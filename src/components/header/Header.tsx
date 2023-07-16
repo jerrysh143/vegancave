@@ -5,7 +5,7 @@ import SearchIcon from "../../images/Icons/searchIcon.tsx";
 import AddUserIcon from "../../images/Icons/addUserIcon.tsx";
 
 export default function Header() {
-  // const navigate = useNavigate();
+  
   return (
     <div>
       <div className="py-20px px-15px  w-full max-w-full 1600:w-[1530px] mx-auto">
