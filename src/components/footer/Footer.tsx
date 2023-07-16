@@ -53,7 +53,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-6/12 lg:w-4/12 2xl:w-3/12 flex justify-start flex-col pb-3 px-15px lg:pl-[70px] xl:pl-[105px] items-center">
+          <div className="w-full md:w-6/12 lg:w-4/12 2xl:w-3/12 flex justify-start flex-col pb-3 px-15px lg:pl-[70px] xl:pl-[105px] items-start">
             <div className="text-16 md:text-18 lg:text-26 leading-normal text-black font-bold pb-[8px] md:pb-[38px] lg:pb-[68px]">
               Opening Restaurant
             </div>
