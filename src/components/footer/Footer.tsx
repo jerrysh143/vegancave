@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Logo from "../../images/logo_vegan_cave.png";
 import FacebookIcon from "../../images/Icons/facebookIcon.tsx";
@@ -10,7 +11,7 @@ const Footer = () => {
       <div className="max-w-[1530px] mx-auto py-30px xl:pt-50px xl:pb-[88px]">
         <div className="flex flex-wrap">
           <div className="w-full 2xl:w-3/12 px-15px flex flex-col items-center 2xl:items-start">
-            <a href="" className="inline-block">
+            <a href="#!" className="inline-block">
               <img src={Logo} alt="" />
             </a>
             <p className="mt-[23px] text-13 md:text-18 leading-normal text-black font-medium max-w-[500px] 2xl:max-w-full text-center 2xl:text-left">
@@ -53,7 +54,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-6/12 lg:w-4/12 2xl:w-3/12 flex justify-start flex-col pb-3 px-15px lg:pl-[70px] xl:pl-[105px] items-start">
+          <div className="w-full md:w-4/12 lg:w-4/12 2xl:w-3/12 flex justify-start flex-col pb-3 px-15px lg:pl-[70px] 2xl:pl-[90px] items-center md:items-start">
             <div className="text-16 md:text-18 lg:text-26 leading-normal text-black font-bold pb-[8px] md:pb-[38px] lg:pb-[68px]">
               Opening Restaurant
             </div>
@@ -69,7 +70,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="pb-3 w-full md:w-6/12 lg:w-4/12 2xl:w-3/12 lg:pl-[70px] xl:pl-[105px] px-15px text-center md:text-left">
+          <div className="pb-3 w-full md:w-4/12 lg:w-4/12 2xl:w-3/12 lg:pl-[70px] xl:pl-[105px] px-15px text-center md:text-left">
             <div className="text-16 md:text-18 lg:text-26 leading-normal text-black font-bold pb-[8px] md:pb-[38px] lg:pb-[68px]">
               User Link
             </div>
@@ -91,7 +92,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="pb-3 w-full lg:w-4/12 2xl:w-3/12 px-15px flex flex-col justify-center md:justify-start">
+          <div className="pb-3 w-full md:w-4/12 2xl:w-3/12 px-15px flex flex-col justify-center md:justify-start">
             <div className="text-16 md:text-18 lg:text-26 leading-normal text-center md:text-left text-black font-bold pb-[8px] md:pb-[38px] lg:pb-[68px]">
               Contact Us
             </div>
