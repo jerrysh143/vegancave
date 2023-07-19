@@ -20,7 +20,7 @@ export default function Header() {
           </div>
           <div className="relative w-full max-w-[calc(100%_-_150px)] xl:max-w-[calc(100%_-_270px)] px-15px flex flex-wrap justify-end items-center">
             <DesktopMenu className="desktop lg:max-w-[calc(100%_-_320px)] xl:max-w-[calc(100%_-_452px)] hidden flex-col md:flex-row flex-wrap items-center lg:flex h-fit md:h-full justify-start mr-15px lg:mr-40px 2xl:mr-0px" />
-            <MobileMenu className={`flex absolute top-full right-0 translate-y-20px lg:hidden ${Menu ? "translate-x-0 opacity-100 duration-150 transition-all" : "translate-x-full opacity-0 duration-150 transition-all"}`} />
+            <MobileMenu className={`flex absolute top-full right-0 translate-y-20px lg:hidden ${Menu ? " translate-x-0 opacity-100 duration-150 transition-all" : "translate-x-full opacity-0 duration-150 transition-all"}`} />
             <div className="max-w-32px px-15px md:px-0">
               <CartIcon className="w-20px md:w-auto" />
             </div>
