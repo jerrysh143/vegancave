@@ -6,9 +6,11 @@ module.exports = {
         primaryColor: '#2BB672',
         backgroundColor: '#FAFAFF',
         inputBorder: '#E0E0E0',
+        rateColor: '#EE140A',
+        borderColor: '#B6B6B6',
       },
       backgroundImage: {
-        
+        bannerGrad: "linear-gradient(40deg, rgba(255,255,255,1) 20%, rgba(217,217,217,0.7) 100%)",
       },
       boxShadow: {
         cardShadow: "0 0 0 31px rgba(0,0,0,0.5)"
