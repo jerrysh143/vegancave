@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../../components/Buttons/buttonHome.tsx";
-import ArrowIcon from "../../images/Icons/leftArrowIcon.tsx";
+import Button from "../../components/Buttons/buttonHome";
+import ArrowIcon from "../../images/Icons/leftArrowIcon";
 import BurgerImage from "../../images/burger_sandwich.png";
 import ComboImage from "../../images/Combo-Junk-Food.png";
 import PizzaImage from "../../images/pizza-png.png";
@@ -11,12 +11,27 @@ import poularItem2 from "../../images/poularItem3.jpg";
 import poularItem3 from "../../images/poularItem4.jpg";
 import poularItem4 from "../../images/poularItem5.jpg";
 import poularItem5 from "../../images/poularItem6.jpg";
-import AbstractImage from "../../images/Icons/abstractImage.tsx";
-import TimeIcon from "../../images/Icons/timeIcon.tsx";
-import LocationIcon from "../../images/Icons/locationIcon.tsx";
-import ContactIcon from "../../images/Icons/contactIcon.tsx";
-import StarIcon from "../../images/Icons/starIcon.tsx";
-import ButtonArrow from "../../components/Buttons/buttonArrow.tsx";
+import OrderImage from "../../images/orderImage1.jpg";
+import OrderImage1 from "../../images/orderImage2.jpg";
+import OrderImage2 from "../../images/orderImage3.jpg";
+import OrderImage3 from "../../images/orderImage4.jpg";
+import AbstractImage from "../../images/Icons/abstractImage";
+import TimeIcon from "../../images/Icons/timeIcon";
+import LocationIcon from "../../images/Icons/locationIcon";
+import ContactIcon from "../../images/Icons/contactIcon";
+import StarIcon from "../../images/Icons/starIcon";
+import ButtonArrow from "../../components/Buttons/buttonArrow";
+import DeliveryIcon from "../../images/deliveryIcon.png";
+import QualityIcon from "../../images/qualityIcon.png";
+import HealthyIcon from "../../images/healthyIcon.png";
+import LaptopImage from "../../images/laptopImage.png";
+import FoodPrepareImage from "../../images/foodPrepareImage.png";
+import DeliverImage from "../../images/deliverImage.png";
+import ConnectRight from "../../images/connectRight.png";
+import ConnectLeft from "../../images/connectLeft.png";
+import SliderTestimonial from "../../components/Testimonials/sliderTestimonial";
+import FoodComboImage from "../../images/foodComboImage.png";
+import BurgerCTAImage from "../../images/burgerCtaImage.png";
 
 const Home = () => {
   return (
@@ -120,7 +135,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="pt-[105px] pb-[75px]">
+      <div className="pt-[105px] pb-70px">
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px w-full h-[200px] py-[28px] rounded-50px bg-white shadow-[0px_0px_50px_0px_rgba(0,0,0,0.05)]">
             <div className="w-4/12 px-15px border-r-[1px] border-borderColor flex flex-col justify-center items-center">
@@ -153,7 +168,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="pt-[75px] pb-[40px]">
+      <div className="pt-70px pb-40px">
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full px-15px text-center text-36 leading-normal font-bold mb-[58px]">
@@ -368,8 +383,285 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="">
-        <div className="1600:w-[1530px] mx-auto px-15px"></div>
+      <div className="pt-40px pb-70px">
+        <div className="px-15px w-full 1600:w-[1530px] mx-auto">
+          <div className="flex flex-wrap -mx-15px">
+            <div className="w-full px-15px text-center">
+              <div className="text-26 leading-normal pb-[7px] font-medium text-primaryColor">
+                Our Menu
+              </div>
+              <div className="text-48 leading-normal font-bold pb-[48px]">
+                Popular Recipes
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-15px">
+            <div className="w-3/12 px-15px h-[680px]">
+              <div className="relative w-full h-full flex flex-col justify-between items-center">
+                <div className="absolute top-0 left-0 w-full h-full">
+                  <img
+                    src={OrderImage}
+                    alt=""
+                    className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
+                  />
+                </div>
+                <div className="relative z-10 w-100px h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                  $ 30.00
+                </div>
+                <div className="z-10 text-center bg-imageGrad w-full h-auto">
+                  <div className="text-36 leading-normal font-bold text-white pb-[11px]">
+                    Mutligrain Idli
+                  </div>
+                  <p className="text-18 leading-normal font-medium text-white pb-45px max-w-[230px] mx-auto">
+                    Flour, Milk, Seeds, Sugar, Salt, Dry Yeast
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-3/12 px-15px h-[680px]">
+              <div className="relative w-full h-full flex flex-col justify-between items-center">
+                <div className="absolute top-0 left-0 w-full h-full">
+                  <img
+                    src={OrderImage1}
+                    alt=""
+                    className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
+                  />
+                </div>
+                <div className="relative z-10 w-100px h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                  $ 30.00
+                </div>
+                <div className="z-10 text-center bg-imageGrad w-full h-auto">
+                  <div className="text-36 leading-normal font-bold text-white pb-[11px]">
+                    Sprouts Salad
+                  </div>
+                  <p className="text-18 leading-normal font-medium text-white pb-45px max-w-[230px] mx-auto">
+                    Seeds, Grams and Beans
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-3/12 px-15px h-[680px]">
+              <div className="relative w-full h-full flex flex-col justify-between items-center">
+                <div className="absolute top-0 left-0 w-full h-full">
+                  <img
+                    src={OrderImage2}
+                    alt=""
+                    className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
+                  />
+                </div>
+                <div className="relative z-10 w-100px h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                  $ 30.00
+                </div>
+                <div className="z-10 text-center bg-imageGrad w-full h-auto">
+                  <div className="text-36 leading-normal font-bold text-white pb-[11px] px-15px">
+                    Overnight Soaked Salad
+                  </div>
+                  <p className="text-18 leading-normal font-medium text-white pb-45px max-w-[230px] mx-auto">
+                    Seeds, Grams and Beans
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-3/12 px-15px h-[680px]">
+              <div className="relative w-full h-full flex flex-col justify-between items-center">
+                <div className="absolute top-0 left-0 w-full h-full">
+                  <img
+                    src={OrderImage3}
+                    alt=""
+                    className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
+                  />
+                </div>
+                <div className="relative z-10 w-100px h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                  $ 30.00
+                </div>
+                <div className="z-10 text-center bg-imageGrad w-full h-auto">
+                  <div className="text-36 leading-normal font-bold text-white pb-[11px]">
+                    Ragi Toast
+                  </div>
+                  <p className="text-18 leading-normal font-medium text-white pb-45px max-w-[230px] mx-auto">
+                    Oats, Milk, Chain Seeds, Vegan Yogurt, Sweetner, Toopings
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pt-40px pb-70px">
+        <div className="px-15px w-full 1600:w-[1530px] mx-auto">
+          <div className="flex flex-wrap -mx-15px">
+            <div className="w-full px-15px text-center">
+              <div className="text-26 leading-normal font-medium pb-[7px] text-primaryColor">
+                Services
+              </div>
+              <div className="text-48 leading-normal font-bold pb-[48px]">
+                Why Choose Our Favorite Food
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-15px">
+            <div className="w-4/12 h-full px-15px flex items-center">
+              <div className="border-[1px] border-[#B6B6B6] bg-white w-full h-full rounded-35px py-100px px-40px hover:border-0 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.15)] duration-300 transition-all hover:duration-300 hover:transition-shadow">
+                <div className="w-100px h-100px flex items-center justify-center bg-[#AAE2C7] rounded-full mx-auto mb-40px">
+                  <img src={QualityIcon} alt="" />
+                </div>
+                <div className="text-26 leading-normal font-bold pb-40px text-center">
+                  Qualityfull Food
+                </div>
+                <p className="text-18 leading-normal font-medium text-center">
+                  But I must explain to you how all this mistaken idea of
+                  denouncing pleasur and prasising pain was bron.
+                </p>
+              </div>
+            </div>
+            <div className="w-4/12 h-full px-15px flex items-center">
+              <div className="border-[1px] border-[#B6B6B6] bg-white w-full h-full rounded-35px py-100px px-40px duration-300 transition-all hover:border-0 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.15)] hover:duration-300 hover:transition-shadow">
+                <div className="w-100px h-100px flex items-center justify-center bg-[#AAE2C7] rounded-full mx-auto mb-40px">
+                  <img src={HealthyIcon} alt="" />
+                </div>
+                <div className="text-26 leading-normal font-bold pb-40px text-center">
+                  Qualityfull Food
+                </div>
+                <p className="text-18 leading-normal font-medium text-center">
+                  But I must explain to you how all this mistaken idea of
+                  denouncing pleasur and prasising pain was bron.
+                </p>
+              </div>
+            </div>
+            <div className="w-4/12 h-full px-15px flex items-center">
+              <div className="border-[1px] border-[#B6B6B6] bg-white w-full h-full rounded-35px py-100px px-40px duration-300 transition-all hover:border-0 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.15)] hover:duration-300 hover:transition-shadow">
+                <div className="w-100px h-100px flex items-center justify-center bg-[#AAE2C7] rounded-full mx-auto mb-40px">
+                  <img src={DeliveryIcon} alt="" />
+                </div>
+                <div className="text-26 leading-normal font-bold pb-40px text-center">
+                  Qualityfull Food
+                </div>
+                <p className="text-18 leading-normal font-medium text-center">
+                  But I must explain to you how all this mistaken idea of
+                  denouncing pleasur and prasising pain was bron.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pt-40px pb-70px">
+        <div className="px-15px w-full 1600:w-[1530px] mx-auto">
+          <div className="flex flex-wrap -mx-15px">
+            <div className="w-full px-15px text-center">
+              <div className="text-26 leading-normal font-medium pb-[7px] text-primaryColor">
+                How to work
+              </div>
+              <div className="text-48 leading-normal font-bold pb-[48px]">
+                Food Us An Important Part Of A Balanced Diet
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-15px">
+            <div className="w-4/12 px-15px relative">
+              <div className="">
+                <div className="mb-45px">
+                  <img src={LaptopImage} alt="" />
+                </div>
+                <div className="text-26 leading-normal font-bold pb-25px">
+                  CHOOSE
+                </div>
+                <p className="text-18 leading-normal font-medium">
+                  Do you want to lose weight, exercise, adhere to a therapeutic
+                  diet? Our dietitian will help you with choosing the right
+                  program!
+                  <span className="absolute top-10px -right-[31%] scale-[0.95] -rotate-1">
+                    <img src={ConnectRight} alt="" />
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div className="w-4/12 px-15px">
+              <div className="">
+                <div className="text-26 leading-normal font-bold pb-25px text-center">
+                  PREPARE FOOD
+                </div>
+                <p className="text-18 leading-normal font-medium">
+                  Do you want to lose weight, exercise, adhere to a therapeutic
+                  diet? Our dietitian will help you with choosing the right
+                  program!
+                </p>
+                <div className="mt-45px">
+                  <img className="mx-auto" src={FoodPrepareImage} alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="w-4/12 px-15px relative">
+              <div className="text-right">
+                <div className="mb-45px">
+                  <img className="ml-auto mr-0" src={DeliverImage} alt="" />
+                </div>
+                <div className="text-26 leading-normal font-bold pb-25px">
+                  DELIVER
+                </div>
+                <p className="text-18 leading-normal font-medium">
+                  <span className="absolute top-10px -left-[31%] scale-[0.95] rotate-1">
+                    <img src={ConnectLeft} alt="" />
+                  </span>
+                  Do you want to lose weight, exercise, adhere to a therapeutic
+                  diet? Our dietitian will help you with choosing the right
+                  program!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pt-40px pb-70px">
+        <div className="px-15px w-full 1600:w-[1530px] mx-auto">
+          <div className="flex flex-wrap -mx-15px">
+            <div className="w-full px-15px text-center">
+              <div className="text-26 leading-normal font-medium pb-[7px] text-primaryColor">
+                Testimonials
+              </div>
+              <div className="text-48 leading-normal font-bold pb-[48px]">
+                Our Happy Client Says
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-15px">
+            <div className="w-6/12 px-15px h-[445px]">
+              <SliderTestimonial />
+            </div>
+            <div className="w-6/12 px-15px">
+              <img src={FoodComboImage} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pt-40px pb-70px">
+        <div className="px-15px w-full 1600:w-[1530px] mx-auto">
+          <div className="flex flex-wrap -mx-15px bg-black items-center h-[370px] rounded-50px">
+            <div className="w-6/12 px-15px relative h-full">
+              <div className="absolute -top-45px left-50px">
+                <img src={BurgerCTAImage} alt="" />
+              </div>
+            </div>
+            <div className="w-6/12 px-15px">
+              <div className="pr-100px">
+                <div className="text-white text-36 leading-normal font- bold pb-15px">
+                  Explore Our Nutrition Foods
+                </div>
+                <p className="text-white text-18 leading-normal pb-15px">
+                  Lorem ipsum dolor sit amet, consectetur adipidrscing elit.
+                  Purus mauris sem sed urna venenatis vivamus. Egestas in velit
+                  nulla viverra turpis id ac. Amet faucibus tempus.
+                </p>
+                <div>
+                  <Button
+                    className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
+                    Title="Explore Now"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

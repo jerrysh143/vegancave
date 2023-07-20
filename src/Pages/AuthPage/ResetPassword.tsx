@@ -1,6 +1,6 @@
 import React from "react";
-import LoginOverlay from "./LoginOverlay.tsx";
-import Button from "../../components/Buttons/buttonOrder.tsx";
+import LoginOverlay from "./LoginOverlay";
+import Button from "../../components/Buttons/buttonOrder";
 
 const ResetPassword = () => {
   return (

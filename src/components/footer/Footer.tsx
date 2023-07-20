@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Logo from "../../images/logo_vegan_cave.png";
-import FacebookIcon from "../../images/Icons/facebookIcon.tsx";
-import TwitterIcon from "../../images/Icons/twiterIcon.tsx";
-import LinkedinIcon from "../../images/Icons/linkedinIcon.tsx";
-import InstagramIcon from "../../images/Icons/instagramIcon.tsx";
+import FacebookIcon from "../../images/Icons/facebookIcon";
+import TwitterIcon from "../../images/Icons/twiterIcon";
+import LinkedinIcon from "../../images/Icons/linkedinIcon";
+import InstagramIcon from "../../images/Icons/instagramIcon";
 
 const Footer = () => {
   return (
