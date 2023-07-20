@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Logo from "../../images/logo_vegan_cave.png";
-import CartIcon from "../../images/Icons/cartIcon.tsx";
-import SearchIcon from "../../images/Icons/searchIcon.tsx";
-import AddUserIcon from "../../images/Icons/addUserIcon.tsx";
-import DesktopMenu from "./DesktopMenu.tsx";
-import MobileMenu from "./MobileMenu.tsx";
+import CartIcon from "../../images/Icons/cartIcon";
+import SearchIcon from "../../images/Icons/searchIcon";
+import AddUserIcon from "../../images/Icons/addUserIcon";
+import DesktopMenu from "./DesktopMenu";
+import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const [Menu, setMenu] = useState(false);

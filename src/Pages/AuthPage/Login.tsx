@@ -1,7 +1,7 @@
 import React from "react";
-import MailIcon from "../../images/Icons/mailIcon.tsx";
-import Button from "../../components/Buttons/buttonOrder.tsx";
-import LoginOverlay from "./LoginOverlay.tsx";
+import MailIcon from "../../images/Icons/mailIcon";
+import Button from "../../components/Buttons/buttonOrder";
+import LoginOverlay from "./LoginOverlay";
 
 const Login = () => {
   return (

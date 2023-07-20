@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowRightIcon from "../../images/Icons/arrowRightIcon.tsx";
+import ArrowRightIcon from "../../images/Icons/arrowRightIcon";
 
 interface ButtonArrowProps {
   className?: string;
