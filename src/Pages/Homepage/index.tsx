@@ -39,45 +39,45 @@ const Home = () => {
       <div className="">
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px items-center">
-            <div className="w-5/12 px-15px">
-              <div className="text-95 leading-[105px] font-bold pb-[48px]">
+            <div className="w-full md:w-7/12 lg:w-5/12 px-15px">
+              <h1 className="md:text-[65px] lg:text-[75px] xl:text-[85px] 2xl:text-95 md:leading-[75px] xl:leading-[105px] font-bold pb-[48px]">
                 The Fastest Delivery In
                 <span className="text-primaryColor">Your City</span>
-              </div>
+              </h1>
               <p className="text-18 leading-normal pb-55px relative">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Commodo, sed proin amet a vestibulum enim volutpat lacus.
                 Volutpat arcu sit sed tortor etiam volutpat ipsum.
-                <div className="absolute -top-[228px] -right-[50%]">
+                <div className="absolute -top-[228px] -right-[50%] hidden 2xl:block">
                   <AbstractImage className="h-1/2" />
                 </div>
               </p>
               <div className="flex">
-                <div className="mr-[73px]">
+                <div className="mr-[30px] xl:mr-[73px]">
                   <Button
-                    className="btn--border btn-read btn--animated w-[248px] h-[86px] text-26 leading-normal font-bold rounded-15px"
+                    className="btn--border btn-read btn--animated w-[200px] xl:w-[248px] h-[66px] xl:h-[86px] text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
                     Title="Order Now"
                   />
                 </div>
                 <div>
                   <Button
-                    className="btn--border btn-read btn--animated w-[248px] h-[86px] text-26 leading-normal font-bold rounded-15px"
+                    className="btn--border btn-read btn--animated w-[200px] xl:w-[248px] h-[66px] xl:h-[86px] text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
                     Title="Contact Us"
                   />
                 </div>
               </div>
             </div>
-            <div className="w-7/12 relative px-15px">
-              <div className="bg-bannerGrad w-[445px] h-[837px] ml-auto mr-0 rounded-xl"></div>
-              <div className="w-full absolute top-[138px] right-40px flex flex-wrap justify-end">
-                <div className="flex flex-wrap flex-col items-end mr-20px">
-                  <div className="w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mb-[115px]">
+            <div className="w-full md:w-5/12 lg:w-7/12 relative px-15px">
+              <div className="bg-bannerGrad w-full lg:w-[445px] h-[502px] lg:h-[837px] ml-auto mr-0 rounded-xl"></div>
+              <div className="absolute top-0 lg:top-[138px] right-0 justify-center lg:justify-normal lg:right-40px flex flex-wrap h-[502px] scroll overflow-y-scroll m-10px lg:m-auto lg:overflow-visible lg:h-auto">
+                <div className="flex flex-wrap flex-row md:flex-col items-end mr-0px lg:mr-20px py-[123px] lg:py-0">
+                  <div className="w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mb-[115px]">
                     <img
                       src={BurgerImage}
                       alt=""
                       className="mx-auto -mt-80px"
                     />
-                    <div className="text-26 leading-normal font-bold text-center pt-20px pb-10px">
+                    <div className="text-20 lg:text-26 leading-normal font-bold text-center pt-20px pb-10px">
                       Burger
                     </div>
                     <p className="text-18 leading-normal font-medium text-center pb-10px">
@@ -88,9 +88,9 @@ const Home = () => {
                     </div>
                     <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full ml-[69px] mt-[15px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
-                  <div className="w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)]">
+                  <div className="w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)]">
                     <img src={PizzaImage} alt="" className="mx-auto -mt-65px" />
-                    <div className="text-center text-26 leading-normal font-bold pb-10px pt-20px">
+                    <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-20px">
                       Pizza
                     </div>
                     <p className="text-center text-18 leading-normal font-medium pb-10px">
@@ -102,10 +102,10 @@ const Home = () => {
                     <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full ml-[69px] mt-[25px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
                 </div>
-                <div className="flex flex-wrap flex-col items-end mr-20px">
-                  <div className="w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mb-[115px]">
+                <div className="flex flex-wrap flex-row md:flex-col items-end lg:mr-20px pb-[123px] lg:pb-0 m-0">
+                  <div className="w-[235px] lg:w-[258px] h-auto lg:h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mb-[115px]">
                     <img src={ComboImage} alt="" className="mx-auto -mt-65px" />
-                    <div className="text-center text-26 leading-normal font-bold pb-10px pt-20px">
+                    <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-20px">
                       Food Combo
                     </div>
                     <p className="text-center text-18 leading-normal font-medium pb-10px">
@@ -116,9 +116,9 @@ const Home = () => {
                     </div>
                     <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full ml-[69px] mt-[6px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
-                  <div className="w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)]">
+                  <div className="w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)]">
                     <img src={CakeImage} alt="" className="mx-auto -mt-65px" />
-                    <div className="text-center text-26 leading-normal font-bold pb-10px pt-0px">
+                    <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-0px">
                       Cake
                     </div>
                     <p className="text-center text-18 leading-normal font-medium pb-10px">
