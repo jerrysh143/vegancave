@@ -39,12 +39,12 @@ const Home = () => {
       <div className="">
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px items-center">
-            <div className="w-full md:w-7/12 lg:w-5/12 px-15px">
-              <h1 className="md:text-[65px] lg:text-[75px] xl:text-[85px] 2xl:text-95 md:leading-[75px] xl:leading-[105px] font-bold pb-[48px]">
+            <div className="w-full md:w-7/12 lg:w-5/12 pb-30px md:pb-0 px-15px">
+              <h1 className="text-[40px] leading-[50px] pb-20px pt-30px sm:pt-0 md:text-[65px] lg:text-[75px] xl:text-[85px] 2xl:text-95 md:leading-[75px] xl:leading-[105px] font-bold sm:pb-[48px]">
                 The Fastest Delivery In
                 <span className="text-primaryColor">Your City</span>
               </h1>
-              <p className="text-18 leading-normal pb-55px relative">
+              <p className="text-18 leading-normal pb-30px sm:pb-55px relative">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Commodo, sed proin amet a vestibulum enim volutpat lacus.
                 Volutpat arcu sit sed tortor etiam volutpat ipsum.
@@ -53,25 +53,25 @@ const Home = () => {
                 </div>
               </p>
               <div className="flex">
-                <div className="mr-[30px] xl:mr-[73px]">
+                <div className="mr-10px sm:mr-[30px] xl:mr-[73px]">
                   <Button
-                    className="btn--border btn-read btn--animated w-[200px] xl:w-[248px] h-[66px] xl:h-[86px] text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
+                    className="btn--border btn-read btn--animated w-[140px] sm:w-[200px] xl:w-[248px] h-[57px] sm:h-[66px] xl:h-[86px] text-18 sm:text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
                     Title="Order Now"
                   />
                 </div>
                 <div>
                   <Button
-                    className="btn--border btn-read btn--animated w-[200px] xl:w-[248px] h-[66px] xl:h-[86px] text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
+                    className="btn--border btn-read btn--animated w-[140px] sm:w-[200px] xl:w-[248px] h-[57px] sm:h-[66px] xl:h-[86px] text-18 sm:text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
                     Title="Contact Us"
                   />
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-5/12 lg:w-7/12 relative px-15px">
-              <div className="bg-bannerGrad w-full lg:w-[445px] h-[502px] lg:h-[837px] ml-auto mr-0 rounded-xl"></div>
+            <div className="w-full md:w-5/12 lg:w-7/12 relative px-15px overflow-hidden">
+              <div className="bg-bannerGrad w-full lg:w-[445px] h-[450px] lg:h-[837px] ml-auto mr-0 rounded-xl"></div>
               <div className="absolute top-0 lg:top-[138px] right-0 justify-center lg:justify-normal lg:right-40px flex flex-wrap h-[502px] scroll overflow-y-scroll m-10px lg:m-auto lg:overflow-visible lg:h-auto">
-                <div className="flex flex-wrap flex-row md:flex-col items-end mr-0px lg:mr-20px py-[123px] lg:py-0">
-                  <div className="w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mb-[115px]">
+                <div className="flex flex-wrap flex-row md:flex-col items-end mr-0px lg:mr-20px pt-[123px] pb-0 md:py-[123px] lg:py-0">
+                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[115px]">
                     <img
                       src={BurgerImage}
                       alt=""
@@ -86,9 +86,9 @@ const Home = () => {
                     <div className="text-18 leading-normal text-center font-semibold">
                       <span className="text-rateColor">$</span>5.15
                     </div>
-                    <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full ml-[69px] mt-[15px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
+                    <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full mx-auto mt-25px md:ml-[69px] md:mt-[15px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
-                  <div className="w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)]">
+                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[115px]">
                     <img src={PizzaImage} alt="" className="mx-auto -mt-65px" />
                     <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-20px">
                       Pizza
@@ -99,11 +99,11 @@ const Home = () => {
                     <div className="text-18 leading-normal text-center font-semibold">
                       <span className="text-rateColor">$</span>9.15
                     </div>
-                    <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full ml-[69px] mt-[25px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
+                    <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full mx-auto mt-[34px] md:ml-[69px] md:mt-[25px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
                 </div>
-                <div className="flex flex-wrap flex-row md:flex-col items-end lg:mr-20px pb-[123px] lg:pb-0 m-0">
-                  <div className="w-[235px] lg:w-[258px] h-auto lg:h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mb-[115px]">
+                <div className="flex flex-wrap flex-row md:flex-col items-end lg:mr-20px  md:pb-[123px] pt-90px sm:pt-0 lg:pb-0 m-0 justify-center md:justify-normal">
+                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[115px]">
                     <img src={ComboImage} alt="" className="mx-auto -mt-65px" />
                     <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-20px">
                       Food Combo
@@ -114,9 +114,9 @@ const Home = () => {
                     <div className="text-center text-18 leading-normal font-semibold">
                       <span className="text-rateColor">$</span>6.15
                     </div>
-                    <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full ml-[69px] mt-[6px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
+                    <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full mx-auto mt-25px md:ml-[69px] md:mt-[6px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
-                  <div className="w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)]">
+                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[115px]">
                     <img src={CakeImage} alt="" className="mx-auto -mt-65px" />
                     <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-0px">
                       Cake
@@ -127,7 +127,7 @@ const Home = () => {
                     <div className="text-center text-18 leading-normal font-semibold">
                       <span className="text-rateColor">$</span>5.15
                     </div>
-                    <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full ml-[69px] mt-[22px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
+                    <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full mx-auto mt-25px md:ml-[69px] md:mt-[22px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
                 </div>
               </div>
@@ -135,32 +135,32 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="pt-[105px] pb-70px">
+      <div className="py-30px md:pt-[105px] md:pb-70px">
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
-          <div className="flex flex-wrap -mx-15px w-full h-[200px] py-[28px] rounded-50px bg-white shadow-[0px_0px_50px_0px_rgba(0,0,0,0.05)]">
-            <div className="w-4/12 px-15px border-r-[1px] border-borderColor flex flex-col justify-center items-center">
+          <div className="flex flex-wrap mx-0 w-full h-full md:h-[200px] py-[28px] rounded-50px bg-white shadow-[0px_0px_50px_0px_rgba(0,0,0,0.05)]">
+            <div className="w-full sm:w-4/12 px-15px border-0 md:border-r-[1px] border-borderColor flex flex-col justify-center items-center">
               <div className="bg-primaryColor w-[42px] h-[42px] flex items-center justify-center rounded-full mb-[12px]">
                 <TimeIcon />
               </div>
-              <div className="text-18 leading-normal font-semibold pb-[6px]">
+              <div className="text-16 md:text-18 leading-normal font-semibold pb-[6px] text-center">
                 Today 10:00am - 10:00pm
               </div>
               <p className="text-13 leading-normal">Working time</p>
             </div>
-            <div className="w-4/12 px-15px border-r-[1px] border-borderColor flex flex-col justify-center items-center">
+            <div className="w-full sm:w-4/12 px-15px border-0 md:border-r-[1px] border-borderColor flex flex-col justify-center items-center">
               <div className="bg-primaryColor w-[42px] h-[42px] flex items-center justify-center rounded-full mb-[12px]">
                 <LocationIcon />
               </div>
-              <div className="text-18 leading-normal font-semibold">
-                Washington, D.C., DC,USA
+              <div className="text-16 md:text-18 leading-normal font-semibold text-center">
+                Washington, D.C., USA
               </div>
               <p className="text-13 leading-normal pb-[6px]">Our Location</p>
             </div>
-            <div className="w-4/12 px-15px flex flex-col justify-center items-center">
+            <div className="w-full sm:w-4/12 px-15px flex flex-col justify-center items-center">
               <div className="bg-primaryColor w-[42px] h-[42px] flex items-center justify-center rounded-full mb-[12px]">
                 <ContactIcon />
               </div>
-              <div className="text-18 leading-normal font-semibold pb-[6px]">
+              <div className="text-16 md:text-18 leading-normal font-semibold pb-[6px] text-center">
                 +0123 456 7891
               </div>
               <p className="text-13 leading-normal">Phone Number</p>
@@ -168,7 +168,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="pt-70px pb-40px">
+      <div className="pt-30px pb-40px">
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full px-15px text-center text-36 leading-normal font-bold mb-[58px]">
@@ -176,7 +176,7 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-wrap -mx-15px">
-            <div className="w-[485px] px-15px mr-35px mb-[58px]">
+            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full !bg-transparent">
                   <img
@@ -185,9 +185,9 @@ const Home = () => {
                     className="shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] w-full object-cover rounded-tl-[35px] rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
                   <div className="flex flex-wrap w-9/12">
-                    <div className="text-26 leading-normal font-bold pb-[7px]">
+                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -209,7 +209,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[485px] px-15px mr-35px mb-[58px]">
+            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -218,9 +218,9 @@ const Home = () => {
                     className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
                   <div className="flex flex-wrap w-9/12">
-                    <div className="text-26 leading-normal font-bold pb-[7px]">
+                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -242,7 +242,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[485px] px-15px mb-[58px]">
+            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -251,9 +251,9 @@ const Home = () => {
                     className="w-full object-cover  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[32px] pb-[21px] bg-white flex flex-wrap  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
                   <div className="flex flex-wrap w-9/12">
-                    <div className="text-26 leading-normal font-bold pb-[7px]">
+                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -275,7 +275,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[485px] px-15px mr-35px mb-[58px]">
+            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -284,9 +284,9 @@ const Home = () => {
                     className="w-full object-cover  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[32px] pb-[21px] bg-white flex flex-wrap  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
                   <div className="flex flex-wrap w-9/12">
-                    <div className="text-26 leading-normal font-bold pb-[7px]">
+                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -308,7 +308,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[485px] px-15px mr-35px mb-[58px]">
+            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -317,9 +317,9 @@ const Home = () => {
                     className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
                   <div className="flex flex-wrap w-9/12">
-                    <div className="text-26 leading-normal font-bold pb-[7px]">
+                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -341,7 +341,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[485px] px-15px mb-[58px]">
+            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -350,9 +350,9 @@ const Home = () => {
                     className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
                   <div className="flex flex-wrap w-9/12">
-                    <div className="text-26 leading-normal font-bold pb-[7px]">
+                    <div className="ttext-18 md:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
