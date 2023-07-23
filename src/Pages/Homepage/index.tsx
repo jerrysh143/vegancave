@@ -168,15 +168,15 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="pt-30px pb-40px">
+      <div className="py-30px md:pt-30px md:pb-40px">
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px">
-            <div className="w-full px-15px text-center text-36 leading-normal font-bold mb-[58px]">
+            <div className="w-full px-15px text-center text-36 leading-unset font-bold mb-30px md:mb-[58px]">
               Most Popular Items
             </div>
           </div>
           <div className="flex flex-wrap -mx-15px">
-            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
+            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full !bg-transparent">
                   <img
@@ -209,7 +209,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
+            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -242,7 +242,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
+            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -275,7 +275,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
+            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -308,7 +308,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
+            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -341,7 +341,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-4/12 px-15px mb-[58px]">
+            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
@@ -383,29 +383,29 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="pt-40px pb-70px">
+      <div className="pt-30px pb-0 md:pt-40px md:pb-70px">
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full px-15px text-center">
-              <div className="text-26 leading-normal pb-[7px] font-medium text-primaryColor">
+              <div className="text-20 md:text-26 leading-normal pb-[7px] font-medium text-primaryColor">
                 Our Menu
               </div>
-              <div className="text-48 leading-normal font-bold pb-[48px]">
+              <div className="text-26 md:text-48 leading-normal font-bold pb-[48px]">
                 Popular Recipes
               </div>
             </div>
           </div>
           <div className="flex flex-wrap -mx-15px">
-            <div className="w-3/12 px-15px h-[680px]">
+            <div className="w-full md:w-6/12 lg:w-3/12 px-15px h-[400px] md:h-[680px] mb-20px lg:mb-0">
               <div className="relative w-full h-full flex flex-col justify-between items-center">
                 <div className="absolute top-0 left-0 w-full h-full">
                   <img
                     src={OrderImage}
                     alt=""
-                    className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
+                    className="w-full h-full object-cover flex rounded-35px lg:rounded-tl-35px lg:rounded-tr-35px"
                   />
                 </div>
-                <div className="relative z-10 w-100px h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
                 <div className="z-10 text-center bg-imageGrad w-full h-auto">
@@ -418,16 +418,16 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-3/12 px-15px h-[680px]">
+            <div className="w-full md:w-6/12 lg:w-3/12 px-15px h-[400px] md:h-[680px] mb-20px lg:mb-0">
               <div className="relative w-full h-full flex flex-col justify-between items-center">
                 <div className="absolute top-0 left-0 w-full h-full">
                   <img
                     src={OrderImage1}
                     alt=""
-                    className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
+                    className="w-full h-full object-cover flex rounded-35px lg:rounded-tl-35px lg:rounded-tr-35px"
                   />
                 </div>
-                <div className="relative z-10 w-100px h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
                 <div className="z-10 text-center bg-imageGrad w-full h-auto">
@@ -440,7 +440,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-3/12 px-15px h-[680px]">
+            <div className="w-full md:w-6/12 lg:w-3/12 px-15px h-[400px] md:h-[680px] mb-20px lg:mb-0">
               <div className="relative w-full h-full flex flex-col justify-between items-center">
                 <div className="absolute top-0 left-0 w-full h-full">
                   <img
@@ -449,7 +449,7 @@ const Home = () => {
                     className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
                   />
                 </div>
-                <div className="relative z-10 w-100px h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
                 <div className="z-10 text-center bg-imageGrad w-full h-auto">
@@ -462,7 +462,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-3/12 px-15px h-[680px]">
+            <div className="w-full md:w-6/12 lg:w-3/12 px-15px h-[400px] md:h-[680px] mb-20px lg:mb-0">
               <div className="relative w-full h-full flex flex-col justify-between items-center">
                 <div className="absolute top-0 left-0 w-full h-full">
                   <img
@@ -471,7 +471,7 @@ const Home = () => {
                     className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
                   />
                 </div>
-                <div className="relative z-10 w-100px h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
                 <div className="z-10 text-center bg-imageGrad w-full h-auto">
@@ -487,21 +487,21 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="pt-40px pb-70px">
+      <div className="py-30px md:pt-40px md:pb-70px">
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full px-15px text-center">
               <div className="text-26 leading-normal font-medium pb-[7px] text-primaryColor">
                 Services
               </div>
-              <div className="text-48 leading-normal font-bold pb-[48px]">
+              <div className="text-26 md:text-48 leading-normal font-bold pb-30px md:pb-[48px]">
                 Why Choose Our Favorite Food
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-15px">
-            <div className="w-4/12 h-full px-15px flex items-center">
-              <div className="border-[1px] border-[#B6B6B6] bg-white w-full h-full rounded-35px py-100px px-40px hover:border-0 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.15)] duration-300 transition-all hover:duration-300 hover:transition-shadow">
+          <div className="flex flex-wrap justify-center -mx-15px">
+            <div className="w-full mb-30px lg:mb-0 md:w-6/12 lg:w-4/12 h-full px-15px flex items-center">
+              <div className="border-[1px] border-[#B6B6B6] bg-white w-full h-full rounded-35px p-30px md:py-100px md:px-40px hover:border-0 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.15)] duration-300 transition-all hover:duration-300 hover:transition-shadow">
                 <div className="w-100px h-100px flex items-center justify-center bg-[#AAE2C7] rounded-full mx-auto mb-40px">
                   <img src={QualityIcon} alt="" />
                 </div>
@@ -514,8 +514,8 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="w-4/12 h-full px-15px flex items-center">
-              <div className="border-[1px] border-[#B6B6B6] bg-white w-full h-full rounded-35px py-100px px-40px duration-300 transition-all hover:border-0 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.15)] hover:duration-300 hover:transition-shadow">
+            <div className="w-full mb-30px lg:mb-0 md:w-6/12 lg:w-4/12 h-full px-15px flex items-center">
+              <div className="border-[1px] border-[#B6B6B6] bg-white w-full h-full rounded-35px p-30px md:py-100px md:px-40px duration-300 transition-all hover:border-0 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.15)] hover:duration-300 hover:transition-shadow">
                 <div className="w-100px h-100px flex items-center justify-center bg-[#AAE2C7] rounded-full mx-auto mb-40px">
                   <img src={HealthyIcon} alt="" />
                 </div>
@@ -528,8 +528,8 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="w-4/12 h-full px-15px flex items-center">
-              <div className="border-[1px] border-[#B6B6B6] bg-white w-full h-full rounded-35px py-100px px-40px duration-300 transition-all hover:border-0 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.15)] hover:duration-300 hover:transition-shadow">
+            <div className="w-full mb-30px lg:mb-0 md:w-6/12 lg:w-4/12 h-full px-15px flex items-center">
+              <div className="border-[1px] border-[#B6B6B6] bg-white w-full h-full rounded-35px p-30px md:py-100px md:px-40px duration-300 transition-all hover:border-0 hover:shadow-[0_20px_80px_0_rgba(0,0,0,0.15)] hover:duration-300 hover:transition-shadow">
                 <div className="w-100px h-100px flex items-center justify-center bg-[#AAE2C7] rounded-full mx-auto mb-40px">
                   <img src={DeliveryIcon} alt="" />
                 </div>
@@ -545,62 +545,64 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="pt-40px pb-70px">
+      <div className="pt-0 pb-30px md:pt-40px md:pb-70px">
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full px-15px text-center">
               <div className="text-26 leading-normal font-medium pb-[7px] text-primaryColor">
                 How to work
               </div>
-              <div className="text-48 leading-normal font-bold pb-[48px]">
+              <div className="text-26 md:text-48 leading-normal font-bold pb-[48px]">
                 Food Us An Important Part Of A Balanced Diet
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-15px">
-            <div className="w-4/12 px-15px relative">
+          <div className="flex flex-wrap md:justify-center lg:justify-normal -mx-15px">
+            <div className="w-full sm:w-6/12 md:w-4/12 px-15px relative">
               <div className="">
-                <div className="mb-45px">
+                <div className="mb-30px md:mb-45px">
                   <img src={LaptopImage} alt="" />
                 </div>
-                <div className="text-26 leading-normal font-bold pb-25px">
+                <div className="text-26 leading-normal font-bold pb-25px text-center md:text-left">
                   CHOOSE
                 </div>
-                <p className="text-18 leading-normal font-medium">
+                <p className="text-18 leading-normal font-medium text-center md:text-left">
                   Do you want to lose weight, exercise, adhere to a therapeutic
                   diet? Our dietitian will help you with choosing the right
                   program!
-                  <span className="absolute top-10px -right-[31%] scale-[0.95] -rotate-1">
+                  <span className="absolute top-10px hidden 2xl:block -right-[31%] scale-[0.95] -rotate-1">
                     <img src={ConnectRight} alt="" />
                   </span>
                 </p>
               </div>
             </div>
-            <div className="w-4/12 px-15px">
-              <div className="">
-                <div className="text-26 leading-normal font-bold pb-25px text-center">
-                  PREPARE FOOD
+            <div className="w-full sm:w-6/12 md:w-4/12 px-15px flex md:block flex-col\-reverse">
+              <div className="flex flex-wrap flex-col-reverse md:block">
+                <div>
+                  <div className="text-26 leading-normal font-bold pb-25px text-center lg:text-right xl:text-center">
+                    PREPARE FOOD
+                  </div>
+                  <p className="text-18 leading-normal font-medium text-center md:text-left">
+                    Do you want to lose weight, exercise, adhere to a
+                    therapeutic diet? Our dietitian will help you with choosing
+                    the right program!
+                  </p>
                 </div>
-                <p className="text-18 leading-normal font-medium">
-                  Do you want to lose weight, exercise, adhere to a therapeutic
-                  diet? Our dietitian will help you with choosing the right
-                  program!
-                </p>
-                <div className="mt-45px">
+                <div className="mt-30px md:m-45px">
                   <img className="mx-auto" src={FoodPrepareImage} alt="" />
                 </div>
               </div>
             </div>
-            <div className="w-4/12 px-15px relative">
+            <div className="w-full sm:w-6/12 md:w-4/12 px-15px relative">
               <div className="text-right">
-                <div className="mb-45px">
-                  <img className="ml-auto mr-0" src={DeliverImage} alt="" />
+                <div className="mb-30px md:mb-45px">
+                  <img className="mx-auto md:ml-auto md:mr-0" src={DeliverImage} alt="" />
                 </div>
-                <div className="text-26 leading-normal font-bold pb-25px">
+                <div className="text-26 leading-normal font-bold pb-25px text-center md:text-right">
                   DELIVER
                 </div>
-                <p className="text-18 leading-normal font-medium">
-                  <span className="absolute top-10px -left-[31%] scale-[0.95] rotate-1">
+                <p className="text-18 leading-normal font-medium text-center md:text-right">
+                  <span className="absolute hidden 2xl:block top-10px -left-[31%] scale-[0.95] rotate-1">
                     <img src={ConnectLeft} alt="" />
                   </span>
                   Do you want to lose weight, exercise, adhere to a therapeutic
@@ -619,16 +621,16 @@ const Home = () => {
               <div className="text-26 leading-normal font-medium pb-[7px] text-primaryColor">
                 Testimonials
               </div>
-              <div className="text-48 leading-normal font-bold pb-[48px]">
+              <div className="text-26 md:text-48 leading-normal font-bold pb-[48px]">
                 Our Happy Client Says
               </div>
             </div>
           </div>
           <div className="flex flex-wrap -mx-15px">
-            <div className="w-6/12 px-15px h-[445px]">
+            <div className="w-full lg:w-6/12 px-15px h-auto md:h-[445px]">
               <SliderTestimonial />
             </div>
-            <div className="w-6/12 px-15px">
+            <div className="w-full lg:w-6/12 px-15px">
               <img src={FoodComboImage} alt="" />
             </div>
           </div>
@@ -636,13 +638,14 @@ const Home = () => {
       </div>
       <div className="pt-40px pb-70px">
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
-          <div className="flex flex-wrap -mx-15px bg-black items-center h-[370px] rounded-50px">
-            <div className="w-6/12 px-15px relative h-full">
+          <div className="flex flex-wrap -mx-15px">
+            <div className="bg-black items-center h-[370px] rounded-50px px-15px flex flex-wrap">
+            <div className="w-6/12 relative h-full">
               <div className="absolute -top-45px left-50px">
                 <img src={BurgerCTAImage} alt="" />
               </div>
             </div>
-            <div className="w-6/12 px-15px">
+            <div className="w-6/12">
               <div className="pr-100px">
                 <div className="text-white text-36 leading-normal font- bold pb-15px">
                   Explore Our Nutrition Foods
@@ -659,6 +662,7 @@ const Home = () => {
                   />
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>

@@ -24,7 +24,7 @@ export default function Header() {
             <div className="max-w-32px px-15px md:px-0">
               <CartIcon className="w-20px md:w-auto" />
             </div>
-            <div className="w-auto lg:max-w-fit 2xl:max-w-[393px] h-[65px] md:ml-[15px] lg:ml-[27px] relative flex items-center">
+            <div className="w-auto max-w-fit xl:max-w-[300px] 2xl:max-w-[393px] h-[65px] md:ml-[15px] lg:ml-[27px] relative flex items-center">
               <div
                 className="lg:static xl:absolute top-[19px] left-20px"
                 onClick={() => setSearch(!Search)}
@@ -37,7 +37,7 @@ export default function Header() {
                 className={`text-black placeholder:text-black h-full shadow-[0_0_17px_rgba(0,0,0,0.15)] bg-white/30 rounded-10px focus:outline-0 pl-[30px] pr-[30px] xl:pl-[72px] xl:pr-[75px] text-18 font-semibold xl:block ${
                   Search
                     ? "block w-[290px] md:w-[393px] absolute xl:static -bottom-[90px] -right- md:right-0"
-                    : "hidden"
+                    : "hidden w-full"
                 }`}
               />
               <AddUserIcon className="hidden xl:block absolute top-[19px] right-20px" />
