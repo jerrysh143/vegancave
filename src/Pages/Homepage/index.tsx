@@ -88,7 +88,7 @@ const Home = () => {
                     </div>
                     <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full mx-auto mt-25px md:ml-[69px] md:mt-[15px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
-                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[115px]">
+                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[30px]">
                     <img src={PizzaImage} alt="" className="mx-auto -mt-65px" />
                     <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-20px">
                       Pizza
@@ -116,7 +116,7 @@ const Home = () => {
                     </div>
                     <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full mx-auto mt-25px md:ml-[69px] md:mt-[6px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
-                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[115px]">
+                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[30px]">
                     <img src={CakeImage} alt="" className="mx-auto -mt-65px" />
                     <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-0px">
                       Cake
@@ -627,10 +627,10 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-wrap -mx-15px">
-            <div className="w-full lg:w-6/12 px-15px h-auto md:h-[445px]">
+            <div className="w-full lg:w-6/12 px-15px h-auto xl:h-[445px]">
               <SliderTestimonial />
             </div>
-            <div className="w-full lg:w-6/12 px-15px">
+            <div className="w-full lg:w-6/12 px-15px flex items-center">
               <img src={FoodComboImage} alt="" />
             </div>
           </div>
@@ -638,24 +638,24 @@ const Home = () => {
       </div>
       <div className="pt-40px pb-70px">
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
-          <div className="flex flex-wrap -mx-15px">
-            <div className="bg-black items-center h-[370px] rounded-50px px-15px flex flex-wrap">
-            <div className="w-6/12 relative h-full">
-              <div className="absolute -top-45px left-50px">
-                <img src={BurgerCTAImage} alt="" />
+          <div className="w-ful">
+            <div className="bg-black items-center pb-20px md:pb-0 h-full md:h-[370px] rounded-50px flex flex-wrap">
+            <div className="w-full md:w-6/12 relative h-full">
+              <div className="static flex items-center h-full xl:h-fit xl:absolute xl:-top-45px xl:left-50px">
+                <img src={BurgerCTAImage} alt="" className="w-full h-[280px] md:h-full object-contain" />
               </div>
             </div>
-            <div className="w-6/12">
-              <div className="pr-100px">
-                <div className="text-white text-36 leading-normal font- bold pb-15px">
+            <div className="w-full md:w-6/12 px-15px lg:px-0">
+              <div className="pr-0px lg:pr-100px">
+                <div className="text-white text-center md:text-left text-[30px] lg:text-36 leading-normal font- bold pb-10px lg:pb-15px">
                   Explore Our Nutrition Foods
                 </div>
-                <p className="text-white text-18 leading-normal pb-15px">
+                <p className="text-white text-center md:text-left text-16px lg:text-18 leading-normal pb-15px">
                   Lorem ipsum dolor sit amet, consectetur adipidrscing elit.
                   Purus mauris sem sed urna venenatis vivamus. Egestas in velit
                   nulla viverra turpis id ac. Amet faucibus tempus.
                 </p>
-                <div>
+                <div className="flex items-center justify-center md:block">
                   <Button
                     className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
                     Title="Explore Now"
