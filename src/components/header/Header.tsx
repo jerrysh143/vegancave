@@ -30,17 +30,17 @@ export default function Header() {
             </div>
             <div className="w-auto max-w-fit xl:max-w-[300px] 2xl:max-w-[393px] h-[65px] md:ml-[15px] lg:ml-[27px] relative flex items-center">
               <div
-                className="lg:static xl:absolute top-[19px] left-20px"
+                className="lg:static z-10 xl:absolute top-[19px] left-20px"
                 onClick={() => {setSearch(!Search);setMenu(false);}}
               >
-                {Search ? <CloseIcon className="w-30px" />:<SearchIcon className="w-30px lg:cursor-pointer xl:cursor-auto" />}
+                {Search ? <CloseIcon className="w-30px block lg:hidden" />:<SearchIcon className="w-30px md:cursor-pointer xl:cursor-auto" />}
               </div>
               <input
                 type="search"
                 placeholder="Search"
-                className={`text-black placeholder:text-black h-full shadow-[0_0_17px_rgba(0,0,0,0.15)] bg-white rounded-10px focus:outline-0 pl-[30px] pr-[30px] xl:pl-[72px] xl:pr-[75px] text-18 font-semibold xl:block ${
+                className={`text-black lg:translate-x-0 xl:w-full lg:w-[393px] lg:opacity-100 lg:static md:h-[60px] placeholder:text-black shadow-[0_0_17px_rgba(0,0,0,0.15)] bg-white rounded-10px focus:outline-0 pl-[30px] pr-[30px] xl:pl-[72px] xl:pr-[75px] text-18 font-semibold xl:block ${
                   Search
-                    ? "w-[290px] md:w-[393px] translate-x-0 opacity-100 duration-300 transition-all absolute xl:static -bottom-[60px] -right-60px"
+                    ? "w-[290px] translate-x-0 opacity-100 duration-300 transition-all absolute xl:static -bottom-[60px] -right-60px"
                     : "absolute -translate-x-70px opacity-0 w-0 h-0 transition-all"
                 }`}
               />

@@ -116,7 +116,7 @@ const Home = () => {
                     </div>
                     <ArrowIcon className="w-[42px] h-[42px] bg-black flex items-center justify-center rounded-full mx-auto mt-25px md:ml-[69px] md:mt-[6px] transition-all duration-200 hover:-rotate-90 hover:duration-200 hover:transition-all" />
                   </div>
-                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[30px]">
+                  <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[80px]">
                     <img src={CakeImage} alt="" className="mx-auto -mt-65px" />
                     <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-0px">
                       Cake
