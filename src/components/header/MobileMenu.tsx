@@ -11,7 +11,6 @@ const MobileMenu = (props: MenuProps) => {
           <li className="pt-10px pb-10px hover:bg-primaryColor/30 hover:text-primaryColor font-bold w-full text-center text-[25px]">Home</li>
           <li className="pt-10px pb-10px hover:bg-primaryColor/30 hover:text-primaryColor font-bold w-full text-center text-[25px]">About</li>
           <li className="pt-10px pb-10px hover:bg-primaryColor/30 hover:text-primaryColor font-bold w-full text-center text-[25px]">Nutritionist</li>
-          <li className="pt-10px pb-10px hover:bg-primaryColor/30 hover:text-primaryColor font-bold w-full text-center text-[25px]">Videos</li>
           <li className="pt-10px pb-10px hover:bg-primaryColor/30 hover:text-primaryColor font-bold w-full text-center text-[25px]">About Us</li>
           <li className="pt-10px pb-10px hover:bg-primaryColor/30 hover:text-primaryColor font-bold w-full text-center text-[25px]">Contact Us</li>
         </ul>
