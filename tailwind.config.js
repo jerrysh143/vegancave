@@ -12,6 +12,7 @@ module.exports = {
       backgroundImage: {
         bannerGrad: "linear-gradient(40deg, rgba(255,255,255,1) 20%, rgba(217,217,217,0.7) 100%)",
         imageGrad: "linear-gradient(0deg, rgba(20,6,6,1) 0%, rgba(217,217,217,0) 100%)",
+        arrowIcon: 'url(./src/images/Icons/ArrowSlider.svg)'
       },
       boxShadow: {
         cardShadow: "0 0 0 31px rgba(0,0,0,0.5)"

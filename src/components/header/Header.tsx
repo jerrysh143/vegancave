@@ -13,7 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Header() {
   const [Menu, setMenu] = useState(false);
   const [Search, setSearch] = useState(false);
-  const [selectAria, setSelectAria] = useState(false);
+  // const [selectAria, setSelectAria] = useState(false);
 
   return (
     <div className="z-10 relative">
