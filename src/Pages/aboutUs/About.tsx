@@ -1,10 +1,12 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import AboutBanner from "../../images/aboutBanner.jpg";
-// import SliderCard from "../../components/Testimonials/SliderCard";
-// import SliderABout from "../../components/ABoutslide/SliderImage";
-import StoryImage from "../../images/ourStoryImage.jpg"
+import StoryImage from "../../images/ourStoryImage.jpg";
+import Team from "../../components/teamsection/Team";
+import SliderABout from "../../components/ABoutslide/sliderCards";
 
 const About = () => {
+  // const [Play, setAutoPlay] = useState(false);
   return (
     <>
       <div className="pt-[116px] pb-70px">
@@ -36,7 +38,7 @@ const About = () => {
                 </p>
               </div>
               <div className="w-full flex flex-nowrap -mx-15px">
-                <div className="">{/* <SliderABout /> */}</div>
+                <div className=""><SliderABout /></div>
               </div>
             </div>
           </div>
@@ -68,6 +70,34 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="pt-70px">
+        <div className="px-15px w-full 1600:w-[1530px] mx-auto">
+          <div className="flex flex-wrap -mx-15px">
+            <div className="w-full text-center">
+              <div className="text-56 leading-56 text-primaryColor font-bold pb-100px">
+                Our Team
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-15px">
+            <Team />
+          </div>
+        </div>
+      </div>
+      <div className="relative w-screen h-[800px] overflow-hidden">
+        <div className="">
+          <div className="">
+            <video className="videoembed h-[800px] w-screen" autoPlay muted loop
+            >
+              <source src="https://netdemo.uk/bbb/bbb.mp4" type="video/mp4" />
+              <source src="https://netdemo.uk/bbb/bbb.ogg" type="video/ogg" />
+            </video>
+          </div>
+        </div>
+        <div className="w-full text-center">
+          
         </div>
       </div>
     </>

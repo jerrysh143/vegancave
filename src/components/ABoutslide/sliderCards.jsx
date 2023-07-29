@@ -1,43 +1,35 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SliderContent from "./SliderImage.jsx";
-import "swiper/css";
+import SliderContent from "./SliderImage.tsx";
+import Slider from "react-slick";
 
 export default function SliderABout() {
+  var settings = {
+    dots: false,
+    arrow: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      scrollbar={{ draggable: true }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide className="w-4/12 px-15px">
-        <div>
+    <>
+      <Slider {...settings}>
+        <div className="">
           <SliderContent />
         </div>
-      </SwiperSlide>
-      <SwiperSlide className="w-4/12 px-15px">
-        <div>
+        <div className="">
           <SliderContent />
         </div>
-      </SwiperSlide>
-      <SwiperSlide className="w-4/12 px-15px">
-        <div>
+        <div className="">
           <SliderContent />
         </div>
-      </SwiperSlide>
-      <SwiperSlide className="w-4/12 px-15px">
-        <div>
+        <div className="">
           <SliderContent />
         </div>
-      </SwiperSlide>
-      <SwiperSlide className="w-4/12 px-15px">
-        <div>
+        <div className="">
           <SliderContent />
         </div>
-      </SwiperSlide>
-      ...
-    </Swiper>
+      </Slider>
+    </>
   );
 }

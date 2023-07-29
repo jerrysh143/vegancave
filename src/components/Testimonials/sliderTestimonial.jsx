@@ -1,12 +1,13 @@
 import React from "react";
 import SliderCard from "./SliderCard";
 import Slider from "react-slick";
+// import ArrowSlider from "../../images/Icons/ArrowSlider";
 
 export default function SliderTestimonial() {
   var settings = {
     dots: false,
     arrow: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
