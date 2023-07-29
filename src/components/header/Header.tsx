@@ -7,6 +7,8 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import BurgerMenu from "../../images/Icons/burgerMenu";
 import CloseIcon from "../../images/Icons/closeIcon";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Header() {
   const [Menu, setMenu] = useState(false);
@@ -24,16 +26,29 @@ export default function Header() {
           </div>
           <div className="relative w-full max-w-[calc(100%_-_150px)] xl:max-w-[calc(100%_-_270px)] px-15px flex flex-wrap justify-end items-center">
             <DesktopMenu className="desktop lg:max-w-[calc(100%_-_320px)] xl:max-w-[calc(100%_-_452px)] hidden flex-col md:flex-row flex-wrap items-center lg:flex h-fit md:h-full justify-start mr-15px lg:mr-40px 2xl:mr-0px" />
-            <MobileMenu className={`flex absolute top-full left-auto right-auto w-[calc(100vw_-_30%)] h-auto rounded-20px lg:hidden ${Menu ? " translate-x-0 opacity-100 duration-150 transition-all" : "translate-x-full opacity-0 duration-150 transition-all"}`} />
+            <MobileMenu
+              className={`flex absolute top-full left-auto right-auto w-[calc(100vw_-_30%)] h-auto rounded-20px lg:hidden ${
+                Menu
+                  ? " translate-x-0 opacity-100 duration-150 transition-all"
+                  : "translate-x-full opacity-0 duration-150 transition-all"
+              }`}
+            />
             <div className="max-w-32px px-15px md:px-0">
               <CartIcon className="w-30px md:w-auto" />
             </div>
             <div className="w-auto max-w-fit xl:max-w-[300px] 2xl:max-w-[393px] h-[65px] md:ml-[15px] lg:ml-[27px] relative flex items-center">
               <div
                 className="lg:static z-10 xl:absolute top-[19px] left-20px"
-                onClick={() => {setSearch(!Search);setMenu(false);}}
+                onClick={() => {
+                  setSearch(!Search);
+                  setMenu(false);
+                }}
               >
-                {Search ? <CloseIcon className="w-30px block lg:hidden" />:<SearchIcon className="w-30px md:cursor-pointer xl:cursor-auto" />}
+                {Search ? (
+                  <CloseIcon className="w-30px block lg:hidden" />
+                ) : (
+                  <SearchIcon className="w-30px md:cursor-pointer xl:cursor-auto" />
+                )}
               </div>
               <input
                 type="search"
@@ -47,14 +62,20 @@ export default function Header() {
               <AddUserIcon className="hidden xl:block absolute top-[19px] right-20px" />
             </div>
             <div
-              className={`ml-10px mr-0px md:ml-10px block lg:hidden cursor-pointer z-50 ${Menu ? "opened":""}`}
-              onClick={() => {setSearch(false);setMenu(!Menu);}}
+              className={`ml-10px mr-0px md:ml-10px block lg:hidden cursor-pointer z-50 ${
+                Menu ? "opened" : ""
+              }`}
+              onClick={() => {
+                setSearch(false);
+                setMenu(!Menu);
+              }}
             >
               <BurgerMenu />
             </div>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

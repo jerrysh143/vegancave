@@ -2,7 +2,7 @@ import React from "react";
 interface ClassPropsIcon {
   className?: string;
 }
-const leftArrowIcon = (props:ClassPropsIcon) => {
+const leftArrowIcon = (props: ClassPropsIcon) => {
   return (
     <div className={props.className}>
       <svg
@@ -15,16 +15,16 @@ const leftArrowIcon = (props:ClassPropsIcon) => {
         <path
           d="M1.58325 8H14.4166"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M8 1.58325L14.4167 7.99992L8 14.4166"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>

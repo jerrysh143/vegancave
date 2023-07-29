@@ -2,12 +2,16 @@ import React from "react";
 import MailIcon from "../../images/Icons/mailIcon";
 import Button from "../../components/Buttons/buttonOrder";
 import LoginOverlay from "./LoginOverlay";
+import { Link } from "react-router-dom";
+import { ROUTE_NAME } from "../";
 
 const Login = () => {
   return (
     <LoginOverlay>
       <div className="w-4/12">
-        <div className="text-28 leading-normal pb-40px font-bold font-opensans">Login</div>
+        <div className="text-28 leading-normal pb-40px font-bold font-opensans">
+          Login
+        </div>
         <div className="relative pb-40px">
           <p className="text-18 leading-6 font-normal font-opensans pb-5px">
             Email
@@ -32,17 +36,21 @@ const Login = () => {
           />
         </div>
         <div className="text-14 leading-normal font-opensans text-right pt-6px pb-50px">
-           Forget password?
+          Forget password?
         </div>
         <div>
           <Button
-            className="bg-primaryColor w-full h-50px text-20 leading-unset font-bold text-white rounded-15px font-montserratbg-primaryColor w-full h-50px text-20 leading-unset font-bold text-white rounded-15px font-montserrat"
+            className="bg-primaryColor w-full h-50px text-20 leading-unset font-bold text-white rounded-15px font-montserratbg-primaryColor font-montserrat"
             Title="Login"
           />
         </div>
         <div className="text-18 font-normal font-opensans text-[#616161] flex justify-center pt-40px">
           Don’t have an account?
-          <div className="text-primaryColor font-bold pl-10px">Sign up</div>
+          <Link to={ROUTE_NAME.SIGNUP}>
+            <div className="text-primaryColor font-bold pl-10px cursor-pointer">
+              Sign up
+            </div>
+          </Link>
         </div>
       </div>
       <div className="w-8/12"></div>
