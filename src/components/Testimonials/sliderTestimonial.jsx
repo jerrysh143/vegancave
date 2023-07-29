@@ -15,29 +15,29 @@ export default function SliderTestimonial() {
   return (
     <Slider {...settings}>
       <div className="">
-          <SliderCard
-            ImagePath="AuthorImage.jpg"
-            Description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus."'
-            Author="Willians Jhone"
-            Position="CEO & Co-Founder"
-          />
+        <SliderCard
+          ImagePath="AuthorImage.jpg"
+          Description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus."'
+          Author="Willians Jhone"
+          Position="CEO & Co-Founder"
+        />
       </div>
       <div className="">
-          <SliderCard
-            ImagePath="AuthorImage.jpg"
-            Description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus."'
-            Author="1Willians Jhone"
-            Position="1CEO & Co-Founder"
-          />
+        <SliderCard
+          ImagePath="AuthorImage.jpg"
+          Description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus."'
+          Author="1Willians Jhone"
+          Position="1CEO & Co-Founder"
+        />
       </div>
-        <div className="">
-          <SliderCard
-            ImagePath="AuthorImage.jpg"
-            Description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus."'
-            Author="2Willians Jhone"
-            Position="2CEO & Co-Founder"
-          />
-        </div>
+      <div className="">
+        <SliderCard
+          ImagePath="AuthorImage.jpg"
+          Description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus."'
+          Author="2Willians Jhone"
+          Position="2CEO & Co-Founder"
+        />
+      </div>
     </Slider>
   );
 }
