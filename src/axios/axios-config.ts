@@ -47,16 +47,14 @@ export const axiosPost = (
     .post(baseURL + url, data, { params })
     .then((res) => {
       setLoader(shouldProcess, false);
-      return res;
+      return res.data;
     })
     .catch((error) => {
       setLoader(shouldProcess, false);
       // return {
       //     error: error.response?.data?.message?.text ?? "Error while processing",
       // };
-      return {
-        error: "Error while processing",
-      };
+      return error.response.data;
     });
 };
 
@@ -70,7 +68,7 @@ export const axiosGet = (
     .get(baseURL + url, { params })
     .then((res) => {
       setLoader(shouldProcess, false);
-      return res;
+      return res.data;
     })
     .catch((error) => {
       setLoader(shouldProcess, false);
@@ -94,7 +92,7 @@ export const axiosPut = (
     .put(baseURL + url, data, { params })
     .then((res) => {
       setLoader(shouldProcess, false);
-      return res;
+      return res.data;
     })
     .catch((error) => {
       setLoader(shouldProcess, false);
@@ -118,7 +116,7 @@ export const axiosPatch = (
     .patch(baseURL + url, data, { params })
     .then((res) => {
       setLoader(shouldProcess, false);
-      return res;
+      return res.data;
     })
     .catch((error) => {
       setLoader(shouldProcess, false);
@@ -142,7 +140,7 @@ export const axiosDelete = (
     .delete(baseURL + url, { params, data })
     .then((res) => {
       setLoader(shouldProcess, false);
-      return res;
+      return res.data;
     })
     .catch((error) => {
       setLoader(shouldProcess, false);

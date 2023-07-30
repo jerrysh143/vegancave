@@ -4,22 +4,15 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import { ROUTE_NAME, routes } from "../pages/index.ts";
-import Header from "../components/header/Header.tsx";
-import Footer from "../components/footer/Footer.tsx";
-import Loader from "../components/loader/Loader.tsx";
+import { ROUTE_NAME, routes } from "../pages/";
+import Loader from "../components/loader/Loader";
 import { useSelector } from "react-redux";
+import Layout from "../components/layout/Layout";
 
 const RootComponent = () => {
-  const [defaultRoute, setDefaultRoute] = useState(ROUTE_NAME.HOME);
-
   const isAuthenticated = useSelector((store) => store.user.isLoggedIn);
 
   const FinalRoute = ({ routeProps: { isPublic, component: Component } }) => {
-    if (isPublic && isAuthenticated) {
-      return <Navigate to={defaultRoute} replace />;
-    }
-
     if (!isPublic && !isAuthenticated) {
       return <Navigate to={ROUTE_NAME.LOGIN} replace />;
     }
@@ -27,9 +20,9 @@ const RootComponent = () => {
     return (
       <>
         <Suspense fallback={<Loader />}>
-          <Header />
-          <Component />
-          <Footer />
+          <Layout>
+            <Component />
+          </Layout>
         </Suspense>
       </>
     );
