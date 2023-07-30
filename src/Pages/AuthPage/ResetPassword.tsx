@@ -1,11 +1,11 @@
 import React from "react";
-import LoginOverlay from "./LoginOverlay";
+import LoginOverlay from "../../components/Overlay/Overlay";
 import Button from "../../components/Buttons/buttonOrder";
 
 const ResetPassword = () => {
   return (
     <LoginOverlay>
-      <div className="w-4/12">
+      <div className="w-4/12 px-15px">
         <div className="text-28 leading-normal font-bold font-opensans pb-15px text-center">Reset password</div>
         <div className="text-[#424242] text-18 leading-normal font-opensans pb-30px text-center">Create your Password and Explore.</div>
         <div className="pb-40px">
@@ -32,7 +32,7 @@ const ResetPassword = () => {
             <Button className="bg-primaryColor w-full h-50px text-20 leading-unset font-bold text-white rounded-15px font-opensans" Title="Create password" />
         </div>
       </div>
-      <div className="w-8/12"></div>
+      <div className="w-8/12 px-15px"></div>
     </LoginOverlay>
   );
 };

@@ -4,10 +4,10 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import { ROUTE_NAME, routes } from "../pages/index.ts";
+import { ROUTE_NAME, routes } from "../Pages/typesRoute";
 import Header from "../components/header/Header.tsx";
 import Footer from "../components/footer/Footer.tsx";
-import Loader from "../components/loader/Loader.tsx";
+import Loader from "../components/loader/Loader.jsx";
 import { useSelector } from "react-redux";
 
 const RootComponent = () => {
@@ -19,7 +19,6 @@ const RootComponent = () => {
     if (isPublic && isAuthenticated) {
       return <Navigate to={defaultRoute} replace />;
     }
-
     if (!isPublic && !isAuthenticated) {
       return <Navigate to={ROUTE_NAME.LOGIN} replace />;
     }

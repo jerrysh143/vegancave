@@ -4,10 +4,10 @@ module.exports = {
     extend: {
       colors: {
         primaryColor: '#2BB672',
-        backgroundColor: '#FAFAFF',
         inputBorder: '#E0E0E0',
         rateColor: '#EE140A',
         borderColor: '#B6B6B6',
+        paraColor: '#525560',
       },
       backgroundImage: {
         bannerGrad: "linear-gradient(40deg, rgba(255,255,255,1) 20%, rgba(217,217,217,0.7) 100%)",
@@ -60,9 +60,12 @@ module.exports = {
         28: '28px',
         32: '32px',
         36: '36px',
+        40: '40px',
         48: '48px',
         56: '56px',
+        75: '75px',
         95: '95px',
+        108:'108px',
         unset: 'unset',
       },
       lineHeight: {
@@ -78,8 +81,10 @@ module.exports = {
         28: '28px',
         32: '32px',
         36: '36px',
+        40: '40px',
         48: '48px',
         56: '56px',
+        75: '75px',
         95: '95px',
       },
       zIndex: {
