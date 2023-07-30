@@ -1,9 +1,9 @@
 import React from "react";
 import MailIcon from "../../images/Icons/mailIcon";
 import Button from "../../components/Buttons/buttonOrder";
-import LoginOverlay from "./LoginOverlay";
+import LoginOverlay from "../../components/Overlay/Overlay";
 import { Link } from "react-router-dom";
-import { ROUTE_NAME } from "../";
+import { ROUTE_NAME } from "../typesRoute";
 
 const Login = () => {
   return (

@@ -8,7 +8,7 @@ import InstagramIcon from "../../images/Icons/instagramIcon";
 
 const Footer = () => {
   return (
-      <div className="bg-backgroundColor">
+      <div className="bg-[rgba(43,182,114,0.07)]">
         <div className="max-w-[1530px] mx-auto py-30px xl:pt-50px xl:pb-[88px]">
           <div className="flex flex-wrap">
             <div className="w-full 2xl:w-3/12 px-15px flex flex-col items-center 2xl:items-start">

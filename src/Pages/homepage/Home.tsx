@@ -352,7 +352,7 @@ const Home = () => {
                 </div>
                 <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
                   <div className="flex flex-wrap w-9/12">
-                    <div className="ttext-18 md:text-26 leading-normal font-bold pb-[7px]">
+                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -402,13 +402,13 @@ const Home = () => {
                   <img
                     src={OrderImage}
                     alt=""
-                    className="w-full h-full object-cover flex rounded-35px lg:rounded-tl-35px lg:rounded-tr-35px"
+                    className="w-full h-full object-cover flex rounded-20px lg:rounded-35px"
                   />
                 </div>
                 <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
-                <div className="z-10 text-center bg-imageGrad w-full h-auto">
+                <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
                   <div className="text-36 leading-normal font-bold text-white pb-[11px]">
                     Mutligrain Idli
                   </div>
@@ -424,13 +424,13 @@ const Home = () => {
                   <img
                     src={OrderImage1}
                     alt=""
-                    className="w-full h-full object-cover flex rounded-35px lg:rounded-tl-35px lg:rounded-tr-35px"
+                    className="w-full h-full object-cover flex rounded-20px lg:rounded-35px"
                   />
                 </div>
                 <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
-                <div className="z-10 text-center bg-imageGrad w-full h-auto">
+                <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
                   <div className="text-36 leading-normal font-bold text-white pb-[11px]">
                     Sprouts Salad
                   </div>
@@ -446,13 +446,13 @@ const Home = () => {
                   <img
                     src={OrderImage2}
                     alt=""
-                    className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
+                    className="w-full h-full object-cover flex rounded-20px lg:rounded-35px"
                   />
                 </div>
                 <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
-                <div className="z-10 text-center bg-imageGrad w-full h-auto">
+                <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
                   <div className="text-36 leading-normal font-bold text-white pb-[11px] px-15px">
                     Overnight Soaked Salad
                   </div>
@@ -468,13 +468,13 @@ const Home = () => {
                   <img
                     src={OrderImage3}
                     alt=""
-                    className="w-full h-full object-cover flex rounded-tl-35px rounded-tr-35px"
+                    className="w-full h-full object-cover flex rounded-20px lg:rounded-35px"
                   />
                 </div>
                 <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
-                <div className="z-10 text-center bg-imageGrad w-full h-auto">
+                <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
                   <div className="text-36 leading-normal font-bold text-white pb-[11px]">
                     Ragi Toast
                   </div>

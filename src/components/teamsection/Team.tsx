@@ -40,7 +40,7 @@ const Team = () => {
     <>
       {TeamData.map((e) => (
         <>
-          <div className="px-70px mb-100px odd:last:mb-0 even:last:mb-0 w-6/12 group">
+          <div className="px-70px mb-100px odd:last:mb-0 even:last:mb-0 w-full sm:w-6/12 group">
             <div className="text-center">
               <div className="pb-45px">
                 <img

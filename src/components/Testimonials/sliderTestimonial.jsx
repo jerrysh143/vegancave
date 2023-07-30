@@ -1,7 +1,6 @@
 import React from "react";
 import SliderCard from "./SliderCard";
 import Slider from "react-slick";
-// import ArrowSlider from "../../images/Icons/ArrowSlider";
 
 export default function SliderTestimonial() {
   var settings = {
@@ -16,7 +15,6 @@ export default function SliderTestimonial() {
     <Slider {...settings}>
       <div className="">
         <SliderCard
-          ImagePath="AuthorImage.jpg"
           Description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus."'
           Author="Willians Jhone"
           Position="CEO & Co-Founder"
@@ -24,7 +22,6 @@ export default function SliderTestimonial() {
       </div>
       <div className="">
         <SliderCard
-          ImagePath="AuthorImage.jpg"
           Description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus."'
           Author="1Willians Jhone"
           Position="1CEO & Co-Founder"
@@ -32,7 +29,6 @@ export default function SliderTestimonial() {
       </div>
       <div className="">
         <SliderCard
-          ImagePath="AuthorImage.jpg"
           Description='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus."'
           Author="2Willians Jhone"
           Position="2CEO & Co-Founder"

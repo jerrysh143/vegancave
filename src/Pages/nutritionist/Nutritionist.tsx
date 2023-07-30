@@ -1,7 +1,13 @@
 import React from "react";
 
 const Nutritionist = () => {
-  return <div>Nutritionist</div>;
+  return (
+    <>
+      <div>
+        nutrition
+      </div>
+    </>
+  );
 };
 
 export default Nutritionist;
