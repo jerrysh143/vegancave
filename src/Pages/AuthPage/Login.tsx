@@ -8,7 +8,7 @@ import { ROUTE_NAME } from "../typesRoute";
 const Login = () => {
   return (
     <LoginOverlay>
-      <div className="w-4/12">
+      <div className="w-4/12 px-15px">
         <div className="text-28 leading-normal pb-40px font-bold font-opensans">
           Login
         </div>
@@ -53,7 +53,7 @@ const Login = () => {
           </Link>
         </div>
       </div>
-      <div className="w-8/12"></div>
+      <div className="w-8/12 px-15px"></div>
     </LoginOverlay>
   );
 };

@@ -35,7 +35,7 @@ export const routes: RouteType[] = [
     path: ROUTE_NAME.NUTRITIONIST,
     name: "Nutritionist",
     component: lazy(() => import("./nutritionist/Nutritionist")),
-    isPublic: false,
+    isPublic: true,
   },
   {
     path: ROUTE_NAME.STORE,

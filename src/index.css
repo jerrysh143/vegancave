@@ -183,6 +183,16 @@ body {
     @apply fill-mode-both !animation-duration-4s;
   } */
 
+.markers:before {
+  content: '';
+  background: url(/src/images/Icons/MarkerIcon.svg) no-repeat left center / contain;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 0;
+  left: -48px;
+}
+
 @media (max-width: 768px) {
   body nav {
     height: auto;

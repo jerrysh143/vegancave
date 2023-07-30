@@ -11,7 +11,7 @@ const About = () => {
   // const [Play, setAutoPlay] = useState(false);
   return (
     <>
-      <div className="py-30px sm:py-50px lg:py-70px xl:pt-[116px] xl:pb-70px">
+      <div className="py-30px sm:py-40px lg:py-70px xl:pt-[116px] xl:pb-70px">
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full 992:w-6/12 px-15px">
@@ -46,7 +46,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="py-30px sm:py-50px lg:py-70px">
+      <div className="pt-30px pb-0 sm:py-40px lg:py-70px">
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px flex-col-reverse 992:flex-row">
             <div className="w-full 992:w-6/12 xl:w-5/12 px-15px">
@@ -74,7 +74,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="py-30px sm:py-50px lg:pt-70px">
+      <div className="pt-0 pb-30px sm:py-40px lg:py-70px">
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full text-center px-15px">
@@ -104,19 +104,19 @@ const About = () => {
         </div>
         <div className="w-full h-full text-center absolute top-0 left-0 before:content-[''] before:w-full before:h-full before:bg-[rgba(43,182,114,0.5)] before:absolute before:top-0 before:left-0">
           <div className="relative z-10 flex flex-col justify-center items-center h-full">
-            <div className="text-108 leading-normal text-white font-medium">
+            <div className="text-48 leading-[48px] lg:text-108 lg:leading-normal text-white font-medium">
               It looks delicious
             </div>
             <p className="text-16 md:text-20 xl:text-24 leading-24 text-white pb-80px">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <div className="w-[134px] h-[134px] border-2 border-white rounded-full bg-black/50 flex items-center justify-center">
+            <div className="w-100px h-100px lg:w-[134px] lg:h-[134px] border-2 border-white rounded-full bg-black/50 flex items-center justify-center">
               <img src={PlayIcon} alt="" />
             </div>
           </div>
         </div>
       </div>
-      <div className="py-70px">
+      <div className="py-30px sm:py-40px lg:py-70px">
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full px-15px text-center">
@@ -147,11 +147,11 @@ const About = () => {
             </div>
           </div>
           <div className="flex flex-wrap -mx-15px">
-            <div className="w-6/12 px-15px">
-              <img src={ProcessImage} alt="" />
+            <div className="w-full 992:w-6/12 px-15px">
+              <img className="mx-auto lg:m-0" src={ProcessImage} alt="" />
             </div>
-            <div className="w-6/12 px-15px">
-              <div className="text-16 md:text-20 xl:text-24 leading-32 font-medium text-paraColor">
+            <div className="w-full 992:w-6/12 px-15px">
+              <div className="text-16 md:text-20 xl:text-24 leading-32 font-medium text-paraColor pt-15px lg  :pt-0">
                 Whether you are a dedicated vegan, an adventurous food lover, or
                 simply seeking a remarkable dining experience, VeganCave
                 Restaurant invites you to savor the richness of plant-based

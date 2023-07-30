@@ -58,7 +58,7 @@ const SignUp = () => {
         }}
       >
         <>
-          <Form className="w-4/12">
+          <Form className="w-4/12 px-15px">
             <div className="text-28 leading-normal pb-40px font-bold font-opensans text-center">
               Sign up
             </div>
@@ -148,7 +148,7 @@ const SignUp = () => {
               </Link>
             </div>
           </Form>
-          <div className="w-8/12"></div>
+          <div className="w-8/12 px-15px"></div>
         </>
       </Formik>
     </LoginOverlay>
