@@ -12,7 +12,8 @@ module.exports = {
       backgroundImage: {
         bannerGrad: "linear-gradient(40deg, rgba(255,255,255,1) 20%, rgba(217,217,217,0.7) 100%)",
         imageGrad: "linear-gradient(0deg, rgba(20,6,6,1) 0%, rgba(217,217,217,0) 100%)",
-        arrowIcon: 'url(./src/images/Icons/ArrowSlider.svg)'
+        arrowIcon: 'url(./src/images/Icons/ArrowSlider.svg)',
+        Marker: 'linear-gradient(180deg, rgba(212,96,93,1) 33%, rgba(206,134,121,1) 54%, rgba(191,175,143,1) 71%);',
       },
       boxShadow: {
         cardShadow: "0 0 0 31px rgba(0,0,0,0.5)"
@@ -63,8 +64,10 @@ module.exports = {
         40: '40px',
         48: '48px',
         56: '56px',
+        70: '70px',
         75: '75px',
         95: '95px',
+        100:'100px',
         108:'108px',
         unset: 'unset',
       },
@@ -84,6 +87,7 @@ module.exports = {
         40: '40px',
         48: '48px',
         56: '56px',
+        70: '70px',
         75: '75px',
         95: '95px',
       },
@@ -108,6 +112,7 @@ module.exports = {
         500: '500px',
         768: '768px',
         992: '992px',
+        1024: '1024px',
         1200: '1200px',
         1300: '1300px',
         1400: '1400px',

@@ -193,6 +193,47 @@ body {
   left: -48px;
 }
 
+@media(max-width: 1024px) {
+  .showInput {
+    @apply w-[calc(100vw_-_60px)] translate-y-0 opacity-100 duration-[0.5s] transition-all absolute xl:static -bottom-[90px] -right-60px;
+  }
+
+  .hideInput {
+    @apply absolute right-0 -bottom-[90px] -translate-y-0 opacity-0 w-0 h-0 transition-all duration-[0.5s];
+  }
+
+  .closeIcon {
+    animation: Close-in 0.5s ease 0s 1 normal forwards;
+  }
+
+  .searchIcon {
+    animation: Close-in 0.5s ease 0s 1 normal forwards;
+  }
+  @keyframes Close-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes Close-out {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
+}
+
 @media (max-width: 768px) {
   body nav {
     height: auto;
