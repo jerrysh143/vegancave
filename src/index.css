@@ -13,33 +13,6 @@
   --primaryColor: #2BB672;
 }
 
-/* @layer utilities {
-  .fill-mode-both {
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-  }
-
-  .animation-duration-1s {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-  }
-
-  .animation-duration-2s {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-  }
-
-  .animation-duration-3s {
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-  }
-
-  .animation-duration-4s {
-    -webkit-animation-duration: 4s;
-    animation-duration: 4s;
-  }
-} */
-
 body {
   font-family: var(--montserrat);
   font-size: inherit;
@@ -191,6 +164,14 @@ body {
   position: absolute;
   top: 0;
   left: -48px;
+}
+
+@media (max-width:767px) {
+  .markers:before {
+    width: 20px;
+    height: 20px;
+    left: -30px;
+  }  
 }
 
 @media(max-width: 1024px) {

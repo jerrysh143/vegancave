@@ -55,16 +55,16 @@ export default function Header() {
               <input
                 type="search"
                 placeholder="Search"
-                className={`text-black lg:translate-x-0 xl:w-full lg:w-[293px] lg:opacity-100 lg:static md:h-[60px] placeholder:text-black shadow-[0_0_17px_rgba(0,0,0,0.15)] bg-white rounded-10px focus:outline-0 pl-[30px] pr-[30px] lg:pl-[72px] lg:pr-[75px] text-18 font-semibold xl:block ${
+                className={`text-black lg:translate-x-0 md:w-full lg:w-[293px] lg:opacity-100 lg:static md:h-[60px] placeholder:text-black shadow-[0_0_17px_rgba(0,0,0,0.15)] bg-white rounded-10px focus:outline-0 pl-[30px] pr-[30px] lg:pl-[72px] lg:pr-[75px] text-18 font-semibold xl:block ${
                   Search
-                    ? "w-[290px] translate-x-0 opacity-100 duration-300 transition-all absolute xl:static -bottom-[60px] -right-60px"
+                    ? "translate-x-0 opacity-100 duration-300 transition-all rounded-0 h-40px shadow-[0px_3px_4px_0px_rgba(0,0,0,0.2)] w-screen absolute xl:static -bottom-[60px] -right-60px"
                     : "absolute -translate-x-70px opacity-0 w-0 h-0 transition-all"
                 }`}
               />
               <AddUserIcon className="hidden lg:block absolute top-[19px] right-20px" />
             </div>
             <div
-              className={`ml-10px mr-0px md:ml-10px block lg:hidden cursor-pointer z-50 ${
+              className={`ml-0 mr-0px md:ml-10px block lg:hidden cursor-pointer z-50 ${
                 Menu ? "opened" : ""
               }`}
               onClick={() => {
