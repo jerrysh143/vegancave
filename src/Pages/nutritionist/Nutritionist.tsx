@@ -357,11 +357,11 @@ const Nutritionist = () => {
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap clear-both">
             <div className="w-full">
-              <div className="relative w-[463px] h-[108px] inline-flex items-center justify-center pb-40px">
-                <span className="absolute text-100 text-normal font-bold text-[#F5F5F5] -z-1">
+              <div className="relative w-full md:w-[463px] h-full md:h-[108px] inline-flex items-center justify-center pb-15px md:pb-40px">
+                <span className="absolute text-[45px] md:text-100 text-normal font-bold text-[#F5F5F5] -z-1">
                   RESULTS
                 </span>
-                <span className="text-32 leading-32 font-semibold">
+                <span className="text-18 md:text-32 leading-32 font-semibold">
                   VeganCave Reviews
                 </span>
               </div>
