@@ -1,5 +1,5 @@
 import React from "react";
-import LoginOverlay from "./LoginOverlay";
+import LoginOverlay from "../../components/Overlay/Overlay";
 import MailIcon from "../../images/Icons/mailIcon";
 import Button from "../../components/Buttons/buttonOrder";
 import { Link, useNavigate } from "react-router-dom";
@@ -65,7 +65,7 @@ const SignUp = () => {
         }}
       >
         <>
-          <Form className="w-4/12">
+          <Form className="w-4/12 px-15px">
             <div className="text-28 leading-normal pb-40px font-bold font-opensans text-center">
               Sign up
             </div>
@@ -155,7 +155,7 @@ const SignUp = () => {
               </Link>
             </div>
           </Form>
-          <div className="w-8/12"></div>
+          <div className="w-8/12 px-15px"></div>
         </>
       </Formik>
     </LoginOverlay>
