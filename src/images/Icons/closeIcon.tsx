@@ -10,8 +10,8 @@ const CloseIcon = (props:ClassPropsIcon) => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
-        width="512"
-        height="512"
+        width="32"
+        height="33"
         x="0"
         y="0"
         viewBox="0 0 32 32"
