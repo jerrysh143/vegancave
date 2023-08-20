@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ROUTE_NAME } from "../../Pages/typesRoute";
+import { ROUTE_NAME } from "../../pages/typesRoute";
 
 interface MenuProps {
   className?: string;

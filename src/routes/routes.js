@@ -1,13 +1,13 @@
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import {
   createBrowserRouter,
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import { ROUTE_NAME, routes } from "../pages/";
 import Loader from "../components/loader/Loader";
 import { useSelector } from "react-redux";
 import Layout from "../components/layout/Layout";
+import { ROUTE_NAME, routes } from "../pages/typesRoute";
 
 const RootComponent = () => {
   const isAuthenticated = useSelector((store) => store.user.isLoggedIn);

@@ -10,7 +10,7 @@ import CloseIcon from "../../images/Icons/closeIcon";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
-import { ROUTE_NAME } from "../../Pages/typesRoute";
+import { ROUTE_NAME } from "../../pages/typesRoute";
 
 export default function Header() {
   const [Menu, setMenu] = useState(false);
@@ -36,7 +36,9 @@ export default function Header() {
               }`}
             />
             <div className="max-w-32px px-15px md:px-0">
-            <Link to={ROUTE_NAME.STORE}><CartIcon className="w-30px md:w-auto" /></Link>
+              <Link to={ROUTE_NAME.STORE}>
+                <CartIcon className="w-30px md:w-auto" />
+              </Link>
             </div>
             <div className="w-auto max-w-fit xl:max-w-[300px] 2xl:max-w-[393px] h-[65px] md:ml-[15px] lg:ml-[27px] relative flex items-center">
               <div

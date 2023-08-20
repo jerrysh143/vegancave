@@ -3,11 +3,11 @@ import MailIcon from "../../images/Icons/mailIcon";
 import Button from "../../components/Buttons/buttonOrder";
 import LoginOverlay from "./LoginOverlay";
 import { Link, useNavigate } from "react-router-dom";
-import { ROUTE_NAME } from "../";
 import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { login } from "../../services/auth.js";
 import { TOAST_TYPE, notify, setToken } from "../../utils/utils";
+import { ROUTE_NAME } from "../typesRoute";
 
 const Login = () => {
   const navigate = useNavigate();
