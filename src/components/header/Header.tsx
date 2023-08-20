@@ -119,7 +119,7 @@ const Header = () => {
         }`}
     >
       <div className="w-full max-w-full 1600:w-[1530px] mx-auto">
-        <div className="flex flex-wrap justify-between items-center">
+        <div className="flex flex-wrap justify-between items-center z-[999]">
           <div className="w-2/12 md:w-5/12 px-15px flex justify-start">
             <div
               className={`block cursor-pointer z-[999] ${Menu ? "opened absolute top-30px left-20px" : ""
@@ -161,14 +161,14 @@ const Header = () => {
             <div className="">
               <div className="">
                 <div className="rounded-full border-2 border-black">
-                  <Link to={ROUTE_NAME.LOGIN}>
+                  <Link className="cursor-pointer" to={ROUTE_NAME.LOGIN}>
                     <UserIcon class="border-2 rounded-full" />
                   </Link>
                 </div>
               </div>
             </div>
             <div className="max-w-32px md:px-15px px-0">
-              <Link to={ROUTE_NAME.STORE}>
+              <Link className="cursor-pointer" to={ROUTE_NAME.STORE}>
                 <CartIcon className="w-25px" />
               </Link>
             </div>
@@ -190,9 +190,9 @@ const Header = () => {
               }}
             >
               {Search ? (
-                <CloseIcon className="w-30px block fixed top-30px right-30px" />
+                <CloseIcon className="w-30px block fixed top-30px right-30px cursor-pointer" />
               ) : (
-                <SearchIcon className="w-30px md:cursor-pointer xl:cursor-auto" />
+                <SearchIcon className="w-30px md:cursor-pointer xl:cursor-auto cursor-pointer" />
               )}
             </div>
           </div>
