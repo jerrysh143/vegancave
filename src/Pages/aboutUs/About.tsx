@@ -3,7 +3,7 @@ import React from "react";
 import AboutBanner from "../../images/aboutBanner.jpg";
 import StoryImage from "../../images/ourStoryImage.jpg";
 import Team from "../../components/teamsection/Team";
-// import SliderABout from "../../components/ABoutslide/sliderCards";
+import SliderABout from "../../components/ABoutslide/sliderCards";
 import PlayIcon from "../../images/Icons/PlayIcon.svg";
 import ProcessImage from "../../images/ProcessImage.jpg";
 
@@ -40,7 +40,7 @@ const About = () => {
                 </p>
               </div>
               <div className="w-full -mx-15px">
-                <div className="">{/* <SliderABout /> */}</div>
+                <div className=""><SliderABout /></div>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ const About = () => {
             <p className="text-16 md:text-20 xl:text-24 leading-24 text-white pb-80px">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <div className="w-100px h-100px lg:w-[134px] lg:h-[134px] border-2 border-white rounded-full bg-black/50 flex items-center justify-center">
+            <div className="w-100px h-100px lg:w-[134px] lg:h-[134px] border-2 border-white rounded-full bg-black/50 flex items-center justify-center cursor-pointer">
               <img src={PlayIcon} alt="" />
             </div>
           </div>

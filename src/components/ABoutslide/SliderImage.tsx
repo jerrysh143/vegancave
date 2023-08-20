@@ -7,7 +7,7 @@ interface ImageContentProps {
 const SliderContent = (props: ImageContentProps) => {
   return (
     <>
-      {/* <img className="w-full h-full" src={props.Image} alt="" /> */}
+      <img className="w-full h-full rounded-lg" src={props.Image} alt="" />
     </>
   );
 };
