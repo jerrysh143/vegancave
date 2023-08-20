@@ -405,7 +405,7 @@ const Home = () => {
                     className="w-full h-full object-cover flex rounded-20px lg:rounded-35px"
                   />
                 </div>
-                <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                <div className="relative z-10 w-70px h-40px md:w-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
                 <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
@@ -427,7 +427,7 @@ const Home = () => {
                     className="w-full h-full object-cover flex rounded-20px lg:rounded-35px"
                   />
                 </div>
-                <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                <div className="relative z-10 w-70px h-40px md:w-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
                 <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
@@ -449,7 +449,7 @@ const Home = () => {
                     className="w-full h-full object-cover flex rounded-20px lg:rounded-35px"
                   />
                 </div>
-                <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                <div className="relative z-10 w-70px h-40px md:w-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
                 <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
@@ -471,7 +471,7 @@ const Home = () => {
                     className="w-full h-full object-cover flex rounded-20px lg:rounded-35px"
                   />
                 </div>
-                <div className="relative z-10 w-70px h-70px md:w-100px md:h-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
+                <div className="relative z-10 w-70px h-40px md:w-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
                 <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">

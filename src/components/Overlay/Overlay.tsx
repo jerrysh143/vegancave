@@ -7,7 +7,7 @@ interface Props {
 
 const Overlay = (props:Props) => {
   return (
-    <div className="h-[calc(100dvh_-_133px)]">
+    <div className="h-[calc(100dvh_-_133px)] -z-[1]">
       <div className="absolute right-0 top-0 z-0 h-full">
         <img className="w-full h-full" src={LoginBackground} alt="" />
       </div>

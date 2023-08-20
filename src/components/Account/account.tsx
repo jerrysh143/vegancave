@@ -1,13 +1,15 @@
 import React from 'react'
 
-const Store = () => {
+const Account = () => {
   return (
     <div className=''>
       <div className=''>
-        
+        <div className=''>
+
+        </div>
       </div>
     </div>
   )
 }
 
-export default Store
+export default Account

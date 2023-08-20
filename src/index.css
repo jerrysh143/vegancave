@@ -20,6 +20,9 @@ body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: 50px;
+  scroll-snap-stop: 10px;
 }
 
 .slick-prev,
@@ -164,6 +167,20 @@ body {
   position: absolute;
   top: 0;
   left: -48px;
+}
+body.active {
+  overflow: hidden;
+}
+body.active:after {
+  content: '';
+  width: 100vw;
+  height: 100dvh;
+  background: var(--primaryColor);
+  opacity: 0.4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
 @media (max-width:767px) {

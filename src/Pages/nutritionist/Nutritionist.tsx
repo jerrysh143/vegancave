@@ -65,7 +65,7 @@ const Nutritionist = () => {
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap -mx-15px items-center">
             <div className="w-full md:w-6/12 px-15px">
-            <div className="relative w-full mb-15px md:mb-70px">
+              <div className="relative w-full mb-15px md:mb-70px">
                 <div className="text-26 md:text-40 md:leading-40 z-10 font-medium text-center w-full absolute top-[5px] lg:top-[55px] md:left-70px">
                   Why healthy
                 </div>
@@ -100,11 +100,13 @@ const Nutritionist = () => {
               <div className="w-full">
                 <div className="w-full flex flex-wrap items-end mb-15px md:mb-25px">
                   <div className="w-6/12">
-                    <img
-                      className="w-full h-[195px] md:h-auto object-cover  mt-0 lg:mt-[250px] pr-15px md:pr-25px rounded-20px"
-                      src={SectionHealthyImage1}
-                      alt=""
-                    />
+                    <div className="mr-15px md:mr-25px">
+                      <img
+                        className="w-full h-[195px] md:h-auto object-cover  mt-0 lg:mt-[250px] rounded-20px"
+                        src={SectionHealthyImage1}
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <div className="w-6/12">
                     <img
