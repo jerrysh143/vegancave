@@ -157,7 +157,7 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div className="w-4/12 md:w-5/12 px-15px flex items-center justify-end gap-15px">
+          <div className="w-4/12 md:w-5/12 z-[99] px-15px flex items-center justify-end gap-15px">
             <div className="">
               <div className="">
                 <div className="rounded-full border-2 border-black">

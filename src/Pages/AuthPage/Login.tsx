@@ -13,9 +13,9 @@ const Login = () => {
           Login
         </div>
         <div className="relative pb-40px">
-          <p className="text-18 leading-6 font-normal font-opensans pb-5px">
+          <label className="text-18 leading-6 font-normal font-opensans pb-5px">
             Email
-          </p>
+          </label>
           <input
             type="email"
             placeholder="abc@gmail.com"
@@ -26,9 +26,9 @@ const Login = () => {
           </div>
         </div>
         <div>
-          <p className="text-18 leading-6 font-normal font-opensans pb-5px">
+          <label className="text-18 leading-6 font-normal font-opensans pb-5px">
             Password
-          </p>
+          </label>
           <input
             type="password"
             placeholder="*******"
