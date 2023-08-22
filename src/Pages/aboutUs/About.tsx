@@ -6,6 +6,7 @@ import Team from "../../components/teamsection/Team";
 import SliderABout from "../../components/ABoutslide/sliderCards";
 import PlayIcon from "../../images/Icons/PlayIcon.svg";
 import ProcessImage from "../../images/ProcessImage.jpg";
+import Sliderabout from "../../components/ABoutslide/sliderCards";
 
 const About = () => {
   // const [Play, setAutoPlay] = useState(false);
@@ -16,7 +17,7 @@ const About = () => {
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full 992:w-6/12 px-15px">
               <div className="w-full">
-                <img src={AboutBanner} alt="" className="w-full h-[400px] sm:h-[500px] 992:h-full object-cover rounded-10px md:rounded-35px" />
+                <img src={AboutBanner} alt="" className="w-full h-[400px] sm:h-[500px] 992:h-[885px] object-cover rounded-10px md:rounded-35px" />
               </div>
             </div>
             <div className="w-full 992:w-6/12 px-15px">
@@ -39,8 +40,8 @@ const About = () => {
                   laboris nisi ut.
                 </p>
               </div>
-              <div className="w-full -mx-15px">
-                <div className=""><SliderABout /></div>
+              <div className="w-full h-full -mx-15px">
+                <div className="pt-[160px]"><Sliderabout /></div>
               </div>
             </div>
           </div>
@@ -148,7 +149,7 @@ const About = () => {
           </div>
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full 992:w-6/12 px-15px">
-              <img className="mx-auto lg:m-0" src={ProcessImage} alt="" />
+              <img className="mx-auto lg:m-0 rounded-20px" src={ProcessImage} alt="" />
             </div>
             <div className="w-full 992:w-6/12 px-15px">
               <div className="text-16 md:text-20 xl:text-24 leading-32 font-medium text-paraColor pt-15px lg  :pt-0">

@@ -183,7 +183,7 @@ body.active:after {
   z-index: 9;
 }
 .slick-track {
-  @apply flex gap-20px
+  @apply flex gap-20px items-center w-full h-full;
 }
 @media (max-width:767px) {
   .markers:before {

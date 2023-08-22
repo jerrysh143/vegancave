@@ -52,7 +52,9 @@ const Team = () => {
               <div className="text-26 md:text-48 leading-48 font-semibold pb-5px md:pb-30px">
                 {e.Author}
               </div>
-              <div className="text-20 md:text-[30px] lg:text-48 leading-28 md:leading-56 pb-10px md:pb-30px font-semibold">{e.Position}</div>
+              <div className="text-18 md:text-20 lg:text-28 leading-28 md:leading-56 pb-10px md:pb-30px font-semibold">
+                {e.Position}
+              </div>
               <p className="text-24px leading-24 max-w-xl mx-auto w-full font-medium">
                 {e.Description}
               </p>

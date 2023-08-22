@@ -3,7 +3,7 @@ import SliderContent from "./SliderImage.tsx";
 import Slider from "react-slick";
 import Slide1 from "../../images/AboutSlide1.jpg";
 import Slide2 from "../../images/AboutSlide2.jpg";
-import Slide3 from "../../images/AboutSlide3.jpg";
+import AboutSlide from "../../images/Icons/aboutSlide.tsx";
 
 const SlideImage = [
   { Image: Slide1 }
@@ -12,19 +12,20 @@ const SlideImage2 = [
     { Image: Slide2 },
   ];
   const SlideImage3 = [
-    { Image: Slide3 },
-  ];
-  const SlideImage4 = [
     { Image: Slide1 },
   ];
+  const SlideImage4 = [
+    { Image: Slide2 },
+  ];
   const SlideImage5 = [
-    { Image: Slide3 },
+    { Image: Slide1 },
   ];
 
-export default function SliderABout() {
+export default function Sliderabout() {
   var settings = {
     dots: false,
-    arrow: true,
+    nextArrow: <AboutSlide className="" />,
+    prevArrow: <AboutSlide className="" />,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
