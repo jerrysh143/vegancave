@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/Buttons/buttonHome";
 import ArrowIcon from "../../images/Icons/leftArrowIcon";
 import BurgerImage from "../../images/burger_sandwich.png";
@@ -34,6 +34,10 @@ import FoodComboImage from "../../images/foodComboImage.png";
 import BurgerCTAImage from "../../images/burgerCtaImage.png";
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {}, []);
+
   return (
     <>
       <div className="">

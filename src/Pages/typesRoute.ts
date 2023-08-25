@@ -10,6 +10,8 @@ export const ROUTE_NAME = {
   STORE: "/store",
   LOGIN: "/login",
   SIGNUP: "/signup",
+  CART: "/cart",
+  PROFILE: "/profile",
 };
 
 export const routes: RouteType[] = [
@@ -54,5 +56,17 @@ export const routes: RouteType[] = [
     name: "SignUp",
     component: lazy(() => import("./AuthPage/SignUp")),
     isPublic: true,
+  },
+  {
+    path: ROUTE_NAME.CART,
+    name: "Cart",
+    component: lazy(() => import("./AuthPage/SignUp")),
+    isPublic: true,
+  },
+  {
+    path: ROUTE_NAME.PROFILE,
+    name: "Profile",
+    component: lazy(() => import("./AuthPage/SignUp")),
+    isPublic: false,
   },
 ];

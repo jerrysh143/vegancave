@@ -51,14 +51,14 @@ const Login = () => {
         }}
       >
         <>
-          <Form className="w-4/12">
+          <Form className="w-4/12  px-15px">
             <div className="text-28 leading-normal pb-40px font-bold font-opensans">
               Login
             </div>
             <div className="relative pb-40px">
-              <p className="text-18 leading-6 font-normal font-opensans pb-5px">
+              <label className="text-18 leading-6 font-normal font-opensans pb-5px">
                 Email
-              </p>
+              </label>
               <Field
                 type="email"
                 name="username"
@@ -71,9 +71,9 @@ const Login = () => {
               </div>
             </div>
             <div>
-              <p className="text-18 leading-6 font-normal font-opensans pb-5px">
+              <label className="text-18 leading-6 font-normal font-opensans pb-5px">
                 Password
-              </p>
+              </label>
               <Field
                 type="password"
                 name="password"
@@ -89,7 +89,6 @@ const Login = () => {
               <Button
                 className="bg-primaryColor w-full h-50px text-20 leading-unset font-bold text-white rounded-15px font-montserratbg-primaryColor font-montserrat"
                 Title="Login"
-                type="submit"
               />
             </div>
             <div className="text-18 font-normal font-opensans text-[#616161] flex justify-center pt-40px">

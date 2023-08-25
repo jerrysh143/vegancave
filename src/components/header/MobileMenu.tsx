@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ROUTE_NAME } from "../../pages/typesRoute";
+import { ROUTE_NAME } from "../../Pages/typesRoute";
 
 interface MenuProps {
   className?: string;
@@ -24,7 +24,7 @@ const MobileMenu = (props: MenuProps) => {
         <li className="hover:bg-primaryColor/30 hover:text-primaryColor font-bold w-full text-center text-26 leading-[34px]">
           <Link
             className="w-full h-full block py-10px px-30px text-left"
-            to={ROUTE_NAME.HOME}
+            to={ROUTE_NAME.STORE}
           >
             Menu
           </Link>

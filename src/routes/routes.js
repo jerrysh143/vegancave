@@ -7,7 +7,7 @@ import {
 import Loader from "../components/loader/Loader";
 import { useSelector } from "react-redux";
 import Layout from "../components/layout/Layout";
-import { ROUTE_NAME, routes } from "../pages/typesRoute";
+import { ROUTE_NAME, routes } from "../Pages/typesRoute";
 
 const RootComponent = () => {
   const isAuthenticated = useSelector((store) => store.user.isLoggedIn);

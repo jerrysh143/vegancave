@@ -3,9 +3,9 @@ import React from "react";
 import AboutBanner from "../../images/aboutBanner.jpg";
 import StoryImage from "../../images/ourStoryImage.jpg";
 import Team from "../../components/teamsection/Team";
-// import SliderABout from "../../components/ABoutslide/sliderCards";
 import PlayIcon from "../../images/Icons/PlayIcon.svg";
 import ProcessImage from "../../images/ProcessImage.jpg";
+import Sliderabout from "../../components/Aboutslide/sliderCards";
 
 const About = () => {
   // const [Play, setAutoPlay] = useState(false);
@@ -16,7 +16,11 @@ const About = () => {
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full 992:w-6/12 px-15px">
               <div className="w-full">
-                <img src={AboutBanner} alt="" className="w-full h-[400px] sm:h-[500px] 992:h-full object-cover rounded-10px md:rounded-35px" />
+                <img
+                  src={AboutBanner}
+                  alt=""
+                  className="w-full h-[400px] sm:h-[500px] 992:h-[885px] object-cover rounded-10px md:rounded-35px"
+                />
               </div>
             </div>
             <div className="w-full 992:w-6/12 px-15px">
@@ -39,8 +43,10 @@ const About = () => {
                   laboris nisi ut.
                 </p>
               </div>
-              <div className="w-full -mx-15px">
-                <div className="">{/* <SliderABout /> */}</div>
+              <div className="w-full h-full -mx-15px">
+                <div className="pt-[160px]">
+                  <Sliderabout />
+                </div>
               </div>
             </div>
           </div>
@@ -68,7 +74,11 @@ const About = () => {
             </div>
             <div className="w-full 992:w-6/12 xl:w-7/12 px-15px">
               <div>
-                <img className="w-full h-[400px] sm:h-[400px] 992:h-full object-cover rounded-10px md:rounded-35px" src={StoryImage} alt="" />
+                <img
+                  className="w-full h-[400px] sm:h-[400px] 992:h-full object-cover rounded-10px md:rounded-35px"
+                  src={StoryImage}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -110,7 +120,7 @@ const About = () => {
             <p className="text-16 md:text-20 xl:text-24 leading-24 text-white pb-80px">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <div className="w-100px h-100px lg:w-[134px] lg:h-[134px] border-2 border-white rounded-full bg-black/50 flex items-center justify-center">
+            <div className="w-100px h-100px lg:w-[134px] lg:h-[134px] border-2 border-white rounded-full bg-black/50 flex items-center justify-center cursor-pointer">
               <img src={PlayIcon} alt="" />
             </div>
           </div>
@@ -148,7 +158,11 @@ const About = () => {
           </div>
           <div className="flex flex-wrap -mx-15px">
             <div className="w-full 992:w-6/12 px-15px">
-              <img className="mx-auto lg:m-0" src={ProcessImage} alt="" />
+              <img
+                className="mx-auto lg:m-0 rounded-20px"
+                src={ProcessImage}
+                alt=""
+              />
             </div>
             <div className="w-full 992:w-6/12 px-15px">
               <div className="text-16 md:text-20 xl:text-24 leading-32 font-medium text-paraColor pt-15px lg  :pt-0">
