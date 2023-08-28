@@ -4,6 +4,7 @@ import Product2 from "../../images/product2.jpg";
 import Product3 from "../../images/product3.jpg";
 import Product4 from "../../images/product4.jpg";
 import Button from "../Buttons/buttonHome";
+import StarIcon from "../../images/Icons/starIcon";
 
 const DataProduct = [
   {
@@ -82,7 +83,9 @@ const ProductsWrap = () => {
           </div>
           <div className="bg-white shadow-lg w-full rounded-bl-15px rounded-br-15px md:rounded-bl-35px md:rounded-br-35px p-25px flex flex-wrap justify-between">
             <div className="w-1/2 md:w-7/12 xl:w-1/2">
-              <div className="500:text-14 md:text-[19px] xl:text-26 pb-20px">{e.Title}</div>
+              <div className="500:text-14 md:text-[19px] xl:text-26 pb-20px">
+                {e.Title}
+              </div>
               <div>
                 <Button
                   className="btn--border btn-read btn--animated w-[140px] sm:w-[200px] xl:w-[150px] h-[37px] sm:h-[46px] text-16 md:text-18 xl:text-20 leading-normal font-bold rounded-10px md:rounded-15px"
@@ -91,7 +94,12 @@ const ProductsWrap = () => {
               </div>
             </div>
             <div className="w-1/2 md:w-5/12 xl:w-1/2 flex justify-start items-end flex-col">
-              <div className="text-14 pb-25px">4.9</div>
+              <div className="flex flex-wrap">
+                <div className="pr-10px">
+                  <StarIcon />
+                </div>
+                <div className="text-14 pb-25px">4.9</div>
+              </div>
               <div className="text-18 leading-[22px] font-bold">{e.Rate}</div>
             </div>
           </div>

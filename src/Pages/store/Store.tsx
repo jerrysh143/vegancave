@@ -21,13 +21,13 @@ const Store = () => {
               <div className="">
                 <Button
                   Title="Scroll Down"
-                  className="btn--border btn-read btn--animated w-[140px] sm:w-[200px] xl:w-[200px] h-[47px] sm:h-[66px] xl:h-[76px] text-16 md:text-32 sm:text-18 xl:text-20 leading-normal font-bold rounded-15px"
+                  className="btn--border btn-read btn--animated w-[140px] sm:w-[200px] xl:w-[200px] h-[47px] sm:h-[66px] xl:h-[76px] text-16 md:text-20 lg:text-32 sm:text-18 xl:text-20 leading-normal font-bold rounded-15px"
                 />
               </div>
             </div>
-            <div className="w-full md:w-6/12 px-15px pb-30px md:pb-0px">
+            <div className="w-full md:w-6/12 px-15px pb-30px md:pb-0">
               <img
-                className="mx-auto w-full h-[350px] object-cover rounded-none md:rounded-[24px] shadow-lg"
+                className="mx-auto w-full h-full object-cover rounded-none md:rounded-[24px] shadow-lg"
                 src={BannerImage}
                 alt=""
               />
@@ -38,7 +38,7 @@ const Store = () => {
       <div className="py-70px">
         <div className="w-full max-w-full 1600:w-[1530px] mx-auto px-15px">
           <div className="flex flex-wrap flex-col items-center -mx-15px clear-both pb-30px md:pb-50px lg:pb-100px">
-            <div className="w-full px-15px">
+            <div className="w-full px-15px text-center">
               <h2 className="text-42 leading-42 font-bold pb-[56px]">
                 Find the delicious foods for you
               </h2>
