@@ -69,4 +69,10 @@ export const routes: RouteType[] = [
     component: lazy(() => import("./AuthPage/SignUp")),
     isPublic: false,
   },
+  // {
+  //   path: "*",
+  //   name: "Not Found",
+  //   component: lazy(() => import("./homepage/Home")),
+  //   isPublic: true,
+  // },
 ];

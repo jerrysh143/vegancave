@@ -32,11 +32,27 @@ import ConnectLeft from "../../images/connectLeft.png";
 import SliderTestimonial from "../../components/Testimonials/sliderTestimonial";
 import FoodComboImage from "../../images/foodComboImage.png";
 import BurgerCTAImage from "../../images/burgerCtaImage.png";
+import { useNavigate } from "react-router-dom";
+import { ROUTE_NAME } from "../typesRoute";
+import { getProducts } from "../../services/auth";
+import { TOAST_TYPE, notify } from "../../utils/utils";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const response = await getProducts();
+      if (response.status) {
+        setProducts(response.data);
+      } else {
+        notify(TOAST_TYPE.ERROR, response.message);
+      }
+    };
+
+    fetchProduct();
+  }, []);
 
   return (
     <>
@@ -61,12 +77,14 @@ const Home = () => {
                   <Button
                     className="btn--border btn-read btn--animated w-[140px] sm:w-[200px] xl:w-[248px] h-[57px] sm:h-[66px] xl:h-[86px] text-18 sm:text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
                     Title="Order Now"
+                    onClick={() => navigate(ROUTE_NAME.STORE)}
                   />
                 </div>
                 <div>
                   <Button
                     className="btn--border btn-read btn--animated w-[140px] sm:w-[200px] xl:w-[248px] h-[57px] sm:h-[66px] xl:h-[86px] text-18 sm:text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
                     Title="Contact Us"
+                    onClick={() => navigate(ROUTE_NAME.CONTACT)}
                   />
                 </div>
               </div>
@@ -383,6 +401,7 @@ const Home = () => {
             <ButtonArrow
               Title="See More Product"
               className="flex bg-primaryColor"
+              onClick={() => navigate(ROUTE_NAME.STORE)}
             />
           </div>
         </div>

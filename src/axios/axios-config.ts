@@ -29,127 +29,58 @@ axios.interceptors.response.use(
   }
 );
 
-const setLoader = (shouldShow: boolean, status: boolean) => {
-  /* Todo: set global processing loader true or false */
-  // if (shouldShow) {
-  //   store.dispatch(setProcessing(status));
-  // }
-};
-
-export const axiosPost = (
-  url: string,
-  data: any = {},
-  params: any = {},
-  shouldProcess: boolean = false
-) => {
-  setLoader(shouldProcess, true);
+export const axiosPost = (url: string, data: any = {}, params: any = {}) => {
   return axios
     .post(baseURL + url, data, { params })
     .then((res) => {
-      setLoader(shouldProcess, false);
       return res.data;
     })
     .catch((error) => {
-      setLoader(shouldProcess, false);
-      // return {
-      //     error: error.response?.data?.message?.text ?? "Error while processing",
-      // };
-      return error.response.data;
+      return error.response;
     });
 };
 
-export const axiosGet = (
-  url: string,
-  params: any = {},
-  shouldProcess: boolean = false
-) => {
-  setLoader(shouldProcess, true);
+export const axiosGet = (url: string, params: any = {}) => {
   return axios
     .get(baseURL + url, { params })
     .then((res) => {
-      setLoader(shouldProcess, false);
       return res.data;
     })
     .catch((error) => {
-      setLoader(shouldProcess, false);
-      // return {
-      //     error: error.response?.data?.message?.text ?? "Error while processing",
-      // };
-      return {
-        error: "Error while processing",
-      };
+      return error.response;
     });
 };
 
-export const axiosPut = (
-  url: string,
-  data: any = {},
-  params: any = {},
-  shouldProcess: boolean = false
-) => {
-  setLoader(shouldProcess, true);
+export const axiosPut = (url: string, data: any = {}, params: any = {}) => {
   return axios
     .put(baseURL + url, data, { params })
     .then((res) => {
-      setLoader(shouldProcess, false);
       return res.data;
     })
     .catch((error) => {
-      setLoader(shouldProcess, false);
-      // return {
-      //     error: error.response?.data?.message?.text ?? "Error while processing",
-      // };
-      return {
-        error: "Error while processing",
-      };
+      return error.response;
     });
 };
 
-export const axiosPatch = (
-  url: string,
-  data: any = {},
-  params: any = {},
-  shouldProcess: boolean = false
-) => {
-  setLoader(shouldProcess, true);
+export const axiosPatch = (url: string, data: any = {}, params: any = {}) => {
   return axios
     .patch(baseURL + url, data, { params })
     .then((res) => {
-      setLoader(shouldProcess, false);
       return res.data;
     })
     .catch((error) => {
-      setLoader(shouldProcess, false);
-      // return {
-      //     error: error.response?.data?.message?.text ?? "Error while processing",
-      // };
-      return {
-        error: "Error while processing",
-      };
+      return error.response;
     });
 };
 
-export const axiosDelete = (
-  url: string,
-  data: any = {},
-  params: any = {},
-  shouldProcess: boolean = false
-) => {
-  setLoader(shouldProcess, true);
+export const axiosDelete = (url: string, data: any = {}, params: any = {}) => {
   return axios
     .delete(baseURL + url, { params, data })
     .then((res) => {
-      setLoader(shouldProcess, false);
       return res.data;
     })
     .catch((error) => {
-      setLoader(shouldProcess, false);
-      // return {
-      //     error: error.response?.data?.message?.text ?? "Error while processing",
-      // };
-      return {
-        error: "Error while processing",
-      };
+      return error.response;
     });
 };
 

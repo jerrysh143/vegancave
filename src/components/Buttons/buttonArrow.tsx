@@ -4,12 +4,16 @@ import ArrowRightIcon from "../../images/Icons/arrowRightIcon";
 interface ButtonArrowProps {
   className?: string;
   Title?: string;
+  onClick?: () => void;
 }
 
 const ButtonArrow = (props: ButtonArrowProps) => {
   return (
     <>
-      <button className={` ${props.className} btn--border btn-read btn--animated bg-primaryColor flex items-center justify-center relative w-[276px] pr-70px h-[74px] rounded-[37px] text-18 leading-normal font-bold text-white`}>
+      <button
+        className={` ${props.className} btn--border btn-read btn--animated bg-primaryColor flex items-center justify-center relative w-[276px] pr-70px h-[74px] rounded-[37px] text-18 leading-normal font-bold text-white`}
+        onClick={props.onClick}
+      >
         {props.Title}
         <div
           className="w-[58px] h-[58px] bg-white flex items-center justify-center border-1px border-solid rounded-full border-[1px] border-black absolute top-10px

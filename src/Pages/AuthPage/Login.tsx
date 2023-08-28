@@ -8,9 +8,12 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { login } from "../../services/auth.js";
 import { TOAST_TYPE, notify, setToken } from "../../utils/utils";
 import { ROUTE_NAME } from "../typesRoute";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../redux/user/user.action";
 
 const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const initialValues = {
     username: "",
@@ -30,6 +33,7 @@ const Login = () => {
         notify(TOAST_TYPE.SUCCESS, "Welcome!");
         setToken(response.access);
         navigate(ROUTE_NAME.HOME);
+        dispatch(setUser("user"));
       }
       if (response.detail) {
         notify(TOAST_TYPE.ERROR, response.detail);
