@@ -5,10 +5,10 @@ interface Props {
   children: ReactElement[] | ReactElement;
 }
 
-const LoginOverlay = (props:Props) => {
+const OverlayBack = (props:Props) => {
   return (
-    <div className="h-[calc(100dvh_-_133px)]">
-      <div className="absolute right-0 top-0 z-0">
+    <div className="h-[calc(100dvh_-_133px)] z-1 relative overflow-hidden">
+      <div className="absolute right-0 top-0">
         <img src={LoginBackground} alt="" />
       </div>
       <div className="1600:w-[1530px] mx-auto px-15px h-full">
@@ -20,4 +20,4 @@ const LoginOverlay = (props:Props) => {
   );
 };
 
-export default LoginOverlay;
+export default OverlayBack;

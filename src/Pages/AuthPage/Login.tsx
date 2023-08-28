@@ -1,13 +1,13 @@
 import React from "react";
 import MailIcon from "../../images/Icons/mailIcon";
 import Button from "../../components/Buttons/buttonOrder";
-import LoginOverlay from "../../components/Overlay/Overlay";
 import { Link } from "react-router-dom";
 import { ROUTE_NAME } from "../typesRoute";
+import OverlayBack from "./OverlayBack";
 
 const Login = () => {
   return (
-    <LoginOverlay>
+    <OverlayBack>
       <div className="w-4/12 px-15px">
         <div className="text-28 leading-normal pb-40px font-bold font-opensans">
           Login
@@ -54,7 +54,7 @@ const Login = () => {
         </div>
       </div>
       <div className="w-8/12 px-15px"></div>
-    </LoginOverlay>
+    </OverlayBack>
   );
 };
 
