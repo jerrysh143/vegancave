@@ -127,7 +127,7 @@ const Store = () => {
             </div>
           </div>
           <div className="flex flex-wrap items-center -mx-15px clear-both">
-            <ProductsWrap products={filteredProducts} />
+            <ProductsWrap products={filteredProducts} title="Product" />
             <div className="w-full flex justify-center pt-20px">
               <ButtonArrow className="text-center" Title="Load More" />
             </div>

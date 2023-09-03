@@ -34,15 +34,9 @@ const Header = () => {
 
   return (
     <div
-<<<<<<< HEAD
-      className={`z-[999] px-15px ${
-        scrollPosition > 50
-          ? "fixed slide-in w-full py-10px shadow-sm bg-white/80 duration-300 transition-all"
-=======
       className={`z-[9999999] px-15px 
       ${scrollPosition > 50
           ? "fixed slide-in w-full py-10px shadow-sm bg-white/80 duration-300 transition-all group"
->>>>>>> 5d7aa22b5b469a91b402342e1b3088b87f405de6
           : "bg-white py-20px duration-300 transition-all"
       }`}
     >
@@ -68,12 +62,7 @@ const Header = () => {
               }}
             >
               <MobileMenu
-<<<<<<< HEAD
-                className={`z-[99] flex fixed top-0 left-0 m-15px w-[calc(100%-30px)] 500:w-[calc(100%-50%)] md:w-[calc(100%-80%)] ${
-                  Menu
-=======
                 className={`z-[99] flex fixed top-0 left-0 m-15px w-[calc(100%-30px)] 500:w-[290px] md:w-[350px] ${Menu
->>>>>>> 5d7aa22b5b469a91b402342e1b3088b87f405de6
                     ? "translate-x-0 opacity-100 duration-150 transition-all"
                     : "-translate-x-full opacity-0 duration-150 transition-all"
                 }`}
@@ -84,7 +73,7 @@ const Header = () => {
             <div className="w-full max-w-[150px] xl:max-w-[270px] p-0 md:px-15px">
               <Link to={ROUTE_NAME.HOME}>
                 <img
-                  className={`w-full h-full ${scrollPosition > 50 ? "h-50px object-contain mx-auto" : ""}`}
+                  className={`w-full ${scrollPosition > 50 ? "h-50px object-contain mx-auto" : "h-70px object-contain"}`}
                   src={Logo}
                   alt=""
                 />
@@ -95,11 +84,7 @@ const Header = () => {
             <div className="">
               <div className="">
                 <div className="rounded-full border-2 border-black">
-<<<<<<< HEAD
-                  <Link className="cursor-pointer" to={ROUTE_NAME.PROFILE}>
-=======
                   <Link className="cursor-pointer" to={ROUTE_NAME.GETAQUOTE}>
->>>>>>> 5d7aa22b5b469a91b402342e1b3088b87f405de6
                     <UserIcon class="border-2 rounded-full" />
                   </Link>
                 </div>
@@ -110,17 +95,7 @@ const Header = () => {
                 <CartIcon className="w-25px" />
               </Link>
             </div>
-<<<<<<< HEAD
-            <div
-              className={`z-[99] fixed top-0 right-0 m-15px rounded-15px bg-white w-5/12 h-[calc(100dvh_-_30px)] ${
-                Search
-                  ? "translate-x-0 opacity-100 duration-150 transition-all"
-                  : "translate-x-full opacity-0 duration-150 transition-all"
-              } `}
-            >
-=======
             <div className={`z-[99] fixed top-0 right-0 m-15px rounded-15px bg-white w-[calc(100vw_-_30px)] md:w-5/12 h-[calc(100dvh_-_30px)] ${Search ? "translate-x-0 opacity-100 duration-150 transition-all":"translate-x-full opacity-0 duration-150 transition-all"} `}>
->>>>>>> 5d7aa22b5b469a91b402342e1b3088b87f405de6
               <div className="flex items-center justify-center px-15px py-50px">
                 <input
                   type="search"

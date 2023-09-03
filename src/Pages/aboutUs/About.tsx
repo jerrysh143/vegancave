@@ -5,7 +5,6 @@ import StoryImage from "../../images/ourStoryImage.jpg";
 import Team from "../../components/teamsection/Team";
 import PlayIcon from "../../images/Icons/PlayIcon.svg";
 import ProcessImage from "../../images/ProcessImage.jpg";
-import Sliderabout from "../../components/Aboutslide/sliderCards";
 
 const About = () => {
   // const [Play, setAutoPlay] = useState(false);
@@ -45,7 +44,7 @@ const About = () => {
               </div>
               <div className="w-full h-full -mx-15px">
                 <div className="pt-[160px]">
-                  <Sliderabout />
+                  {/* <Sliderabout /> */}
                 </div>
               </div>
             </div>
