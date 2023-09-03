@@ -10,8 +10,12 @@ export const ROUTE_NAME = {
   STORE: "/store",
   LOGIN: "/login",
   SIGNUP: "/signup",
+<<<<<<< HEAD
   CART: "/cart",
   PROFILE: "/profile",
+=======
+  GETAQUOTE: "/getaquote"
+>>>>>>> 5d7aa22b5b469a91b402342e1b3088b87f405de6
 };
 
 export const routes: RouteType[] = [
@@ -58,6 +62,7 @@ export const routes: RouteType[] = [
     isPublic: true,
   },
   {
+<<<<<<< HEAD
     path: ROUTE_NAME.CART,
     name: "Cart",
     component: lazy(() => import("./AuthPage/SignUp")),
@@ -75,4 +80,11 @@ export const routes: RouteType[] = [
   //   component: lazy(() => import("./homepage/Home")),
   //   isPublic: true,
   // },
+=======
+    path: ROUTE_NAME.GETAQUOTE,
+    name: "Getaquote",
+    component: lazy(() => import("./getQuote/GetAQuote")),
+    isPublic: true,
+  },
+>>>>>>> 5d7aa22b5b469a91b402342e1b3088b87f405de6
 ];

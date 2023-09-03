@@ -2,7 +2,7 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <div className="fixed top-1/2 left-1/2 translate-1/2">
+    <div className="fixed top-0 left-0 h-[100dvh] w-screen flex items-center justify-center">
       <svg
         version="1.1"
         width={100}
