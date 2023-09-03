@@ -1,5 +1,4 @@
 import React from "react";
-import LoginOverlay from "../../components/Overlay/Overlay";
 import MailIcon from "../../images/Icons/mailIcon";
 import Button from "../../components/Buttons/buttonOrder";
 import { Link, useNavigate } from "react-router-dom";
@@ -9,6 +8,7 @@ import { signup } from "../../services/auth.js";
 import { TOAST_TYPE, notify } from "../../utils/utils";
 import { Response } from "../../Types/otherTypes";
 import { ROUTE_NAME } from "../typesRoute";
+import OverlayBack from "./OverlayBack";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const SignUp = () => {
   };
 
   return (
-    <LoginOverlay>
+    <OverlayBack>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -158,7 +158,7 @@ const SignUp = () => {
           <div className="w-8/12 px-15px"></div>
         </>
       </Formik>
-    </LoginOverlay>
+    </OverlayBack>
   );
 };
 
