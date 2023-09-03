@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/Buttons/buttonHome";
 import ArrowIcon from "../../images/Icons/leftArrowIcon";
 import BurgerImage from "../../images/burger_sandwich.png";
@@ -32,8 +32,28 @@ import ConnectLeft from "../../images/connectLeft.png";
 import SliderTestimonial from "../../components/Testimonials/sliderTestimonial";
 import FoodComboImage from "../../images/foodComboImage.png";
 import BurgerCTAImage from "../../images/burgerCtaImage.png";
+import { useNavigate } from "react-router-dom";
+import { ROUTE_NAME } from "../typesRoute";
+import { getProducts } from "../../services/auth";
+import { TOAST_TYPE, notify } from "../../utils/utils";
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const response = await getProducts();
+      if (response.status) {
+        setProducts(response.data);
+      } else {
+        notify(TOAST_TYPE.ERROR, response.message);
+      }
+    };
+
+    fetchProduct();
+  }, []);
+
   return (
     <>
       <div className="">
@@ -57,12 +77,14 @@ const Home = () => {
                   <Button
                     className="btn--border btn-read btn--animated w-[140px] sm:w-[200px] xl:w-[248px] h-[57px] sm:h-[66px] xl:h-[86px] text-18 sm:text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
                     Title="Order Now"
+                    onClick={() => navigate(ROUTE_NAME.STORE)}
                   />
                 </div>
                 <div>
                   <Button
                     className="btn--border btn-read btn--animated w-[140px] sm:w-[200px] xl:w-[248px] h-[57px] sm:h-[66px] xl:h-[86px] text-18 sm:text-[22px] xl:text-26 leading-normal font-bold rounded-15px"
                     Title="Contact Us"
+                    onClick={() => navigate(ROUTE_NAME.CONTACT)}
                   />
                 </div>
               </div>
@@ -379,6 +401,7 @@ const Home = () => {
             <ButtonArrow
               Title="See More Product"
               className="flex bg-primaryColor"
+              onClick={() => navigate(ROUTE_NAME.STORE)}
             />
           </div>
         </div>
@@ -596,7 +619,11 @@ const Home = () => {
             <div className="w-full sm:w-6/12 md:w-4/12 px-15px relative">
               <div className="text-right">
                 <div className="mb-30px md:mb-45px">
-                  <img className="mx-auto md:ml-auto md:mr-0" src={DeliverImage} alt="" />
+                  <img
+                    className="mx-auto md:ml-auto md:mr-0"
+                    src={DeliverImage}
+                    alt=""
+                  />
                 </div>
                 <div className="text-26 leading-normal font-bold pb-25px text-center md:text-right">
                   DELIVER
@@ -640,29 +667,33 @@ const Home = () => {
         <div className="px-15px w-full 1600:w-[1530px] mx-auto">
           <div className="w-ful">
             <div className="bg-black items-center pb-20px md:pb-0 h-full md:h-[370px] rounded-50px flex flex-wrap">
-            <div className="w-full md:w-6/12 relative h-full">
-              <div className="static flex items-center h-full xl:h-fit xl:absolute xl:-top-45px xl:left-50px">
-                <img src={BurgerCTAImage} alt="" className="w-full h-[280px] md:h-full object-contain" />
-              </div>
-            </div>
-            <div className="w-full md:w-6/12 px-15px lg:px-0">
-              <div className="pr-0px lg:pr-100px">
-                <div className="text-white text-center md:text-left text-[30px] lg:text-36 leading-normal font- bold pb-10px lg:pb-15px">
-                  Explore Our Nutrition Foods
-                </div>
-                <p className="text-white text-center md:text-left text-16px lg:text-18 leading-normal pb-15px">
-                  Lorem ipsum dolor sit amet, consectetur adipidrscing elit.
-                  Purus mauris sem sed urna venenatis vivamus. Egestas in velit
-                  nulla viverra turpis id ac. Amet faucibus tempus.
-                </p>
-                <div className="flex items-center justify-center md:block">
-                  <Button
-                    className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
-                    Title="Explore Now"
+              <div className="w-full md:w-6/12 relative h-full">
+                <div className="static flex items-center h-full xl:h-fit xl:absolute xl:-top-45px xl:left-50px">
+                  <img
+                    src={BurgerCTAImage}
+                    alt=""
+                    className="w-full h-[280px] md:h-full object-contain"
                   />
                 </div>
               </div>
-            </div>
+              <div className="w-full md:w-6/12 px-15px lg:px-0">
+                <div className="pr-0px lg:pr-100px">
+                  <div className="text-white text-center md:text-left text-[30px] lg:text-36 leading-normal font- bold pb-10px lg:pb-15px">
+                    Explore Our Nutrition Foods
+                  </div>
+                  <p className="text-white text-center md:text-left text-16px lg:text-18 leading-normal pb-15px">
+                    Lorem ipsum dolor sit amet, consectetur adipidrscing elit.
+                    Purus mauris sem sed urna venenatis vivamus. Egestas in
+                    velit nulla viverra turpis id ac. Amet faucibus tempus.
+                  </p>
+                  <div className="flex items-center justify-center md:block">
+                    <Button
+                      className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
+                      Title="Explore Now"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

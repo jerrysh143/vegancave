@@ -1,8 +1,9 @@
+import { getToken } from "../../utils/utils";
 import { USER_ACTION_TYPES } from "./user.types";
 
 const initialState = {
   user: null,
-  isLoggedIn: false,
+  isLoggedIn: getToken() ? true : false,
 };
 
 const UserReducer = (state = initialState, action) => {
@@ -15,7 +16,6 @@ const UserReducer = (state = initialState, action) => {
       isLoggedIn: true,
     };
   }
-
   if (type === USER_ACTION_TYPES.REMOVE_USER) {
     return {
       ...state,

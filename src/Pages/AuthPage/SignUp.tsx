@@ -2,13 +2,17 @@ import React from "react";
 import LoginOverlay from "../../components/Overlay/Overlay";
 import MailIcon from "../../images/Icons/mailIcon";
 import Button from "../../components/Buttons/buttonOrder";
-import { Link } from "react-router-dom";
-import { ROUTE_NAME } from "../typesRoute";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { signup } from "../../services/auth.js";
+import { TOAST_TYPE, notify } from "../../utils/utils";
+import { Response } from "../../Types/otherTypes";
+import { ROUTE_NAME } from "../typesRoute";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
   const initialValues = {
     username: "",
     phone: "",
@@ -37,14 +41,17 @@ const SignUp = () => {
 
   const submitHandler = async (values: any) => {
     try {
-      const response = await signup(values);
+      const response: Response = await signup(values);
+      if (response.status) {
+        notify(TOAST_TYPE.SUCCESS, response.message);
+        navigate(ROUTE_NAME.LOGIN);
+      } else {
+        notify(TOAST_TYPE.ERROR, response.message);
+      }
     } catch (error) {
-      console.log("CALLED");
+      console.log(error);
+      notify(TOAST_TYPE.ERROR, error);
     }
-
-    // if (response.data.data_status){
-
-    // }
   };
 
   return (

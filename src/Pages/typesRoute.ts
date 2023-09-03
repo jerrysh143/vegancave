@@ -10,7 +10,9 @@ export const ROUTE_NAME = {
   STORE: "/store",
   LOGIN: "/login",
   SIGNUP: "/signup",
-  GETAQUOTE: "/getaquote"
+  GETAQUOTE: "/getaquote",
+  CART: "/cart",
+  PROFILE: "/Login",
 };
 
 export const routes: RouteType[] = [
@@ -62,4 +64,21 @@ export const routes: RouteType[] = [
     component: lazy(() => import("./getQuote/GetAQuote")),
     isPublic: true,
   },
+   { path: ROUTE_NAME.CART,
+    name: "Cart",
+    component: lazy(() => import("./AuthPage/Login")),
+    isPublic: true,
+  },
+  {
+    path: ROUTE_NAME.PROFILE,
+    name: "Profile",
+    component: lazy(() => import("./AuthPage/SignUp")),
+    isPublic: false,
+  },
+  // {
+  //   path: "*",
+  //   name: "Not Found",
+  //   component: lazy(() => import("./homepage/Home")),
+  //   isPublic: true,
+  // },
 ];
