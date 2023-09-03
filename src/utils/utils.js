@@ -11,3 +11,14 @@ export const notify = (type, message) => {
     toast.info(message);
   }
 };
+
+export const TOAST_TYPE = {
+  SUCCESS: "success",
+  ERROR: "error",
+  WARN: "warn",
+  INFO: "info",
+};
+
+export const getToken = () => localStorage.getItem("token");
+export const removeToken = () => localStorage.removeItem("token");
+export const setToken = (token) => localStorage.setItem("token", token);

@@ -1,24 +1,18 @@
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import {
   createBrowserRouter,
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import { ROUTE_NAME, routes } from "../Pages/typesRoute";
-import Header from "../components/header/Header.tsx";
-import Footer from "../components/footer/Footer.tsx";
-import Loader from "../components/loader/Loader.jsx";
+import Loader from "../components/loader/Loader";
 import { useSelector } from "react-redux";
+import Layout from "../components/layout/Layout";
+import { ROUTE_NAME, routes } from "../Pages/typesRoute";
 
 const RootComponent = () => {
-  const [defaultRoute, setDefaultRoute] = useState(ROUTE_NAME.HOME);
-
   const isAuthenticated = useSelector((store) => store.user.isLoggedIn);
 
   const FinalRoute = ({ routeProps: { isPublic, component: Component } }) => {
-    if (isPublic && isAuthenticated) {
-      return <Navigate to={defaultRoute} replace />;
-    }
     if (!isPublic && !isAuthenticated) {
       return <Navigate to={ROUTE_NAME.LOGIN} replace />;
     }
@@ -26,9 +20,9 @@ const RootComponent = () => {
     return (
       <>
         <Suspense fallback={<Loader />}>
-          <Header />
-          <Component />
-          <Footer />
+          <Layout>
+            <Component />
+          </Layout>
         </Suspense>
       </>
     );

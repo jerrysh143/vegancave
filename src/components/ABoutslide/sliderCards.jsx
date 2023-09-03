@@ -1,25 +1,15 @@
 import React from "react";
-import SliderContent from "./SliderImage.tsx";
 import Slider from "react-slick";
 import Slide1 from "../../images/AboutSlide1.jpg";
 import Slide2 from "../../images/AboutSlide2.jpg";
 import AboutSlide from "../../images/Icons/aboutSlide.tsx";
+import SliderContent from "./SliderImage";
 
-const SlideImage = [
-  { Image: Slide1 }
-];
-const SlideImage2 = [
-    { Image: Slide2 },
-  ];
-  const SlideImage3 = [
-    { Image: Slide1 },
-  ];
-  const SlideImage4 = [
-    { Image: Slide2 },
-  ];
-  const SlideImage5 = [
-    { Image: Slide1 },
-  ];
+const SlideImage = [{ Image: Slide1 }];
+const SlideImage2 = [{ Image: Slide2 }];
+const SlideImage3 = [{ Image: Slide1 }];
+const SlideImage4 = [{ Image: Slide2 }];
+const SlideImage5 = [{ Image: Slide1 }];
 
 export default function Sliderabout() {
   var settings = {
