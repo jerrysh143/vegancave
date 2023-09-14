@@ -3,6 +3,7 @@ import LoginOverlay from "../../components/Overlay/Overlay";
 import Button from "../../components/Buttons/buttonOrder";
 
 const ResetPassword = () => {
+  document.body.classList.toggle("resetPassPage");
   return (
     <LoginOverlay>
       <div className="w-4/12 px-15px">

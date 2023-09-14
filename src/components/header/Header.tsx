@@ -33,19 +33,13 @@ const Header = () => {
   }, []);
 
   return (
-    <div
-      className={`px-15px 
-      ${scrollPosition > 50
-          ? "fixed slide-in w-full py-10px shadow-sm bg-white/80 duration-300 transition-all group"
-          : "bg-white py-20px duration-300 transition-all"
-      }`}
-    >
+    <div className="z-1 px-15px slide-in w-full py-10px bg-white/80 duration-300 transition-all group">
       <div className="w-full max-w-full 1600:w-[1530px] mx-auto">
         <div className="flex flex-wrap justify-between items-center z-[999]">
-          <div className="w-50px md:w-5/12 p-0 md:pr-15px flex justify-start">
+          <div className="w-2/12 md:w-5/12 p-0 md:pr-15px flex justify-start">
             <div
-              className={`block cursor-pointer z-[999] ${
-                Menu ? "opened absolute top-30px left-20px" : ""
+              className={`block cursor-pointer ${
+                Menu ? "opened absolute top-30px left-20px z-[999]" : ""
               }`}
               onClick={() => {
                 setSearch(false);
@@ -62,9 +56,10 @@ const Header = () => {
               }}
             >
               <MobileMenu
-                className={`z-[99] flex fixed top-0 left-0 m-15px w-[calc(100%-30px)] 500:w-[290px] md:w-[350px] ${Menu
-                    ? "translate-x-0 opacity-100 duration-150 transition-all"
-                    : "-translate-x-full opacity-0 duration-150 transition-all"
+                className={`flex fixed top-0 m-15px w-[calc(100%-30px)] 500:w-[290px] md:w-[350px] ${
+                  Menu
+                    ? "z-[99] left-0 translate-x-0 opacity-100 duration-300 transition-all"
+                    : "-z-1 -left-[600px] opacity-0 duration-300 transition-all"
                 }`}
               />
             </div>
@@ -73,7 +68,11 @@ const Header = () => {
             <div className="w-full max-w-[150px] xl:max-w-[270px] p-0 md:pr-15px">
               <Link to={ROUTE_NAME.HOME}>
                 <img
-                  className={`w-full ${scrollPosition > 50 ? "h-50px object-contain mx-auto" : "h-70px object-contain"}`}
+                  className={`w-full ${
+                    scrollPosition > 50
+                      ? "h-50px object-contain mx-auto"
+                      : "h-45px md:h-70px object-contain"
+                  }`}
                   src={Logo}
                   alt=""
                 />
@@ -95,7 +94,13 @@ const Header = () => {
                 <CartIcon className="w-25px" />
               </Link>
             </div>
-            <div className={`z-[99] fixed top-0 right-0 m-15px rounded-15px bg-white w-[calc(100vw_-_30px)] md:w-5/12 h-[calc(100dvh_-_30px)] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.3)] ${Search ? "translate-x-0 opacity-100 duration-150 transition-all":"translate-x-full opacity-0 duration-150 transition-all"} `}>
+            <div
+              className={`fixed top-0 m-15px rounded-15px bg-white w-[calc(100vw_-_30px)] md:w-5/12 h-[calc(100dvh_-_30px)] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.3)] ${
+                Search
+                  ? "z-1 block right-0 opacity-100 duration-150 transition-all"
+                  : "-z-1 hidden opacity-0 duration-150 transition-all"
+              } `}
+            >
               <div className="flex items-center justify-center px-15px py-50px">
                 <input
                   type="search"

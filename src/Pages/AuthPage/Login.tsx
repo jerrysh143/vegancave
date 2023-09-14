@@ -43,7 +43,7 @@ const Login = () => {
       notify(TOAST_TYPE.ERROR, error);
     }
   };
-
+  document.body.classList.toggle("loginPage");
   return (
     <OverlayBack>
       <Formik

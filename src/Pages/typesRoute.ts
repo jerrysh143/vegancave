@@ -13,6 +13,7 @@ export const ROUTE_NAME = {
   GETAQUOTE: "/getaquote",
   CART: "/cart",
   PROFILE: "/profile",
+  FILLDETAIL: "/filldetail",
 };
 
 export const routes: RouteType[] = [
@@ -74,6 +75,12 @@ export const routes: RouteType[] = [
     path: ROUTE_NAME.GETAQUOTE,
     name: "Getaquote",
     component: lazy(() => import("./getQuote/GetAQuote")),
+    isPublic: true,
+  },
+  {
+    path: ROUTE_NAME.FILLDETAIL,
+    name: "FillDetail",
+    component: lazy(() => import("./AuthPage/FillDetail")),
     isPublic: true,
   }
 ];

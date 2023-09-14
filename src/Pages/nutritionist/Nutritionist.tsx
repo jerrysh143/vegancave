@@ -18,6 +18,7 @@ import VeganCaveForyouBack from "../../images/VeganCaveForyouBackground.png";
 import VeganCaveForyouImage from "../../images/VeganCaveForyouImage.png";
 import ReviewImage from "../../images/ReviewImage.jpg";
 const Nutritionist = () => {
+  document.body.classList.toggle("nutritionPage");
   return (
     <>
       <div className="xl:pt-100px py-30px 2xl:pb-0 2xl:pt-[150px] mb-0 md:mb-[170px] bg-[rgba(43,182,114,0.07)] relative">

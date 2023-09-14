@@ -5,9 +5,11 @@ import StoryImage from "../../images/ourStoryImage.jpg";
 import Team from "../../components/teamsection/Team";
 import PlayIcon from "../../images/Icons/PlayIcon.svg";
 import ProcessImage from "../../images/ProcessImage.jpg";
+import Sliderabout from "../../components/ABoutslide/sliderCards";
 
 const About = () => {
   // const [Play, setAutoPlay] = useState(false);
+  document.body.classList.toggle("AboutPage");
   return (
     <>
       <div className="py-30px sm:py-40px lg:py-70px xl:pt-[116px] xl:pb-70px">
@@ -24,9 +26,9 @@ const About = () => {
             </div>
             <div className="w-full 992:w-6/12 px-15px">
               <div className="">
-                <div className="text-[20px] sm:text-[30px] xl:text-[40px] 2xl:text-56 leading-56 truncate font-bold text-primaryColor pt-10px pb-5px sm:pb-20px lg:pb-30px">
+                <h1 className="text-[20px] sm:text-[30px] xl:text-[40px] 2xl:text-56 leading-56 truncate font-bold text-primaryColor pt-10px pb-5px sm:pb-20px lg:pb-30px">
                   Welcome to Vegancave...
-                </div>
+                </h1>
                 <p className="text-16 md:text-20 xl:text-24 font-medium leading-normal pb-20px text-paraColor">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -42,9 +44,9 @@ const About = () => {
                   laboris nisi ut.
                 </p>
               </div>
-              <div className="w-full h-full -mx-15px">
-                <div className="pt-[160px]">
-                  {/* <Sliderabout /> */}
+              <div className="w-full">
+                <div className="pt-70px lg:pt-100px xl:pt-[160px]">
+                  <Sliderabout />
                 </div>
               </div>
             </div>

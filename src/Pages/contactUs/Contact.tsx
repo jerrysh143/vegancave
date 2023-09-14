@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import Button from "../../components/Buttons/buttonHome";
 import { Formik, Field, Form, FormikHelpers, FormikValues } from "formik";
@@ -8,11 +9,12 @@ const initialValues = {
   Height: "",
 };
 const Contact = () => {
+  document.body.classList.toggle("contactPage");
   return (
     <div className="pt-25px pb-45px">
       <div className="max-w-[1530px] px-15px mx-auto">
         <div className="flex flex-wrap">
-          <div className="w-6/12">
+          <div className="w-full md:w-6/12 pr-0 md:pr-15px flex 480:block flex-col items-center 480:items-start">
             <div
               id="background-video"
               style={{
@@ -52,18 +54,18 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          <div className="w-6/12">
+          <div className="w-full md:w-6/12 pl-0px sm:pl-15px pt-30px 767:pt-0 flex 480:block flex-col items-center 480:items-start">
             <div className="">
-              <h2 className="text-32 leading-[120%] text-primaryColor font-bold pb-[44px]">
+              <h2 className="text-[25px] lg:text-32 leading-[120%] text-primaryColor font-bold pb-20px lg:pb-[44px]">
                 Everyone should have access to nutritious food
               </h2>
-              <p className="text-24 leading-[30px] pb-20px">
+              <p className="text-18 lg:text-24 leading-30px lg:leading-[30px] pb-20px">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut.
               </p>
-              <p className="text-24 leading-[30px] pb-[44px]">
+              <p className="text-18 lg:text-24 leading-30px lg:leading-[30px] pb-20px lg:pb-[44px]">
                 Aliquip ex ea commodo consequat. Duis aute irure dolor in
                 reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur.
@@ -75,10 +77,10 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap">
-          <div className="w-6/12">
-            <div className="flex flex-wrap">
-              <div className="w-6/12 mb-40px">
+        <div className="flex flex-wrap mt-30px md:mt-0">
+          <div className="w-full md:w-6/12 pr-0 480:pr-15px">
+            <div className="flex flex-wrap mb-40px">
+              <div className="w-full 480:w-6/12 pr-15px mb-15px md:mb-0 flex 480:block flex-col items-center 480:items-start">
                 <div className="w-[48px] h-[48px] bg-primaryColor rounded-full flex justify-center items-center mb-[24px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -93,17 +95,17 @@ const Contact = () => {
                     />
                   </svg>
                 </div>
-                <div className="text-32 leading-[120%] text-[#18191F] pb-[16px]">
+                <div className="text-[25px] 1200:text-32 leading-[120%] text-[#18191F] pb-[16px]">
                   Email
                 </div>
                 <a
-                  className="text-[22px] leading-[130%] text-[#525560]"
+                  className="text-18 992:text-[22px] leading-[130%] text-[#525560]"
                   href="#!"
                 >
                   contact@flex.co
                 </a>
               </div>
-              <div className="w-6/12">
+              <div className="w-full 480:w-6/12 pr-15px flex 480:block flex-col items-center 480:items-start">
                 <div className="w-[48px] h-[48px] bg-primaryColor rounded-full flex justify-center items-center mb-[24px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -118,11 +120,11 @@ const Contact = () => {
                     />
                   </svg>
                 </div>
-                <div className="text-32 leading-[120%] text-[#18191F] pb-[16px]">
+                <div className="text-[25px] 1200:text-32 leading-[120%] text-[#18191F] pb-[16px]">
                   Phone
                 </div>
                 <a
-                  className="text-[22px] leading-[130%] text-[#525560]"
+                  className="text-18 992:text-[22px] leading-[130%] text-[#525560]"
                   href="#!"
                 >
                   +7-843-672-431
@@ -130,7 +132,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex flex-wrap">
-              <div className="w-6/12">
+              <div className="w-full 480:w-6/12 480:pr-15px mb-15px md:mb-0 flex 480:block flex-col items-center 480:items-start">
                 <div className="w-[48px] h-[48px] bg-primaryColor rounded-full flex justify-center items-center mb-[24px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -145,15 +147,15 @@ const Contact = () => {
                     />
                   </svg>
                 </div>
-                <div className="text-32 leading-[120%] text-[#18191F] pb-[16px]">
+                <div className="text-[25px] 1200:text-32 leading-[120%] text-[#18191F] pb-[16px]">
                   Office
                 </div>
-                <p className="text-[22px] leading-[150%] text-[#525560] max-w-[250px]">
+                <p className="text-[22px] leading-[150%] text-[#525560] max-w-[250px] text-center 480:text-left">
                   1686, Geraldine Lane New York, NY 10013
                 </p>
               </div>
-              <div className="w-6/12">
-                <div className="w-[48px] h-[48px] bg-primaryColor rounded-full flex justify-center items-center mb-[24px]">
+              <div className="w-full 480:w-6/12 pr-15px mb-15px md:mb-0 flex 480:block flex-col items-center 480:items-start">
+                <div className="w-[48px] h-[48px] bg-primaryColor rounded-full flex justify-center items-center mb-15px md:mb-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -167,11 +169,11 @@ const Contact = () => {
                     />
                   </svg>
                 </div>
-                <div className="text-32 leading-[120%] text-[#18191F] pb-[16px]">
+                <div className="text-[25px] 1200:text-32 leading-[120%] text-[#18191F] pb-[16px]">
                   Socials
                 </div>
                 <ul className="flex flex-wrap items-center">
-                  <li className="mr-[38px]">
+                  <li className="mr-15px 768:mr-5px 1200:mr-[38px]">
                     <a
                       className="w-35px h-35px bg-primaryColor flex justify-center items-center rounded-md"
                       href="#!"
@@ -208,7 +210,7 @@ const Contact = () => {
                       </svg>
                     </a>
                   </li>
-                  <li className="mr-[38px]">
+                  <li className="mr-15px 768:mr-5px 1200:mr-[38px]">
                     <a
                       className="w-35px h-35px bg-primaryColor flex justify-center items-center rounded-md"
                       href="#!"
@@ -245,7 +247,7 @@ const Contact = () => {
                       </svg>
                     </a>
                   </li>
-                  <li className="mr-[38px]">
+                  <li className="mr-15px 768:mr-5px 1200:mr-[38px]">
                     <a
                       className="w-35px h-35px bg-primaryColor flex justify-center items-center rounded-md"
                       href="#!"
@@ -282,7 +284,7 @@ const Contact = () => {
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li className="">
                     <a
                       className="w-35px h-35px bg-primaryColor flex justify-center items-center rounded-md"
                       href="#!"
@@ -312,8 +314,8 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="w-6/12">
-            <div className="w-full h-auto bg-white shadow-[0px_12px_48px_-5px_rgba(85,_105,_135,_0.09)] rounded-[6px] p-40px mt-50px">
+          <div className="w-full md:w-6/12 1200:w-[519px] sm:pl-15px">
+            <div className="w-full h-auto bg-white shadow-[0px_12px_48px_-5px_rgba(85,_105,_135,_0.5)] sm:shadow-[0px_12px_48px_-5px_rgba(85,_105,_135,_0.09)] rounded-[10px] sm:rounded-[6px] p-20px sm:p-30px lg:p-40px mt-50px">
               <Formik
                 initialValues={initialValues}
                 onSubmit={function (
@@ -325,25 +327,25 @@ const Contact = () => {
               >
                 <>
                   <Form className="">
-                    <Field
-                      name="Email"
-                      placeholder="abc@gmail.com"
-                      className="w-6/12 mr-20px"
-                      type="Email"
-                    />
-                    <div className="flex flex-wrap">
+                    <div className="w-full">
+                      <label className="text-18 leading-[25px] block pb-5px group-hover:text-white">Email</label>
                       <Field
-                        name="Weight"
-                        placeholder="Enter your current Weight"
-                        className="w-6/12 mr-20px"
-                        type="Weight"
+                        name="Email"
+                        placeholder="abc@gmail.com"
+                        className="w-full mr-20px py-[13px] px-15px placeholder:text-16 placeholder:leading-16 border-[1px] placeholder:text-[#E0E0E0] rounded-30px focus:border-[1px] focus:outline-0 mb-25px"
+                        type="Email"
                       />
-                      <Field
+                    </div>
+                    <div> 
+                      <label className="block group-hover:text-white text-18 leading-[25px] pb-5px">Height</label>
+                      <textarea
                         name="Height"
-                        placeholder="Enter your current Height"
-                        className="w-6/12 mr-20px"
-                        type="Height"
+                        placeholder="Enter your current height in cms"
+                        className="h-[204px] w-full resize-none mr-20px py-[13px] px-15px placeholder:text-16 placeholder:leading-16 border-[1px] placeholder:text-[#E0E0E0] rounded-20px focus:border-[1px] focus:outline-0 mb-40px"
                       />
+                    </div>
+                    <div className="">
+                      <input type="Submit" className="placeholder:text-white btn--border btn-read btn--animated bg-primaryColor w-full text-white text-16 rounded-35px py-14px px-30px" placeholder="Send" />
                     </div>
                   </Form>
                 </>

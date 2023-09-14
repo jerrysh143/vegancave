@@ -12,7 +12,7 @@ const imgData = [{ image: UserImage }];
 
 const SliderCard = (props: TestimonialProps) => {
   return (
-    <div className=" p-0 m-15px sm:p-50px md:p-0 md:m-30px">
+    <div className=" p-0 m-15px md:p-50px 992:p-0 md:m-30px">
       {imgData.map((e) => (
         <div className="shadow-[0px_0px_30px_0px_rgba(0,0,0,0.10)] p-15px md:px-50px md:py-[100px] bg-white rounded-35px">
           <div className="flex items-center justify-center pb-20px md:pb-45px">

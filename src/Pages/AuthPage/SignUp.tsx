@@ -53,7 +53,7 @@ const SignUp = () => {
       notify(TOAST_TYPE.ERROR, error);
     }
   };
-
+  document.body.classList.toggle("signUpPage");
   return (
     <OverlayBack>
       <Formik
