@@ -14,6 +14,7 @@ export const ROUTE_NAME = {
   CART: "/cart",
   PROFILE: "/profile",
   FILLDETAIL: "/filldetail",
+  PRODUCTDETAIL: "/productdetail",
 };
 
 export const routes: RouteType[] = [
@@ -45,6 +46,12 @@ export const routes: RouteType[] = [
     path: ROUTE_NAME.STORE,
     name: "Store",
     component: lazy(() => import("./store/Store")),
+    isPublic: true,
+  },
+  {
+    path: ROUTE_NAME.PRODUCTDETAIL,
+    name: "Product Detail",
+    component: lazy(() => import("./ProductDetail/productDetail")),
     isPublic: true,
   },
   {

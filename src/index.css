@@ -34,6 +34,15 @@ body {
   border-radius: 50%;
 }
 
+.quantity input::-webkit-inner-spin-button, 
+.quantity input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity input:focus {
+  outline: 0;
+}
+
 .slick-arrow.slick-prev:before,
 .slick-arrow.slick-next:before {
   background: url(./images/Icons/arrow.png) no-repeat center / contain;

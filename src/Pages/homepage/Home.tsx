@@ -32,7 +32,7 @@ import ConnectLeft from "../../images/connectLeft.png";
 import SliderTestimonial from "../../components/Testimonials/sliderTestimonial";
 import FoodComboImage from "../../images/foodComboImage.png";
 import BurgerCTAImage from "../../images/burgerCtaImage.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ROUTE_NAME } from "../typesRoute";
 import { getProducts } from "../../services/auth";
 import { TOAST_TYPE, notify } from "../../utils/utils";
@@ -197,16 +197,19 @@ const Home = () => {
             </h2>
           </div>
           <div className="flex-wrap flex">
-            <div className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]">
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full !bg-transparent">
                   <img
                     src={poularItem}
                     alt=""
-                    className="shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] w-full object-cover rounded-tl-[15px] rounded-tr-[15px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
+                    className="shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] w-full object-cover rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
                   <div className="flex flex-wrap w-7/12 567:w-9/12">
                     <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
@@ -219,7 +222,7 @@ const Home = () => {
                   <div className="w-5/12 567:w-3/12 text-right">
                     <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
@@ -229,17 +232,20 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]">
+            </Link>
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem1}
                     alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
                   <div className="flex flex-wrap w-7/12 567:w-9/12">
                     <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
@@ -252,7 +258,7 @@ const Home = () => {
                   <div className="w-5/12 567:w-3/12 text-right">
                     <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
@@ -262,17 +268,20 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]">
+            </Link>
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem2}
                     alt=""
-                    className="w-full object-cover  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
                   <div className="flex flex-wrap w-7/12 567:w-9/12">
                     <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
@@ -285,7 +294,7 @@ const Home = () => {
                   <div className="w-5/12 567:w-3/12 text-right">
                     <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
@@ -295,17 +304,20 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]">
+            </Link>
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem3}
                     alt=""
-                    className="w-full object-cover  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
                   <div className="flex flex-wrap w-7/12 567:w-9/12">
                     <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
@@ -318,7 +330,7 @@ const Home = () => {
                   <div className="w-5/12 567:w-3/12 text-right">
                     <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
@@ -328,17 +340,20 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]">
+            </Link>
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem4}
                     alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
                   <div className="flex flex-wrap w-7/12 567:w-9/12">
                     <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
@@ -351,7 +366,7 @@ const Home = () => {
                   <div className="w-5/12 567:w-3/12 text-right">
                     <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
@@ -361,17 +376,20 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]">
+            </Link>
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem5}
                     alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
                   <div className="flex flex-wrap w-7/12 567:w-9/12">
                     <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
@@ -384,7 +402,7 @@ const Home = () => {
                   <div className="w-5/12 567:w-3/12 text-right">
                     <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
@@ -394,7 +412,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="flex justify-center">
             <ButtonArrow
