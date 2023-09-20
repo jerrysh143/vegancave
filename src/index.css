@@ -57,10 +57,10 @@ body {
 }
 .slick-arrow.slick-prev {
   position: absolute;
-  left: 10px;
+  left: 25px;
 }
 .slick-arrow.slick-next {
-  right: 0;
+  right: 15px;
 }
 .slick-arrow.slick-next:before {
   transform: rotate(180deg);
@@ -279,8 +279,6 @@ body.active:before {
   font-size: 0px;
   line-height: 0px;
 }
-
-.slick-arrow {}
 
 @media (max-width:767px) {
   .markers:before {

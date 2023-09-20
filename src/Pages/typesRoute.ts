@@ -12,6 +12,7 @@ export const ROUTE_NAME = {
   SIGNUP: "/signup",
   GETAQUOTE: "/getaquote",
   CART: "/cart",
+  CHECKOUT: "/checkout",
   PROFILE: "/profile",
   FILLDETAIL: "/filldetail",
   PRODUCTDETAIL: "/productdetail",
@@ -51,7 +52,7 @@ export const routes: RouteType[] = [
   {
     path: ROUTE_NAME.PRODUCTDETAIL,
     name: "Product Detail",
-    component: lazy(() => import("./ProductDetail/productDetail")),
+    component: lazy(() => import("./productDetail/ProductDetail")),
     isPublic: true,
   },
   {

@@ -199,7 +199,7 @@ const Home = () => {
           <div className="flex-wrap flex">
             <Link
               to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
             >
               <div className="flex flex-col">
                 <div className="w-full !bg-transparent">
@@ -235,7 +235,7 @@ const Home = () => {
             </Link>
             <Link
               to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
             >
               <div className="flex flex-col">
                 <div className="w-full">
@@ -271,7 +271,7 @@ const Home = () => {
             </Link>
             <Link
               to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
             >
               <div className="flex flex-col">
                 <div className="w-full">
@@ -307,7 +307,7 @@ const Home = () => {
             </Link>
             <Link
               to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
             >
               <div className="flex flex-col">
                 <div className="w-full">
@@ -343,7 +343,7 @@ const Home = () => {
             </Link>
             <Link
               to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
             >
               <div className="flex flex-col">
                 <div className="w-full">
@@ -377,9 +377,9 @@ const Home = () => {
                 </div>
               </div>
             </Link>
-            <Link
+            <Link 
               to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-10px md:px-15px mb-15px md:mb-[58px]"
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
             >
               <div className="flex flex-col">
                 <div className="w-full">

@@ -11,7 +11,7 @@ const initialValues = {
 const Contact = () => {
   document.body.classList.toggle("contactPage");
   return (
-    <div className="pt-25px pb-45px">
+    <div className="pt-70px pb-45px">
       <div className="max-w-[1530px] px-15px mx-auto">
         <div className="flex flex-wrap">
           <div className="w-full md:w-6/12 pr-0 md:pr-15px flex 480:block flex-col items-center 480:items-start">
