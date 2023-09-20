@@ -1,6 +1,11 @@
 import React from "react";
 
-const starIcon = () => {
+interface colorCode {
+  fill?: string;
+  stroke?: string;
+}
+
+const starIcon = (props:colorCode) => {
   return (
     <>
       <svg
@@ -12,8 +17,8 @@ const starIcon = () => {
       >
         <path
           d="M7 1L8.854 4.6204L13 5.20452L10 8.02103L10.708 12L7 10.1204L3.292 12L4 8.02103L1 5.20452L5.146 4.6204L7 1Z"
-          fill="#2BB672"
-          stroke="#2BB672"
+          fill={props.fill}
+          stroke={props.stroke}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"

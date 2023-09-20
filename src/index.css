@@ -34,6 +34,15 @@ body {
   border-radius: 50%;
 }
 
+.quantity input::-webkit-inner-spin-button, 
+.quantity input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity input:focus {
+  outline: 0;
+}
+
 .slick-arrow.slick-prev:before,
 .slick-arrow.slick-next:before {
   background: url(./images/Icons/arrow.png) no-repeat center / contain;
@@ -48,10 +57,10 @@ body {
 }
 .slick-arrow.slick-prev {
   position: absolute;
-  left: 10px;
+  left: 25px;
 }
 .slick-arrow.slick-next {
-  right: 0;
+  right: 15px;
 }
 .slick-arrow.slick-next:before {
   transform: rotate(180deg);
@@ -270,8 +279,6 @@ body.active:before {
   font-size: 0px;
   line-height: 0px;
 }
-
-.slick-arrow {}
 
 @media (max-width:767px) {
   .markers:before {
