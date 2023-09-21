@@ -40,7 +40,11 @@ const ProductsWrap = (props: {
           <div className="bg-white shadow-lg w-full rounded-bl-15px rounded-br-15px md:rounded-bl-35px md:rounded-br-35px p-25px flex flex-wrap justify-between">
             <div className="w-1/2 md:w-7/12 xl:w-1/2">
               <div className="500:text-14 md:text-[19px] xl:text-26 pb-20px">
+<<<<<<< HEAD
+                {product.title}
+=======
                 {props.title}
+>>>>>>> 1733af046a9ade092236438090fdbaa36af1786f
               </div>
               <div>
                 <Button
