@@ -52,7 +52,7 @@ export const routes: RouteType[] = [
   {
     path: ROUTE_NAME.PRODUCTDETAIL,
     name: "Product Detail",
-    component: lazy(() => import("./productDetail/ProductDetail")),
+    component: lazy(() => import("./ProductDetail/productDetail")),
     isPublic: true,
   },
   {
