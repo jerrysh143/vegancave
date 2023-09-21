@@ -33,11 +33,11 @@ const productDetail = () => {
       <div className="pt-70px pb-40px">
         <div className="px-15px w-full max-w-full focus:outline-none 1600:w-[1530px] mx-auto">
           <div className="flex flex-wrap">
-            <div className="w-[calc(100%_-_571px)] xl:w-[calc(100%_-_671px)] pr-25px xl:pr-[75px] border-b-[1px] border-[#121110]/30">
-              <h2 className="text-[52px] leading-[65px] text-[#121110] pb-25px">
+            <div className="w-[calc(100%_-_471px)] 992:w-[calc(100%_-_571px)] xl:w-[calc(100%_-_671px)] pr-25px xl:pr-[75px] border-b-[1px] border-[#121110]/30">
+              <h2 className="text-[32px] 992:text-[42px] 1200:text-[52px] leading-[42px] 992:leading-[52px] 1200:leading-[65px] text-[#121110] pb-15px 1200:pb-25px">
                 Green Spirulina Smoothie Bowl
               </h2>
-              <p className="flex flex-wrap pb-20px">
+              <p className="flex flex-wrap pb-10px 1200:pb-20px">
                 <ul className="flex flex-wrap items-center">
                   <li className="mr-5px">
                     <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
@@ -57,21 +57,21 @@ const productDetail = () => {
                 </ul>
                 <span className="text-20 leading-[35px]">(3 reviews)</span>
               </p>
-              <p className="text-20 leading-[35px] pb-20px">
+              <p className="text-18 992:text-[20px] leading-28 992:leading-[35px] pb-10px 1200:pb-20px">
                 <strong className="pr-5px">Category :</strong>Breakfast
               </p>
-              <p className="text-20 leading-[35px] pb-20px">
+              <p className="text-18 992:text-[20px] leading-28 992:leading-[35px] pb-10px 1200:pb-20px">
                 <strong className="pr-5px">Food Type :</strong>Snack, Fast Food
               </p>
-              <span className="text-[31px] leading-[40px] pb-20px block">
+              <span className="text-[25px] 992:text-[31px] leading-[40px] pb-10px 1200:pb-20px block">
                 $1.85
               </span>
-              <p className="text-[20px] leading-[38px]">
+              <p className="text-18 992:text-[20px] leading-28 992:leading-[38px]">
                 Steamed hot dog bun, grilled frank, mustard, homemade coney
                 Islaland hot dong with pure sauce. It’s very delicious and tasty
                 to eat for anybody. Let’s grab the food and enjoy!
               </p>
-              <div className="flex gap-20px pt-35px pb-30px">
+              <div className="flex gap-20px pt-35px pb-20px 1200:pb-30px">
                 <div className="quantity border-[1px] border-[#55504C] border-opacity-20 inline-flex items-center justify-center px-15px w-[131px] h-[47px] rounded-35px">
                   <button className="minus" aria-label="Decrease">
                     <img src={Minus} alt="" />
@@ -97,7 +97,7 @@ const productDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[571px] xl:w-[671px] pl-50px xl:pl-[75px]">
+            <div className="w-[471px] 992:w-[571px] xl:w-[671px] pl-50px 1200:pl-[75px]">
               <div>
                 <img
                   className="ml-auto mr-0 rounded-[35px]"
@@ -113,11 +113,11 @@ const productDetail = () => {
                 <input
                   type="checkbox"
                   id="pickup"
-                  className="w-0 h-0 relative before:content-[''] before:w-20px before:h-20px before:border-[1px] before:border-black before:absolute before:rounded-full before:bg-transparent before:top-[1px] block checked:before:border-primaryColor checked:after:content-[''] checked:after:bg-primaryColor checked:after:w-10px checked:after:h-10px checked:after:absolute checked:after:top-[6px] checked:after:left-[5px] checked:after:rounded-full"
+                  className="w-0 h-0 relative before:content-[''] before:w-20px before:h-20px 992:before:w-20px 992:before:h-20px before:border-[1px] before:border-black before:absolute before:rounded-full before:bg-transparent before:top-[1px] block checked:before:border-primaryColor checked:after:content-[''] checked:after:bg-primaryColor checked:after:w-10px checked:after:h-10px checked:after:absolute checked:after:top-[6px] checked:after:left-[5px] checked:after:rounded-full"
                 />
                 <label
                   htmlFor="pickup"
-                  className="pl-30px font-medium text-20 leading-20 text-[#121110]"
+                  className="pl-30px font-medium text-18 992:text-20 leading-20 text-[#121110]"
                 >
                   Store Pickup
                 </label>
@@ -130,7 +130,7 @@ const productDetail = () => {
                 />
                 <label
                   htmlFor="delivery"
-                  className="pl-30px font-medium text-20 leading-20 text-[#121110]"
+                  className="pl-30px font-medium text-18 992:text-20 leading-20 text-[#121110]"
                 >
                   Delivery
                 </label>
@@ -144,40 +144,40 @@ const productDetail = () => {
             <div className="w-full flex flex-wrap gap-y-20px flex-col">
               <label
                 htmlFor="checkCOD"
-                className="rounded-20px px-25px py-15px w-[544px] border-[1px] border-[#A4A4A4]"
+                className="rounded-20px px-25px py-15px w-[350px] 992:w-[544px] border-[1px] border-[#A4A4A4]"
               >
                 <input
                   id="checkCOD"
                   type="checkbox"
                   className="w-0 h-0 relative before:content-[''] before:w-20px before:h-20px before:border-[1px] before:border-black before:absolute before:rounded-full before:bg-transparent before:top-[1px] block checked:before:border-primaryColor checked:after:content-[''] checked:after:bg-primaryColor checked:after:w-10px checked:after:h-10px checked:after:absolute checked:after:top-[6px] checked:after:left-[5px] checked:after:rounded-full"
                 />
-                <span className="pl-30px text-20 leading-20 text-[#121110]">
+                <span className="pl-30px text-18 992:text-20 leading-20 text-[#121110]">
                   Cash on Delivery
                 </span>
               </label>
               <label
                 htmlFor="checkCC"
-                className="rounded-20px px-25px py-15px w-[544px] border-[1px] border-[#A4A4A4]"
+                className="rounded-20px px-25px py-15px w-[350px] 992:w-[544px] border-[1px] border-[#A4A4A4]"
               >
                 <input
                   id="checkCC"
                   type="checkbox"
                   className="w-0 h-0 relative before:content-[''] before:w-20px before:h-20px before:border-[1px] before:border-black before:absolute before:rounded-full before:bg-transparent before:top-[1px] block checked:before:border-primaryColor checked:after:content-[''] checked:after:bg-primaryColor checked:after:w-10px checked:after:h-10px checked:after:absolute checked:after:top-[6px] checked:after:left-[5px] checked:after:rounded-full"
                 />
-                <span className="pl-30px text-20 leading-20 text-[#121110]">
+                <span className="pl-30px text-18 992:text-20 leading-20 text-[#121110]">
                   Credit Card / Debit Card
                 </span>
               </label>
               <label
                 htmlFor="checkUPI"
-                className="rounded-20px px-25px py-15px w-[544px] border-[1px] border-[#A4A4A4]"
+                className="rounded-20px px-25px py-15px w-[350px] 992:w-[544px] border-[1px] border-[#A4A4A4]"
               >
                 <input
                   id="checkUPI"
                   type="checkbox"
                   className="w-0 h-0 relative before:content-[''] before:w-20px before:h-20px before:border-[1px] before:border-black before:absolute before:rounded-full before:bg-transparent before:top-[1px] block checked:before:border-primaryColor checked:after:content-[''] checked:after:bg-primaryColor checked:after:w-10px checked:after:h-10px checked:after:absolute checked:after:top-[6px] checked:after:left-[5px] checked:after:rounded-full"
                 />
-                <span className="pl-30px text-20 leading-20 text-[#121110]">
+                <span className="pl-30px text-18 992:text-20 leading-20 text-[#121110]">
                   Paytm / GPay / PhonePay
                 </span>
               </label>
@@ -185,30 +185,30 @@ const productDetail = () => {
           </div>
           <div className="flex flex-wrap pt-50px pb-70px max-w-[740px] border-b-[1px] border-[#121110]/30">
             <h2 className="text-[31px] font-bold">Description</h2>
-            <p className="text-20 leading-[35px] pb-30px">
+            <p className="text-18 992:text-20 leading-[25px] 992:leading-[35px] pb-20px 992:pb-30px">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, nostrud ipsum consectetur sed do.
             </p>
-            <ul className="pl-30px pb-30px">
-              <li className="text-20 leading-[35px] list-disc">
+            <ul className="pl-30px pb-20px 992:pb-30px">
+              <li className="text-18 992:text-20 leading-[25px] 992:leading-[35px] list-disc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </li>
-              <li className="text-20 leading-[35px] list-disc">
+              <li className="text-18 992:text-20 leading-[25px] 992:leading-[35px] list-disc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </li>
-              <li className="text-20 leading-[35px] list-disc">
+              <li className="text-18 992:text-20 leading-[25px] 992:leading-[35px] list-disc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </li>
             </ul>
-            <p className="text-20 leading-[35px]">
+            <p className="text-18 992:text-20 leading-[25px] 992:leading-[35px]">
               <strong className="pr-5px">Note:</strong>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, nostrud ipsum consectetur sed do.
             </p>
           </div>
-          <div className="flex flex-wrap py-40px">
+          <div className="flex flex-wrap py-20px 992:py-40px">
             <h2 className="text-[31px] font-bold pb-30px">Reviews</h2>
             <div className="w-full">
               <div className="flex flex-wrap items-center">
