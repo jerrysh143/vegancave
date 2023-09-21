@@ -13,10 +13,9 @@ const SlideImage5 = [{ Image: Slide1 }];
 
 export default function Sliderabout() {
   var settings = {
-    dots: false,
-    nextArrow: <AboutSlide className="" />,
-    prevArrow: <AboutSlide className="" />,
-    infinite: false,
+    dots: true,
+    arrow: false, 
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,

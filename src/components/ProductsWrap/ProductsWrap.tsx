@@ -1,6 +1,6 @@
-import React from "react";
+/* eslint-disable jsx-a11y/img-redundant-alt */
+import React, { ReactNode } from "react";
 import Button from "../Buttons/buttonHome";
-import StarIcon from "../../images/Icons/starIcon";
 
 interface ProductItems {
   title?: string;
@@ -20,7 +20,9 @@ export interface Product {
   categories: Array<number>;
 }
 
-const ProductsWrap = (props: { products: Product[] }) => {
+const ProductsWrap = (props: {
+  title: ReactNode; products: Product[] 
+}) => {
   return (
     <>
       {props.products.map((product) => (
@@ -38,7 +40,11 @@ const ProductsWrap = (props: { products: Product[] }) => {
           <div className="bg-white shadow-lg w-full rounded-bl-15px rounded-br-15px md:rounded-bl-35px md:rounded-br-35px p-25px flex flex-wrap justify-between">
             <div className="w-1/2 md:w-7/12 xl:w-1/2">
               <div className="500:text-14 md:text-[19px] xl:text-26 pb-20px">
+<<<<<<< HEAD
                 {product.title}
+=======
+                {props.title}
+>>>>>>> 1733af046a9ade092236438090fdbaa36af1786f
               </div>
               <div>
                 <Button

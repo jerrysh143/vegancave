@@ -32,7 +32,7 @@ import ConnectLeft from "../../images/connectLeft.png";
 import SliderTestimonial from "../../components/Testimonials/sliderTestimonial";
 import FoodComboImage from "../../images/foodComboImage.png";
 import BurgerCTAImage from "../../images/burgerCtaImage.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ROUTE_NAME } from "../typesRoute";
 import { getProducts } from "../../services/auth";
 import { TOAST_TYPE, notify } from "../../utils/utils";
@@ -53,7 +53,6 @@ const Home = () => {
 
     fetchProduct();
   }, []);
-
   return (
     <>
       <div className="">
@@ -99,9 +98,9 @@ const Home = () => {
                       alt=""
                       className="mx-auto -mt-80px"
                     />
-                    <div className="text-20 lg:text-26 leading-normal font-bold text-center pt-20px pb-10px">
+                    <h6 className="text-20 lg:text-26 leading-normal font-bold text-center pt-20px pb-10px">
                       Burger
-                    </div>
+                    </h6>
                     <p className="text-18 leading-normal font-medium text-center pb-10px">
                       Mushroom Sauce
                     </p>
@@ -112,9 +111,9 @@ const Home = () => {
                   </div>
                   <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[30px]">
                     <img src={PizzaImage} alt="" className="mx-auto -mt-65px" />
-                    <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-20px">
+                    <h6 className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-20px">
                       Pizza
-                    </div>
+                    </h6>
                     <p className="text-center text-18 leading-normal font-medium pb-10px">
                       Mushroom Sauce
                     </p>
@@ -127,9 +126,9 @@ const Home = () => {
                 <div className="flex flex-wrap flex-row md:flex-col items-end lg:mr-20px  md:pb-[123px] pt-90px sm:pt-0 lg:pb-0 m-0 justify-center md:justify-normal">
                   <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[115px]">
                     <img src={ComboImage} alt="" className="mx-auto -mt-65px" />
-                    <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-20px">
+                    <h6 className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-20px">
                       Food Combo
-                    </div>
+                    </h6>
                     <p className="text-center text-18 leading-normal font-medium pb-10px">
                       Mushroom Sauce
                     </p>
@@ -140,9 +139,9 @@ const Home = () => {
                   </div>
                   <div className="w-[calc(100%_-_30px)] 500:w-[235px] lg:w-[258px] h-[275px] rounded-30px bg-white shadow-[0px_0px_31px_0_rgba(0,0,0,0.05)] mx-auto mr-auto 500:mr-10px md:mr-0 mb-[80px]">
                     <img src={CakeImage} alt="" className="mx-auto -mt-65px" />
-                    <div className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-0px">
+                    <h6 className="text-center text-20 lg:text-26 leading-normal font-bold pb-10px pt-0px">
                       Cake
-                    </div>
+                    </h6>
                     <p className="text-center text-18 leading-normal font-medium pb-10px">
                       Mushroom Sauce
                     </p>
@@ -192,24 +191,27 @@ const Home = () => {
       </div>
       <div className="py-30px md:pt-30px md:pb-40px">
         <div className="px-15px w-full max-w-full 1600:w-[1530px] mx-auto">
-          <div className="flex flex-wrap -mx-15px">
-            <div className="w-full px-15px text-center text-36 leading-unset font-bold mb-30px md:mb-[58px]">
+          <div className="flex flex-wrapx">
+            <h2 className="w-full px-15px text-center text-26 md:text-48 leading-unset font-bold mb-30px md:mb-[58px]">
               Most Popular Items
-            </div>
+            </h2>
           </div>
-          <div className="flex flex-wrap -mx-15px">
-            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
+          <div className="flex-wrap flex">
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full !bg-transparent">
                   <img
                     src={poularItem}
                     alt=""
-                    className="shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] w-full object-cover rounded-tl-[35px] rounded-tr-[35px]"
+                    className="shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] w-full object-cover rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
-                  <div className="flex flex-wrap w-9/12">
-                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
+                  <div className="flex flex-wrap w-7/12 567:w-9/12">
+                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -217,32 +219,35 @@ const Home = () => {
                       className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
                     />
                   </div>
-                  <div className="w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-25px">
+                  <div className="w-5/12 567:w-3/12 text-right">
+                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
-                    <div className="text-18 leading-normal font-medium">
+                    <div className="text-16 567:text-18 leading-normal font-medium">
                       $15.00
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
+            </Link>
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem1}
                     alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
-                  <div className="flex flex-wrap w-9/12">
-                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
+                  <div className="flex flex-wrap w-7/12 567:w-9/12">
+                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -250,32 +255,35 @@ const Home = () => {
                       className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
                     />
                   </div>
-                  <div className="w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-25px">
+                  <div className="w-5/12 567:w-3/12 text-right">
+                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
-                    <div className="text-18 leading-normal font-medium">
+                    <div className="text-16 567:text-18 leading-normal font-medium">
                       $15.00
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
+            </Link>
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem2}
                     alt=""
-                    className="w-full object-cover  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
-                  <div className="flex flex-wrap w-9/12">
-                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
+                  <div className="flex flex-wrap w-7/12 567:w-9/12">
+                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -283,32 +291,35 @@ const Home = () => {
                       className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
                     />
                   </div>
-                  <div className="w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-25px">
+                  <div className="w-5/12 567:w-3/12 text-right">
+                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
-                    <div className="text-18 leading-normal font-medium">
+                    <div className="text-16 567:text-18 leading-normal font-medium">
                       $15.00
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
+            </Link>
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem3}
                     alt=""
-                    className="w-full object-cover  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap  shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
-                  <div className="flex flex-wrap w-9/12">
-                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
+                  <div className="flex flex-wrap w-7/12 567:w-9/12">
+                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -316,32 +327,35 @@ const Home = () => {
                       className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
                     />
                   </div>
-                  <div className="w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-25px">
+                  <div className="w-5/12 567:w-3/12 text-right">
+                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
-                    <div className="text-18 leading-normal font-medium">
+                    <div className="text-16 567:text-18 leading-normal font-medium">
                       $15.00
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
+            </Link>
+            <Link
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem4}
                     alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
-                  <div className="flex flex-wrap w-9/12">
-                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
+                  <div className="flex flex-wrap w-7/12 567:w-9/12">
+                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -349,32 +363,35 @@ const Home = () => {
                       className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
                     />
                   </div>
-                  <div className="w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-25px">
+                  <div className="w-5/12 567:w-3/12 text-right">
+                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
-                    <div className="text-18 leading-normal font-medium">
+                    <div className="text-16 567:text-18 leading-normal font-medium">
                       $15.00
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full md:w-6/12 xl:w-4/12 px-15px mb-[58px]">
+            </Link>
+            <Link 
+              to={ROUTE_NAME.PRODUCTDETAIL}
+              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
+            >
               <div className="flex flex-col">
                 <div className="w-full">
                   <img
                     src={poularItem5}
                     alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[35px] rounded-tr-[35px]"
+                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                   />
                 </div>
-                <div className="pt-[16px] px-[15px] md:px-[32px] pb-[21px] bg-white flex flex-wrap shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[35px] rounded-br-[35px]">
-                  <div className="flex flex-wrap w-9/12">
-                    <div className="text-18 md:text-26 leading-normal font-bold pb-[7px]">
+                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
+                  <div className="flex flex-wrap w-7/12 567:w-9/12">
+                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
                       Green Spirulina Smoothie Bowl
                     </div>
                     <Button
@@ -382,20 +399,20 @@ const Home = () => {
                       className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
                     />
                   </div>
-                  <div className="w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-25px">
+                  <div className="w-5/12 567:w-3/12 text-right">
+                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
                       <div className="pr-10px">
-                        <StarIcon />
+                        <StarIcon fill="#2BB672" stroke="#2BB672" />
                       </div>
                       <div className="text-13 leading-normal">4.9</div>
                     </div>
-                    <div className="text-18 leading-normal font-medium">
+                    <div className="text-16 567:text-18 leading-normal font-medium">
                       $15.00
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="flex justify-center">
             <ButtonArrow
@@ -431,7 +448,7 @@ const Home = () => {
                 <div className="relative z-10 w-70px h-40px md:w-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
-                <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
+                <div className="z-1 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
                   <div className="text-36 leading-normal font-bold text-white pb-[11px]">
                     Mutligrain Idli
                   </div>
@@ -453,7 +470,7 @@ const Home = () => {
                 <div className="relative z-10 w-70px h-40px md:w-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
-                <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
+                <div className="z-1 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
                   <div className="text-36 leading-normal font-bold text-white pb-[11px]">
                     Sprouts Salad
                   </div>
@@ -475,7 +492,7 @@ const Home = () => {
                 <div className="relative z-10 w-70px h-40px md:w-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
-                <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
+                <div className="z-1 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
                   <div className="text-36 leading-normal font-bold text-white pb-[11px] px-15px">
                     Overnight Soaked Salad
                   </div>
@@ -497,7 +514,7 @@ const Home = () => {
                 <div className="relative z-10 w-70px h-40px md:w-100px bg-primaryColor rounded-full flex items-center justify-center text-white ml-auto top-20px mr-20px">
                   $ 30.00
                 </div>
-                <div className="z-10 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
+                <div className="z-1 text-center bg-imageGrad w-full h-auto rounded-20px lg:rounded-35px">
                   <div className="text-36 leading-normal font-bold text-white pb-[11px]">
                     Ragi Toast
                   </div>
@@ -583,7 +600,7 @@ const Home = () => {
           <div className="flex flex-wrap md:justify-center lg:justify-normal -mx-15px">
             <div className="w-full sm:w-6/12 md:w-4/12 px-15px relative">
               <div className="">
-                <div className="mb-30px md:mb-45px">
+                <div className="mb-30px md:mb-45px flex justify-center md:justify-start">
                   <img src={LaptopImage} alt="" />
                 </div>
                 <div className="text-26 leading-normal font-bold pb-25px text-center md:text-left">

@@ -9,7 +9,11 @@ import { TOAST_TYPE, notify, setToken } from "../../utils/utils";
 import { ROUTE_NAME } from "../typesRoute";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/user/user.action";
+<<<<<<< HEAD
 import Overlay from "../../components/Overlay/Overlay";
+=======
+import OverlayBack from "./OverlayBack";
+>>>>>>> 1733af046a9ade092236438090fdbaa36af1786f
 
 const Login = () => {
   const navigate = useNavigate();
@@ -43,9 +47,13 @@ const Login = () => {
       notify(TOAST_TYPE.ERROR, error);
     }
   };
-
+  document.body.classList.toggle("loginPage");
   return (
+<<<<<<< HEAD
     <Overlay>
+=======
+    <OverlayBack>
+>>>>>>> 1733af046a9ade092236438090fdbaa36af1786f
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -107,7 +115,11 @@ const Login = () => {
           <div className="w-8/12"></div>
         </>
       </Formik>
+<<<<<<< HEAD
     </Overlay>
+=======
+    </OverlayBack>
+>>>>>>> 1733af046a9ade092236438090fdbaa36af1786f
   );
 };
 
