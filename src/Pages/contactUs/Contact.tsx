@@ -155,7 +155,7 @@ const Contact = () => {
                 </p>
               </div>
               <div className="w-full 480:w-6/12 pr-15px mb-15px md:mb-0 flex 480:block flex-col items-center 480:items-start">
-                <div className="w-[48px] h-[48px] bg-primaryColor rounded-full flex justify-center items-center mb-15px md:mb-0">
+                <div className="w-[48px] h-[48px] bg-primaryColor rounded-full flex justify-center items-center mb-15px md:mb-[24px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
