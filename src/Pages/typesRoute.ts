@@ -12,14 +12,10 @@ export const ROUTE_NAME = {
   SIGNUP: "/signup",
   GETAQUOTE: "/getaquote",
   CART: "/cart",
-<<<<<<< HEAD
-  PROFILE: "/Login",
-=======
   CHECKOUT: "/checkout",
   PROFILE: "/profile",
   FILLDETAIL: "/filldetail",
   PRODUCTDETAIL: "/productdetail",
->>>>>>> 1733af046a9ade092236438090fdbaa36af1786f
 };
 
 export const routes: RouteType[] = [
@@ -72,16 +68,7 @@ export const routes: RouteType[] = [
     isPublic: true,
   },
   {
-<<<<<<< HEAD
-    path: ROUTE_NAME.GETAQUOTE,
-    name: "Getaquote",
-    component: lazy(() => import("./getQuote/GetAQuote")),
-    isPublic: true,
-  },
-   { path: ROUTE_NAME.CART,
-=======
     path: ROUTE_NAME.CART,
->>>>>>> 1733af046a9ade092236438090fdbaa36af1786f
     name: "Cart",
     component: lazy(() => import("./AuthPage/Login")),
     isPublic: true,
@@ -92,14 +79,6 @@ export const routes: RouteType[] = [
     component: lazy(() => import("./AuthPage/SignUp")),
     isPublic: false,
   },
-<<<<<<< HEAD
-  // {
-  //   path: "*",
-  //   name: "Not Found",
-  //   component: lazy(() => import("./homepage/Home")),
-  //   isPublic: true,
-  // },
-=======
   {
     path: ROUTE_NAME.GETAQUOTE,
     name: "Getaquote",
@@ -112,5 +91,4 @@ export const routes: RouteType[] = [
     component: lazy(() => import("./AuthPage/FillDetail")),
     isPublic: true,
   }
->>>>>>> 1733af046a9ade092236438090fdbaa36af1786f
 ];
