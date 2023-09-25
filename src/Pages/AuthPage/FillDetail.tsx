@@ -13,12 +13,12 @@ const FillDetail = () => {
   return (
     <>
       <OverlayBack>
-        <Form className="w-full 767:w-8/12 992:w-6/12 1200:w-4/12 px-15px">
+        <Form className="m-auto text-center 992:text-left w-full 567:w-8/12 992:w-7/12 1200:w-4/12 bg-white/70 py-20px px-15px shadow-lg 992:shadow-none rounded-xl 992:rounded-none">
           <div className="text-28 leading-normal pb-40px font-bold font-opensans text-center">
             Fill up your details
           </div>
-          <div className="relative pb-20px 767:pb-30px 992:pb-40px">
-            <label className="text-18 leading-6 font-normal font-opensans pb-5px">
+          <div className="relative pb-20px 767:pb-30px 992:pb-40px text-left">
+            <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
               Full Name
             </label>
             <input
@@ -31,8 +31,8 @@ const FillDetail = () => {
               <ProfileIcon />
             </div>
           </div>
-          <div className="pb-30px">
-            <label className="text-18 leading-6 font-normal font-opensans pb-5px">
+          <div className="pb-30px text-left">
+            <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
               Date of Birth
             </label>
             <input
@@ -42,23 +42,23 @@ const FillDetail = () => {
               className="pl-15px pr-[31px] text-14 leading-normal w-full h-45px rounded-10px border-[1px] border-inputBorder outline-none focus:border-[1px] focus:bg-white focus:border-inputBorder bg-white"
             />
           </div>
-          <div className="pb-30px">
-            <div className="text-18 leading-6 font-normal font-opensans pb-15px">
+          <div className="pb-30px text-left">
+            <div className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-15px">
               Gender
             </div>
             <div className="flex flex-wrap items-center">
               <div className="mr-50px">
                 <input
-                  className="mr-10px relative w-0 h-0 pl-35px block before:w-20px before:h-20px before:rounded-full before:content-[''] before:absolute before:border-[1px] before:top-[1.5px] checked:before:border-transparent after:content-[''] after:w-14px after:h-14px after:absolute after:top-[5px] after:left-[3px] after:bg-[#E0E0E0] after:rounded-full checked:before:border-black checked:after:bg-primaryColor"
+                  className="mr-10px relative w-0 h-0 pl-35px block before:w-20px before:h-20px before:rounded-full before:content-[''] before:absolute before:border-[1px] before:top-[1.5px] after:content-[''] after:w-[12px] after:h-[12px] after:absolute after:top-[6px] after:left-[4px] after:bg-[#E0E0E0] after:rounded-full checked:before:border-black checked:after:bg-primaryColor"
                   name="tab"
                   type="radio"
                   id="html"
                 />
                 <label className="pl-35px">Male</label>
               </div>
-              <div>
+              <div className="">
                 <input
-                  className="mr-10px relative w-0 h-0 pl-35px block before:w-20px before:h-20px before:rounded-full before:content-[''] before:absolute before:border-[1px] before:top-[1.5px] checked:before:border-transparent after:content-[''] after:w-14px after:h-14px after:absolute after:top-[5px] after:left-[3px] after:bg-[#E0E0E0] after:rounded-full checked:before:border-black checked:after:bg-primaryColor"
+                  className="mr-10px relative w-0 h-0 pl-35px block before:w-20px before:h-20px before:rounded-full before:content-[''] before:absolute before:border-[1px] before:top-[1.5px] after:content-[''] after:w-[12px] after:h-[12px] after:absolute after:top-[6px] after:left-[4px] after:bg-[#E0E0E0] after:rounded-full checked:before:border-black checked:after:bg-primaryColor"
                   name="tab"
                   type="radio"
                   id="html"
@@ -67,8 +67,8 @@ const FillDetail = () => {
               </div>
             </div>
           </div>
-          <div className="pb-30px">
-            <label className="text-18 leading-6 font-normal font-opensans pb-5px">
+          <div className="pb-30px text-left">
+            <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
               Your Goal
             </label>
             <input
@@ -79,7 +79,7 @@ const FillDetail = () => {
             />
           </div>
           <div className="pb-30px">
-            <label className="text-18 leading-6 font-normal font-opensans pb-5px">
+            <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
               Your Goal
             </label>
             <input
@@ -90,7 +90,7 @@ const FillDetail = () => {
             />
           </div>
           <div className="pb-30px">
-            <label className="text-18 leading-6 font-normal font-opensans pb-5px">
+            <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
               Height
             </label>
             <input
