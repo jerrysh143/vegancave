@@ -32,8 +32,8 @@ const productDetail = () => {
     <>
       <div className="pt-70px pb-40px">
         <div className="px-15px w-full max-w-full focus:outline-none 1600:w-[1530px] mx-auto">
-          <div className="flex flex-wrap">
-            <div className="w-[calc(100%_-_471px)] 992:w-[calc(100%_-_571px)] xl:w-[calc(100%_-_671px)] pr-25px xl:pr-[75px] border-b-[1px] border-[#121110]/30">
+          <div className="flex flex-wrap flex-col-reverse 992:flex-row">
+            <div className="w-full 992:w-6/12 1200:w-[calc(100%_-_571px)] xl:w-[calc(100%_-_671px)] pr-25px xl:pr-[75px] border-b-[1px] border-[#121110]/30">
               <h2 className="text-[32px] 992:text-[42px] 1200:text-[52px] leading-[42px] 992:leading-[52px] 1200:leading-[65px] text-[#121110] pb-15px 1200:pb-25px">
                 Green Spirulina Smoothie Bowl
               </h2>
@@ -97,10 +97,10 @@ const productDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[471px] 992:w-[571px] xl:w-[671px] pl-50px 1200:pl-[75px]">
-              <div>
+            <div className="w-full 992:h-full 992:w-6/12 1200:w-[571px] xl:w-[671px] pl-0 992:pl-50px 1200:pl-[75px]">
+              <div className="h-[300px] 992:h-full text-left">
                 <img
-                  className="ml-auto mr-0 rounded-[35px]"
+                  className="h-[300px] 992:h-full object-cover m-0 992:ml-auto 992:mr-0 rounded-[35px]"
                   src={ProductDetailImage}
                   alt=""
                 />

@@ -65,59 +65,59 @@ const SignUp = () => {
         }}
       >
         <>
-          <Form className="w-4/12 px-15px">
+          <Form className="m-auto text-center 992:text-left w-full 567:w-8/12 992:w-7/12 1200:w-4/12 bg-white/70 py-20px px-15px shadow-lg 992:shadow-none">
             <div className="text-28 leading-normal pb-40px font-bold font-opensans text-center">
               Sign up
             </div>
-            <div className="relative pb-40px">
-              <p className="text-18 leading-6 font-normal font-opensans pb-5px">
+            <div className="relative pb-40px text-left">
+              <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
                 Name
-              </p>
+              </label>
               <Field
                 name="username"
                 placeholder="ABC"
                 type="text"
                 className="pl-15px pr-[31px] text-14 leading-normal w-full h-45px rounded-10px border-[1px] border-inputBorder outline-none focus:border-[1px] focus:bg-white active:bg-white focus:border-inputBorder bg-white"
               />
-              <ErrorMessage name="username" className="text-red-500" />
+              <ErrorMessage name="username" className="text-red-500 text-left" />
               <div className="absolute top-[42px] right-15px">
                 <MailIcon />
               </div>
             </div>
-            <div className="relative pb-40px">
-              <p className="text-18 leading-6 font-normal font-opensans pb-5px">
+            <div className="relative pb-40px text-left">
+              <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
                 Mobile No.
-              </p>
+              </label>
               <Field
                 name="phone"
                 placeholder="999*******"
                 type="tel"
                 className="pl-15px pr-[31px] text-14 leading-normal w-full h-45px rounded-10px border-[1px] border-inputBorder outline-none focus:border-[1px] focus:bg-white active:bg-white focus:border-inputBorder bg-white"
               />
-              <ErrorMessage name="phone" className="text-red-500" />
+              <ErrorMessage name="phone" className="text-red-500 text-left" />
               <div className="absolute top-[42px] right-15px">
                 <MailIcon />
               </div>
             </div>
-            <div className="relative pb-40px">
-              <p className="text-18 leading-6 font-normal font-opensans pb-5px">
+            <div className="relative pb-40px text-left">
+              <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
                 Email
-              </p>
+              </label>
               <Field
                 name="email"
                 placeholder="abc@gmail.com"
                 type="email"
                 className="pl-15px pr-[31px] text-14 leading-normal w-full h-45px rounded-10px border-[1px] border-inputBorder outline-none focus:border-[1px] focus:bg-white active:bg-white focus:border-inputBorder bg-white"
               />
-              <ErrorMessage name="email" className="text-red-500" />
+              <ErrorMessage name="email" className="text-red-500 text-left" />
               <div className="absolute top-[42px] right-15px">
                 <MailIcon />
               </div>
             </div>
-            <div className="pb-50px">
-              <p className="text-18 leading-6 font-normal font-opensans pb-5px">
+            <div className="pb-50px text-left">
+              <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
                 Password
-              </p>
+              </label>
               <Field
                 name="password"
                 placeholder="*******"

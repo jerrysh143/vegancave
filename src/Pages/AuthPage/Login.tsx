@@ -55,12 +55,12 @@ const Login = () => {
         }}
       >
         <>
-          <Form className="w-4/12  px-15px">
+          <Form className="m-auto text-center 992:text-left w-full 567:w-8/12 992:w-7/12 1200:w-4/12 bg-white/70 py-20px px-15px shadow-lg 992:shadow-none">
             <div className="text-28 leading-normal pb-40px font-bold font-opensans">
               Login
             </div>
-            <div className="relative pb-40px">
-              <label className="text-18 leading-6 font-normal font-opensans pb-5px">
+            <div className="relative pb-40px text-left">
+              <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
                 Email
               </label>
               <Field
@@ -74,8 +74,8 @@ const Login = () => {
                 <MailIcon />
               </div>
             </div>
-            <div>
-              <label className="text-18 leading-6 font-normal font-opensans pb-5px">
+            <div className="text-left">
+              <label className="text-left w-full block text-18 leading-6 font-normal font-opensans pb-5px">
                 Password
               </label>
               <Field

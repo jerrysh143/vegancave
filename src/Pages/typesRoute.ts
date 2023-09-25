@@ -16,6 +16,7 @@ export const ROUTE_NAME = {
   PROFILE: "/profile",
   FILLDETAIL: "/filldetail",
   PRODUCTDETAIL: "/productdetail",
+  RESETPASSWORD: "/resetpassword",
 };
 
 export const routes: RouteType[] = [
@@ -65,6 +66,12 @@ export const routes: RouteType[] = [
     path: ROUTE_NAME.SIGNUP,
     name: "SignUp",
     component: lazy(() => import("./AuthPage/SignUp")),
+    isPublic: true,
+  },
+  {
+    path: ROUTE_NAME.RESETPASSWORD,
+    name: "ResetPassword",
+    component: lazy(() => import("./AuthPage/ResetPassword")),
     isPublic: true,
   },
   {
