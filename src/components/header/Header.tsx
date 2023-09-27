@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../images/logo_vegan_cave.png";
-import CartIcon from "../../images/Icons/cartIcon";
 import SearchIcon from "../../images/Icons/searchIcon";
-// import AddUserIcon from "../../images/Icons/addUserIcon";
-// import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import BurgerMenu from "../../images/Icons/burgerMenu";
 import CloseIcon from "../../images/Icons/closeIcon";
@@ -11,10 +8,15 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import { ROUTE_NAME } from "../../Pages/typesRoute";
 import UserIcon from "../../images/Icons/userIcon";
+import CartSidebar from "../CartSidebar/cartSidebar";
+import CartIcon from "../../images/Icons/cartIcon.svg";
+import Cart from "../../images/Icons/cartIcon";
+import Close from "../../images/Icons/close.svg";
 
 const Header = () => {
   const [Menu, setMenu] = useState(false);
   const [Search, setSearch] = useState(false);
+  const [cart, setCart] = useState(false);
   const handleClick = () => {
     // Add or remove a class to the body element
     document.body.classList.toggle("active");
@@ -31,6 +33,13 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  //  componentDidMount() {
+  //   document.body.classList.add('active');
+  // }
+
+  // componentWillUnmount() {
+  //   document.body.classList.remove('active');
+  // }
 
   return (
     <div className="z-1 px-15px slide-in w-full py-10px bg-white/80 duration-300 transition-all group">
@@ -90,9 +99,22 @@ const Header = () => {
               </div>
             </div>
             <div className="max-w-32px md:px-15px px-0">
-              <Link className="cursor-pointer" to={ROUTE_NAME.CART}>
-                <CartIcon className="w-25px" />
-              </Link>
+              <a
+                className="cursor-pointer"
+                onClick={() => {
+                  setCart(!cart);
+                  setSearch(false);
+                  setMenu(false);
+                  handleClick();
+                }}
+              >
+                <>
+                  <Cart className="w-25px" />
+                </>
+              </a>
+              <div>
+                <CartSidebar className={` ${cart ? "" : "hidden"} `} />
+              </div>
             </div>
             <div
               className={`fixed top-0 m-15px rounded-15px bg-white w-[calc(100vw_-_30px)] md:w-5/12 h-[calc(100dvh_-_30px)] shadow-[0px_0px_10px_0px_rgba(0,0,0,0.3)] ${

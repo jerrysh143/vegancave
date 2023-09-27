@@ -77,7 +77,7 @@ export const routes: RouteType[] = [
   {
     path: ROUTE_NAME.CART,
     name: "Cart",
-    component: lazy(() => import("./AuthPage/Login")),
+    component: lazy(() => import("../components/CartSidebar/cartSidebar")),
     isPublic: true,
   },
   {
