@@ -23,7 +23,7 @@ const CartSidebar = (pros: CartProps) => {
             <img className="w-20px h-20px" src={Close} alt="" />
           </div>
         </div>
-        <div className="w-full 567:w-[450px] h-full mb-[155px] py-15px">
+        <div className="w-full 567:w-[450px] h-full mb-0 430:mb-[125px] 567:mb-[155px] py-15px">
           <SidebarProduct />
           <SidebarProduct />
           <SidebarProduct />
