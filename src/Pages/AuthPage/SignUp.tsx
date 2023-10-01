@@ -1,6 +1,4 @@
 import React from "react";
-import MailIcon from "../../images/Icons/mailIcon";
-import Button from "../../components/Buttons/buttonOrder";
 import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";

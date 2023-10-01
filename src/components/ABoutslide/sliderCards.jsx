@@ -1,8 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import Slide1 from "../../images/AboutSlide1.jpg";
-import Slide2 from "../../images/AboutSlide2.jpg";
-import AboutSlide from "../../images/Icons/aboutSlide.tsx";
 import SliderContent from "./SliderImage";
 
 const SlideImage = [{ Image: Slide1 }];

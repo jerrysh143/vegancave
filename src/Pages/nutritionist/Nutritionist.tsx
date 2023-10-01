@@ -1,22 +1,5 @@
 import React from "react";
-import Button from "../../components/Buttons/buttonHome";
-import NutritionBannerImage from "../../images/nutrition_Image.png";
-import SectionHealthyImage1 from "../../images/SectionHealthyImage1.jpg";
-import SectionHealthyImage2 from "../../images/SectionHealthyImage2.jpg";
-import SectionHealthyImage3 from "../../images/SectionHealthyImage3.jpg";
-import FruitIcon1 from "../../images/Fruiticon1.png";
-import FruitIcon2 from "../../images/Fruiticon2.png";
-import FruitIcon3 from "../../images/Fruiticon3.png";
-import MeetImage from "../../images/MeetImage.jpg";
-import MeetCircles from "../../images/MeetCircles.png";
-import ButtonArrow from "../../components/Buttons/buttonArrow";
-import VeganCaveForImage1 from "../../images/veganCaveForImage1.png";
-import VeganCaveForImage2 from "../../images/veganCaveForImage2.png";
-import VeganCaveForImage3 from "../../images/veganCaveForImage3.png";
-import VeganCaveForImage4 from "../../images/veganCaveForImage4.png";
-import VeganCaveForyouBack from "../../images/VeganCaveForyouBackground.png";
-import VeganCaveForyouImage from "../../images/VeganCaveForyouImage.png";
-import ReviewImage from "../../images/ReviewImage.jpg";
+
 const Nutritionist = () => {
   document.body.classList.toggle("nutritionPage");
   return (
