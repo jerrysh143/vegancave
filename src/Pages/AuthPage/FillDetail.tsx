@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import OverlayBack from "../AuthPage/OverlayBack";
 import { Form } from "react-router-dom";
-import Button from "../../components/Buttons/buttonHome";
-import ProfileIcon from "../../images/Icons/profileIcon";
 
 const FillDetail = () => {
   document.body.classList.toggle("getFillPage");

@@ -1,14 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
-import ProductDetailImage from "../../images/ProductImage.jpg";
-import StarIcon from "../../images/Icons/starIcon";
-import Minus from "../../images/minus.png";
-import Plus from "../../images/plus.png";
-import Button from "../../components/Buttons/buttonHome";
-import AuthorReviewImage from "../../images/authorreviewimage.jpg";
-import PhoneIcon from "../../images/Icons/phone.svg";
-import LocationIcon from "../../images/Icons/location.svg";
-import EmailIcon from "../../images/Icons/email.svg";
 
 // interface QuantityCounterProps {
 //   initialQuantity: number;
@@ -40,19 +31,19 @@ const productDetail = () => {
               <p className="flex flex-wrap pb-10px 1200:pb-20px">
                 <ul className="flex flex-wrap items-center">
                   <li className="mr-5px">
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li className="mr-5px">
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li className="mr-5px">
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li className="mr-5px">
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li className="mr-15px">
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                 </ul>
                 <span className="text-18 768:text-20 leading-20 768:leading-[35px]">(3 reviews)</span>
@@ -74,7 +65,7 @@ const productDetail = () => {
               <div className="flex gap-20px pt-35px pb-20px 1200:pb-30px">
                 <div className="quantity border-[1px] border-[#55504C] border-opacity-20 inline-flex items-center justify-center px-10px 768:px-15px w-[90px] 768:w-[131px] h-40px 768:h-[47px] rounded-35px">
                   <button className="minus" aria-label="Decrease">
-                    <img src={Minus} alt="" />
+                    <img src="{Minus}" alt="" />
                   </button>
                   <input
                     type="number"
@@ -84,7 +75,7 @@ const productDetail = () => {
                     max="10"
                   />
                   <button className="plus" aria-label="Increase">
-                    <img src={Plus} alt="" />
+                    <img src="{Plus}" alt="" />
                   </button>
                 </div>
                 <div className="">
@@ -101,7 +92,7 @@ const productDetail = () => {
               <div className="h-[300px] 768:h-full text-left">
                 <img
                   className="w-full 768:w-full h-[273px] 768:h-full object-cover m-0 992:ml-auto 992:mr-0 rounded-none 768:rounded-[35px]"
-                  src={ProductDetailImage}
+                  src="{ProductDetailImage}"
                   alt=""
                 />
               </div>
@@ -215,30 +206,24 @@ const productDetail = () => {
                 <span>5.0</span>
                 <ul className="flex items-center pl-10px gap-5px">
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                 </ul>
                 <p className="w-full text-18 pb-20px 768:pb-40px">Based on 3 reviews</p>
                 <div>
-                  <Button
-                    Title="Write A Review"
-                    className="px-30px py-[13px] btn--border btn-read btn--animated rounded-35px"
-                    onClick={() => {
-                      setReview(!Review);
-                    }}
-                  />
+                  
                 </div>
               </div>
             </div>
@@ -257,19 +242,19 @@ const productDetail = () => {
                 </h4>
                 <ul className="flex items-center gap-5px">
                   <li>
-                    <StarIcon fill="#2BB672" stroke="#2BB672" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#2BB672" stroke="#2BB672" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#2BB672" stroke="#2BB672" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#2BB672" stroke="#2BB672" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#2BB672" stroke="#2BB672" />
+                    
                   </li>
                 </ul>
               </div>
@@ -310,14 +295,7 @@ const productDetail = () => {
                   </div>
                 </div>
                 <div className="flex flex-wrap justify-end gap-20px w-full pb-50px">
-                  <Button
-                    Title="Cancel"
-                    className="py-[19px] px-[35px] border-[1px] border-[#222] text-26 leading-26 rounded-[55px] font-bold"
-                  />
-                  <Button
-                    Title="Submit Review"
-                    className="py-[19px] px-[20px] text-26 leading-26 btn--border btn-read btn--animated rounded-[55px] font-bold"
-                  />
+                  
                 </div>
               </form>
             </div>
@@ -327,7 +305,7 @@ const productDetail = () => {
               <div className="w-80px h-80px">
                 <img
                   className="rounded-full w-full h-full object-cover"
-                  src={AuthorReviewImage}
+                  src="{AuthorReviewImage}"
                   alt=""
                 />
               </div>
@@ -340,19 +318,19 @@ const productDetail = () => {
                 </div>
                 <ul className="flex items-center gap-5px pb-10px">
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                 </ul>
                 <p className="font-medium text-20 leading-36 pb-10px text-[#121110]">
@@ -370,7 +348,7 @@ const productDetail = () => {
               <div className="w-80px h-80px">
                 <img
                   className="rounded-full w-full h-full object-cover"
-                  src={AuthorReviewImage}
+                  src="{AuthorReviewImage}"
                   alt=""
                 />
               </div>
@@ -383,19 +361,19 @@ const productDetail = () => {
                 </div>
                 <ul className="flex items-center gap-5px pb-10px">
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                 </ul>
                 <p className="font-medium text-18 768:text-20 leading-36 pb-10px text-[#121110]">
@@ -413,7 +391,7 @@ const productDetail = () => {
               <div className="w-80px h-80px">
                 <img
                   className="rounded-full w-full h-full object-cover"
-                  src={AuthorReviewImage}
+                  src="{AuthorReviewImage}"
                   alt=""
                 />
               </div>
@@ -426,19 +404,19 @@ const productDetail = () => {
                 </div>
                 <ul className="flex items-center gap-5px pb-10px">
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                   <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                    
                   </li>
                 </ul>
                 <p className="font-medium text-18 768:text-20 leading-36 pb-10px text-[#121110]">
@@ -461,7 +439,7 @@ const productDetail = () => {
             <div className="w-full 768:w-4/12 py-[36px] px-15px text-center 768:pl-60px border-primaryColor border-r-[1px]">
               <div className="flex flex-col 768:flex-row items-center gap-0 justify-center 768:justify-start 768:gap-20px">
                 <div className="bg-primaryColor w-70px h-70px rounded-full flex items-center justify-center">
-                  <img src={PhoneIcon} alt="" />
+                  
                 </div>
                 <div className="text-center 768:text-left">
                   <div className="text-[25px] 768:text-32 leading-[120%] pb-10px">Phone</div>
@@ -474,7 +452,7 @@ const productDetail = () => {
             <div className="w-full 768:w-4/12 flex py-[36px] justify-center 768:justify-start pl-0 768:pl-60px border-primaryColor border-r-[1px]">
               <div className="flex flex-col 768:flex-row items-center gap-0 768:gap-20px">
                 <div className="bg-primaryColor w-70px h-70px rounded-full flex items-center justify-center">
-                  <img src={LocationIcon} alt="" />
+                  
                 </div>
                 <div className="text-center 768:text-left">
                   <div className="text-[25px] 768:text-32 leading-[120%] pb-10px">Office</div>
@@ -487,7 +465,7 @@ const productDetail = () => {
             <div className="w-full 768:w-4/12 flex py-[36px] justify-center pl-0 768:pl-60px">
               <div className="flex flex-col 768:flex-row items-center justify-center gap-0 768:gap-20px">
                 <div className="bg-primaryColor w-70px h-70px rounded-full flex items-center justify-center">
-                  <img src={EmailIcon} alt="" />
+                  
                 </div>
                 <div className="text-center 768:text-left">
                   <div className="text-[25px] 768:text-32 leading-[120%]">Email</div>

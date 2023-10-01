@@ -1,11 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
-import AboutBanner from "../../images/aboutBanner.jpg";
-import StoryImage from "../../images/ourStoryImage.jpg";
-import Team from "../../components/teamsection/Team";
-import PlayIcon from "../../images/Icons/PlayIcon.svg";
-import ProcessImage from "../../images/ProcessImage.jpg";
-import Sliderabout from "../../components/ABoutslide/sliderCards";
 
 const About = () => {
   // const [Play, setAutoPlay] = useState(false);
