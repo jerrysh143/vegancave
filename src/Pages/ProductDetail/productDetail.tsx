@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductDetailImage from "../../images/ProductImage.jpg";
 import StarIcon from "../../images/Icons/starIcon";
 import Minus from "../../images/minus.png";
@@ -9,6 +9,13 @@ import AuthorReviewImage from "../../images/authorreviewimage.jpg";
 import PhoneIcon from "../../images/Icons/phone.svg";
 import LocationIcon from "../../images/Icons/location.svg";
 import EmailIcon from "../../images/Icons/email.svg";
+import { useNavigate, useParams } from "react-router-dom";
+import { getProduct } from "../../services/auth";
+import { Product } from "../../components/ProductsWrap/ProductsWrap";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct } from "../../redux/slices/cartSlice";
+import { RootState } from "../../Types/otherTypes";
+import { ROUTE_NAME } from "../typesRoute";
 
 // interface QuantityCounterProps {
 //   initialQuantity: number;
@@ -16,6 +23,38 @@ import EmailIcon from "../../images/Icons/email.svg";
 
 const productDetail = () => {
   const [Review, setReview] = useState(false);
+  const [product, setProduct] = useState<Product>();
+  const [quantity, setQuantity] = useState(1);
+
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { isLoggedIn } = useSelector((state: RootState) => state.user);
+
+  const fetchProduct = async () => {
+    const response = await getProduct(id);
+    if (response.status) {
+      setProduct(response.data[0]);
+    }
+  };
+
+  const increaseQuantity = () => {
+    setQuantity((prevState) => prevState + 1);
+  };
+  const decreaseQuantity = () => {
+    setQuantity((prevState) => (prevState > 1 ? prevState - 1 : prevState));
+  };
+
+  const addToCartHandler = () => {
+    dispatch(addProduct({ product, quantity }));
+  };
+
+  useEffect(() => {
+    fetchProduct();
+
+    window.scrollTo(0, 0);
+  }, []);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   // const [quantity, setQuantity] = useState(props.initialQuantity);
 
@@ -35,7 +74,7 @@ const productDetail = () => {
           <div className="flex flex-wrap flex-col-reverse 992:flex-row">
             <div className="w-full 992:w-6/12 1200:w-[calc(100%_-_571px)] xl:w-[calc(100%_-_671px)] pr-25px xl:pr-[75px] border-b-[1px] border-[#121110]/30">
               <h2 className="text-[32px] 992:text-[42px] 1200:text-[52px] leading-[42px] 992:leading-[52px] 1200:leading-[65px] text-[#121110] pb-15px 1200:pb-25px">
-                Green Spirulina Smoothie Bowl
+                {product?.title}
               </h2>
               <p className="flex flex-wrap pb-10px 1200:pb-20px">
                 <ul className="flex flex-wrap items-center">
@@ -64,36 +103,38 @@ const productDetail = () => {
                 <strong className="pr-5px">Food Type :</strong>Snack, Fast Food
               </p>
               <span className="text-[25px] 992:text-[31px] leading-[40px] pb-10px 1200:pb-20px block">
-                $1.85
+                ${product?.price}
               </span>
               <p className="text-18 992:text-[20px] leading-28 992:leading-[38px]">
-                Steamed hot dog bun, grilled frank, mustard, homemade coney
-                Islaland hot dong with pure sauce. It’s very delicious and tasty
-                to eat for anybody. Let’s grab the food and enjoy!
+                {product?.description}
               </p>
               <div className="flex gap-20px pt-35px pb-20px 1200:pb-30px">
                 <div className="quantity border-[1px] border-[#55504C] border-opacity-20 inline-flex items-center justify-center px-15px w-[131px] h-[47px] rounded-35px">
-                  <button className="minus" aria-label="Decrease">
+                  <button
+                    className="minus"
+                    aria-label="Decrease"
+                    onClick={decreaseQuantity}
+                  >
                     <img src={Minus} alt="" />
                   </button>
-                  <input
-                    type="number"
-                    className="text-center appearance-none m-0 text-20 p-5px pb-0 leading-[36px]"
-                    value="1"
-                    min="1"
-                    max="10"
-                  />
-                  <button className="plus" aria-label="Increase">
+                  <span className="text-center appearance-none m-0 text-20 p-5px pb-0 leading-[36px] px-5">
+                    {quantity}
+                  </span>
+                  <button
+                    className="plus"
+                    aria-label="Increase"
+                    onClick={increaseQuantity}
+                  >
                     <img src={Plus} alt="" />
                   </button>
                 </div>
                 <div className="">
-                  <a
-                    className="px-30px py-10px h-[47px] btn--border btn-read btn--animated rounded-35px"
-                    href="#!"
+                  <div
+                    className="px-30px py-10px h-[47px] btn--border btn-read btn--animated rounded-35px cursor-pointer"
+                    onClick={addToCartHandler}
                   >
                     Add To Cart
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -107,7 +148,7 @@ const productDetail = () => {
               </div>
             </div>
           </div>
-          <div>
+          {/* <div>
             <div className="pt-50px">
               <div className="pb-[12px]">
                 <input
@@ -182,7 +223,7 @@ const productDetail = () => {
                 </span>
               </label>
             </div>
-          </div>
+          </div> */}
           <div className="flex flex-wrap pt-50px pb-70px max-w-[740px] border-b-[1px] border-[#121110]/30">
             <h2 className="text-[31px] font-bold">Description</h2>
             <p className="text-18 992:text-20 leading-[25px] 992:leading-[35px] pb-20px 992:pb-30px">
@@ -236,7 +277,11 @@ const productDetail = () => {
                     Title="Write A Review"
                     className="px-30px py-[13px] btn--border btn-read btn--animated rounded-35px"
                     onClick={() => {
-                      setReview(!Review);
+                      if (!isLoggedIn) {
+                        navigate(ROUTE_NAME.LOGIN);
+                      } else {
+                        setReview(!Review);
+                      }
                     }}
                   />
                 </div>

@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { ReactNode } from "react";
 import Button from "../Buttons/buttonHome";
+import { Link } from "react-router-dom";
+import { ROUTE_NAME } from "../../Pages/typesRoute";
 
 interface ProductItems {
   title?: string;
@@ -20,15 +22,14 @@ export interface Product {
   categories: Array<number>;
 }
 
-const ProductsWrap = (props: {
-  title: ReactNode; products: Product[] 
-}) => {
+const ProductsWrap = (props: { title: ReactNode; products: Product[] }) => {
   return (
     <>
       {props.products.map((product) => (
-        <div
+        <Link
           className="w-full md:w-6/12 lg:w-4/12 px-15px flex flex-wrap items-center my-15px md:my-25px"
           key={product.id}
+          to={`${ROUTE_NAME.PRODUCTDETAIL}/${product.id}}`}
         >
           <div className="flex w-full h-[187px] md:h-[332px]">
             <img
@@ -54,7 +55,7 @@ const ProductsWrap = (props: {
               <div className="text-18 leading-[22px] font-bold">4.5</div>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </>
   );

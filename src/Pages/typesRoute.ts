@@ -51,7 +51,7 @@ export const routes: RouteType[] = [
     isPublic: true,
   },
   {
-    path: ROUTE_NAME.PRODUCTDETAIL,
+    path: "/productdetail/:id",
     name: "Product Detail",
     component: lazy(() => import("./ProductDetail/productDetail")),
     isPublic: true,
@@ -81,12 +81,6 @@ export const routes: RouteType[] = [
     isPublic: true,
   },
   {
-    path: ROUTE_NAME.PROFILE,
-    name: "Profile",
-    component: lazy(() => import("./AuthPage/SignUp")),
-    isPublic: false,
-  },
-  {
     path: ROUTE_NAME.GETAQUOTE,
     name: "Getaquote",
     component: lazy(() => import("./getQuote/GetAQuote")),
@@ -97,5 +91,17 @@ export const routes: RouteType[] = [
     name: "FillDetail",
     component: lazy(() => import("./AuthPage/FillDetail")),
     isPublic: true,
-  }
+  },
+  {
+    path: ROUTE_NAME.PROFILE,
+    name: "Profile",
+    component: lazy(() => import("./user/Profile")),
+    isPublic: false,
+  },
+  {
+    path: ROUTE_NAME.CHECKOUT,
+    name: "Checkout",
+    component: lazy(() => import("./checkout/checkout")),
+    isPublic: false,
+  },
 ];

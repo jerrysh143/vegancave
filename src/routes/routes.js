@@ -14,7 +14,7 @@ const RootComponent = () => {
 
   const FinalRoute = ({ routeProps: { isPublic, component: Component } }) => {
     if (!isPublic && !isAuthenticated) {
-      return <Navigate to={ROUTE_NAME.LOGIN} replace />;
+      return <Navigate to={ROUTE_NAME.LOGIN} replace/>;
     }
 
     return (

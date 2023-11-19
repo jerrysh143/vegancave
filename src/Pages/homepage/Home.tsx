@@ -34,24 +34,24 @@ import FoodComboImage from "../../images/foodComboImage.png";
 import BurgerCTAImage from "../../images/burgerCtaImage.png";
 import { Link, useNavigate } from "react-router-dom";
 import { ROUTE_NAME } from "../typesRoute";
-import { getProducts } from "../../services/auth";
+import { getProductsByKey } from "../../services/auth";
 import { TOAST_TYPE, notify } from "../../utils/utils";
+import { Product } from "../../components/ProductsWrap/ProductsWrap";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
+  const [famousProducts, setFamousProducts] = useState([]);
   const navigate = useNavigate();
 
+  const fetchFamousProducts=async ()=>{
+    const response = await getProductsByKey();
+    if(response.status){
+      setFamousProducts(response.data)
+    }
+  }
+  
+  
   useEffect(() => {
-    const fetchProduct = async () => {
-      const response = await getProducts();
-      if (response.status) {
-        setProducts(response.data);
-      } else {
-        notify(TOAST_TYPE.ERROR, response.message);
-      }
-    };
-
-    fetchProduct();
+    fetchFamousProducts();
   }, []);
   return (
     <>
@@ -197,222 +197,44 @@ const Home = () => {
             </h2>
           </div>
           <div className="flex-wrap flex">
-            <Link
-              to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
-            >
-              <div className="flex flex-col">
-                <div className="w-full !bg-transparent">
-                  <img
-                    src={poularItem}
-                    alt=""
-                    className="shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] w-full object-cover rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
-                  />
-                </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
-                  <div className="flex flex-wrap w-7/12 567:w-9/12">
-                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
-                      Green Spirulina Smoothie Bowl
-                    </div>
-                    <Button
-                      Title="Add To Cart"
-                      className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
+            {famousProducts.map((item: Product)=>(
+              <Link
+                to={`productdetail/${item.id}`}
+                className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
+              >
+                <div className="flex flex-col">
+                  <div className="w-full !bg-transparent">
+                    <img
+                      src={item.image}
+                      alt="product"
+                      className="shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] w-full object-cover rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
                     />
                   </div>
-                  <div className="w-5/12 567:w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
-                      <div className="pr-10px">
-                        <StarIcon fill="#2BB672" stroke="#2BB672" />
+                  <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
+                    <div className="flex flex-wrap w-7/12 567:w-9/12">
+                      <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
+                        {item.title}
                       </div>
-                      <div className="text-13 leading-normal">4.9</div>
+                      <Button
+                        Title="Add To Cart"
+                        className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
+                      />
                     </div>
-                    <div className="text-16 567:text-18 leading-normal font-medium">
-                      $15.00
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link
-              to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
-            >
-              <div className="flex flex-col">
-                <div className="w-full">
-                  <img
-                    src={poularItem1}
-                    alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
-                  />
-                </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
-                  <div className="flex flex-wrap w-7/12 567:w-9/12">
-                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
-                      Green Spirulina Smoothie Bowl
-                    </div>
-                    <Button
-                      Title="Add To Cart"
-                      className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
-                    />
-                  </div>
-                  <div className="w-5/12 567:w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
-                      <div className="pr-10px">
-                        <StarIcon fill="#2BB672" stroke="#2BB672" />
+                    <div className="w-5/12 567:w-3/12 text-right">
+                      <div className="flex items-center justify-end pb-10px 567:pb-25px">
+                        <div className="pr-10px">
+                          <StarIcon fill="#2BB672" stroke="#2BB672" />
+                        </div>
+                        <div className="text-13 leading-normal">4.9</div>
                       </div>
-                      <div className="text-13 leading-normal">4.9</div>
-                    </div>
-                    <div className="text-16 567:text-18 leading-normal font-medium">
-                      $15.00
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link
-              to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
-            >
-              <div className="flex flex-col">
-                <div className="w-full">
-                  <img
-                    src={poularItem2}
-                    alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
-                  />
-                </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
-                  <div className="flex flex-wrap w-7/12 567:w-9/12">
-                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
-                      Green Spirulina Smoothie Bowl
-                    </div>
-                    <Button
-                      Title="Add To Cart"
-                      className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
-                    />
-                  </div>
-                  <div className="w-5/12 567:w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
-                      <div className="pr-10px">
-                        <StarIcon fill="#2BB672" stroke="#2BB672" />
+                      <div className="text-16 567:text-18 leading-normal font-medium">
+                        ${item.price}
                       </div>
-                      <div className="text-13 leading-normal">4.9</div>
-                    </div>
-                    <div className="text-16 567:text-18 leading-normal font-medium">
-                      $15.00
                     </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-            <Link
-              to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
-            >
-              <div className="flex flex-col">
-                <div className="w-full">
-                  <img
-                    src={poularItem3}
-                    alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
-                  />
-                </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
-                  <div className="flex flex-wrap w-7/12 567:w-9/12">
-                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
-                      Green Spirulina Smoothie Bowl
-                    </div>
-                    <Button
-                      Title="Add To Cart"
-                      className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
-                    />
-                  </div>
-                  <div className="w-5/12 567:w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
-                      <div className="pr-10px">
-                        <StarIcon fill="#2BB672" stroke="#2BB672" />
-                      </div>
-                      <div className="text-13 leading-normal">4.9</div>
-                    </div>
-                    <div className="text-16 567:text-18 leading-normal font-medium">
-                      $15.00
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link
-              to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
-            >
-              <div className="flex flex-col">
-                <div className="w-full">
-                  <img
-                    src={poularItem4}
-                    alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
-                  />
-                </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
-                  <div className="flex flex-wrap w-7/12 567:w-9/12">
-                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
-                      Green Spirulina Smoothie Bowl
-                    </div>
-                    <Button
-                      Title="Add To Cart"
-                      className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
-                    />
-                  </div>
-                  <div className="w-5/12 567:w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
-                      <div className="pr-10px">
-                        <StarIcon fill="#2BB672" stroke="#2BB672" />
-                      </div>
-                      <div className="text-13 leading-normal">4.9</div>
-                    </div>
-                    <div className="text-16 567:text-18 leading-normal font-medium">
-                      $15.00
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-            <Link 
-              to={ROUTE_NAME.PRODUCTDETAIL}
-              className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
-            >
-              <div className="flex flex-col">
-                <div className="w-full">
-                  <img
-                    src={poularItem5}
-                    alt=""
-                    className="w-full object-cover shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-tl-[10px] rounded-tr-[10px] 767:rounded-tl-[20px] 767:rounded-tr-[20px] 992:rounded-tl-[25px] 992:rounded-tr-[25px] 1200:rounded-tl-[35px] 1200:rounded-tr-[35px]"
-                  />
-                </div>
-                <div className="pt-[16px] px-15px md:px-[32px] pb-[21px] flex flex-wrap bg-white shadow-[0_2px_30px_0_rgba(0,0,0,0.10)] rounded-bl-[10px] rounded-br-[10px] 767:rounded-bl-[20px] 767:rounded-br-[20px] 992:rounded-bl-[25px] 992:rounded-br-[25px] 1200:rounded-bl-[35px] 1200:rounded-br-[35px]">
-                  <div className="flex flex-wrap w-7/12 567:w-9/12">
-                    <div className="text-[12px] 567:text-16 767:text-20 1200:text-26 leading-normal font-bold pb-[7px]">
-                      Green Spirulina Smoothie Bowl
-                    </div>
-                    <Button
-                      Title="Add To Cart"
-                      className="btn--border btn-read btn--animated text-13 leading-normal w-[139px] h-[44px] rounded-[35px] font-bold"
-                    />
-                  </div>
-                  <div className="w-5/12 567:w-3/12 text-right">
-                    <div className="flex items-center justify-end pb-10px 567:pb-25px">
-                      <div className="pr-10px">
-                        <StarIcon fill="#2BB672" stroke="#2BB672" />
-                      </div>
-                      <div className="text-13 leading-normal">4.9</div>
-                    </div>
-                    <div className="text-16 567:text-18 leading-normal font-medium">
-                      $15.00
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
           </div>
           <div className="flex justify-center">
             <ButtonArrow

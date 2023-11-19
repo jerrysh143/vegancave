@@ -8,7 +8,7 @@ import { login } from "../../services/auth.js";
 import { TOAST_TYPE, notify, setToken } from "../../utils/utils";
 import { ROUTE_NAME } from "../typesRoute";
 import { useDispatch } from "react-redux";
-import { setUser } from "../../redux/user/user.action";
+import { setUser } from "../../redux/slices/userSlice";
 import OverlayBack from "./OverlayBack";
 
 const Login = () => {

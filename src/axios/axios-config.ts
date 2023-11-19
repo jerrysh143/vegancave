@@ -1,4 +1,7 @@
 import axios from "axios";
+import { removeUser } from "../redux/slices/userSlice";
+import store from "../redux/store";
+
 const baseURL = process.env.REACT_APP_API_URL;
 
 axios.interceptors.request.use(
@@ -21,9 +24,8 @@ axios.interceptors.response.use(
   (response) => response,
   (error) => {
     const { response } = error;
-    if (response && response.data && response.data.status === 401) {
-      localStorage.removeItem("token");
-      window.location.href = "/login";
+    if (response && response.status === 401) {
+      store.dispatch(removeUser());
     }
     return Promise.reject(error);
   }
