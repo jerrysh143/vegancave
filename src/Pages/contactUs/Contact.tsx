@@ -1,13 +1,28 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import Button from "../../components/Buttons/buttonHome";
-import { Formik, Field, Form, FormikHelpers, FormikValues } from "formik";
+import {
+  Formik,
+  Field,
+  Form,
+  FormikHelpers,
+  FormikValues,
+  ErrorMessage,
+} from "formik";
+import * as Yup from "yup";
+import { createContact } from "../../services/auth";
+import { TOAST_TYPE, notify } from "../../utils/utils";
 
 const initialValues = {
-  Email: "",
-  Weight: "",
-  Height: "",
+  email: "",
+  description: "",
 };
+
+const validationSchema = Yup.object().shape({
+  email: Yup.string().email().required(),
+  description: Yup.string().required(),
+});
+
 const Contact = () => {
   document.body.classList.toggle("contactPage");
   return (
@@ -318,34 +333,51 @@ const Contact = () => {
             <div className="w-full h-auto bg-white shadow-[0px_12px_48px_-5px_rgba(85,_105,_135,_0.5)] sm:shadow-[0px_12px_48px_-5px_rgba(85,_105,_135,_0.09)] rounded-[10px] sm:rounded-[6px] p-20px sm:p-30px lg:p-40px mt-50px">
               <Formik
                 initialValues={initialValues}
-                onSubmit={function (
-                  _values: FormikValues,
-                  formikHelpers: FormikHelpers<FormikValues>
-                ): void | Promise<any> {
-                  throw new Error("Function not implemented.");
+                validationSchema={validationSchema}
+                onSubmit={async (values, { resetForm }) => {
+                  const response = await createContact(values);
+                  if (response.status) {
+                    notify(
+                      TOAST_TYPE.SUCCESS,
+                      "Response registered successfully"
+                    );
+                  } else {
+                    notify(TOAST_TYPE.ERROR, "Oops! Please try again");
+                  }
+                  resetForm();
                 }}
               >
                 <>
                   <Form className="">
                     <div className="w-full">
-                      <label className="text-18 leading-[25px] block pb-5px group-hover:text-white">Email</label>
+                      <label className="text-18 leading-[25px] block pb-5px group-hover:text-white">
+                        Email
+                      </label>
                       <Field
-                        name="Email"
+                        name="email"
                         placeholder="abc@gmail.com"
                         className="w-full mr-20px py-[13px] px-15px placeholder:text-16 placeholder:leading-16 border-[1px] placeholder:text-[#E0E0E0] rounded-30px focus:border-[1px] focus:outline-0 mb-25px"
-                        type="Email"
+                        type="email"
                       />
+                      <ErrorMessage name="email" className="text-red" />
                     </div>
-                    <div> 
-                      <label className="block group-hover:text-white text-18 leading-[25px] pb-5px">Height</label>
-                      <textarea
-                        name="Height"
+                    <div>
+                      <label className="block group-hover:text-white text-18 leading-[25px] pb-5px">
+                        Height
+                      </label>
+                      <Field
+                        name="description"
                         placeholder="Enter your current height in cms"
-                        className="h-[204px] w-full resize-none mr-20px py-[13px] px-15px placeholder:text-16 placeholder:leading-16 border-[1px] placeholder:text-[#E0E0E0] rounded-20px focus:border-[1px] focus:outline-0 mb-40px"
+                        className="h-[204px] w-full resize-none mr-20px px-15px placeholder:text-16 placeholder:leading-16 border-[1px] placeholder:text-[#E0E0E0] rounded-20px focus:border-[1px] focus:outline-0 mb-40px"
                       />
+                      <ErrorMessage name="description" />
                     </div>
                     <div className="">
-                      <input type="Submit" className="placeholder:text-white btn--border btn-read btn--animated bg-primaryColor w-full text-white text-16 rounded-35px py-14px px-30px" placeholder="Send" />
+                      <input
+                        type="Submit"
+                        className="placeholder:text-white cursor-pointer btn--border btn-read btn--animated bg-primaryColor w-full text-white text-16 rounded-35px py-14px px-30px"
+                        placeholder="Send"
+                      />
                     </div>
                   </Form>
                 </>

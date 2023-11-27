@@ -29,7 +29,7 @@ const ProductsWrap = (props: { title: ReactNode; products: Product[] }) => {
         <Link
           className="w-full md:w-6/12 lg:w-4/12 px-15px flex flex-wrap items-center my-15px md:my-25px"
           key={product.id}
-          to={`${ROUTE_NAME.PRODUCTDETAIL}/${product.id}}`}
+          to={`${ROUTE_NAME.PRODUCTDETAIL}/${product.id}`}
         >
           <div className="flex w-full h-[187px] md:h-[332px]">
             <img
@@ -41,7 +41,7 @@ const ProductsWrap = (props: { title: ReactNode; products: Product[] }) => {
           <div className="bg-white shadow-lg w-full rounded-bl-15px rounded-br-15px md:rounded-bl-35px md:rounded-br-35px p-25px flex flex-wrap justify-between">
             <div className="w-1/2 md:w-7/12 xl:w-1/2">
               <div className="500:text-14 md:text-[19px] xl:text-26 pb-20px">
-                {props.title}
+                {product.title}
               </div>
               <div>
                 <Button

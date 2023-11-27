@@ -7,9 +7,9 @@ import ProductsWrap, {
 import ButtonArrow from "../../components/Buttons/buttonArrow";
 import { getProductCategories, getProducts } from "../../services/auth";
 import { TOAST_TYPE, notify } from "../../utils/utils";
-import PhoneIcon from "../../images/Icons/phone.svg"
-import LocationIcon from "../../images/Icons/location.svg"
-import EmailIcon from "../../images/Icons/email.svg"
+import PhoneIcon from "../../images/Icons/phone.svg";
+import LocationIcon from "../../images/Icons/location.svg";
+import EmailIcon from "../../images/Icons/email.svg";
 
 interface Category {
   id: number;
@@ -131,9 +131,9 @@ const Store = () => {
           </div>
           <div className="flex flex-wrap items-center -mx-15px clear-both">
             <ProductsWrap products={filteredProducts} title="Product" />
-            <div className="w-full flex justify-center pt-20px">
+            {/* <div className="w-full flex justify-center pt-20px">
               <ButtonArrow className="text-center" Title="Load More" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -10,12 +10,15 @@ import PhoneIcon from "../../images/Icons/phone.svg";
 import LocationIcon from "../../images/Icons/location.svg";
 import EmailIcon from "../../images/Icons/email.svg";
 import { useNavigate, useParams } from "react-router-dom";
-import { getProduct } from "../../services/auth";
+import { createReview, getProduct, getReviews } from "../../services/auth";
 import { Product } from "../../components/ProductsWrap/ProductsWrap";
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux/slices/cartSlice";
 import { RootState } from "../../Types/otherTypes";
 import { ROUTE_NAME } from "../typesRoute";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { TOAST_TYPE, notify } from "../../utils/utils";
 
 // interface QuantityCounterProps {
 //   initialQuantity: number;
@@ -25,6 +28,7 @@ const productDetail = () => {
   const [Review, setReview] = useState(false);
   const [product, setProduct] = useState<Product>();
   const [quantity, setQuantity] = useState(1);
+  const [reviews, setReviews] = useState<any>([]);
 
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -32,10 +36,14 @@ const productDetail = () => {
 
   const { isLoggedIn } = useSelector((state: RootState) => state.user);
 
-  const fetchProduct = async () => {
+  const fetchProductAndReviews = async () => {
     const response = await getProduct(id);
     if (response.status) {
       setProduct(response.data[0]);
+    }
+    const reviewResponse = await getReviews(id);
+    if (reviewResponse.status) {
+      setReviews(reviewResponse.data);
     }
   };
 
@@ -51,22 +59,39 @@ const productDetail = () => {
   };
 
   useEffect(() => {
-    fetchProduct();
+    fetchProductAndReviews();
 
     window.scrollTo(0, 0);
   }, []);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  // const [quantity, setQuantity] = useState(props.initialQuantity);
 
-  // const increment = () => {
-  //   setQuantity(quantity + 1);
-  // };
+  // REVIEW
+  const validationSchema = Yup.object().shape({
+    title: Yup.string().required(),
+    review: Yup.string().required(),
+    user_name: Yup.string().required(),
+    user_email: Yup.string().email().required(),
+  });
 
-  // const decrement = () => {
-  //   if (quantity > 0) {
-  //     setQuantity(quantity - 1);
-  //   }
-  // };
+  const formik = useFormik({
+    initialValues: {
+      title: "",
+      review: "",
+      user_name: "",
+      user_email: "",
+    },
+    validationSchema: validationSchema,
+    onSubmit: async (values) => {
+      const response: any = await createReview({ ...values, product: id });
+      if (response.status) {
+        setReviews((prevState: any) => [...prevState, response.data]);
+      } else {
+        notify(TOAST_TYPE.ERROR, "Please try again");
+      }
+      setReview(!Review);
+      formik.resetForm();
+    },
+  });
+
   return (
     <>
       <div className="pt-70px pb-40px">
@@ -97,7 +122,8 @@ const productDetail = () => {
                 <span className="text-20 leading-[35px]">(3 reviews)</span>
               </p>
               <p className="text-18 992:text-[20px] leading-28 992:leading-[35px] pb-10px 1200:pb-20px">
-                <strong className="pr-5px">Category :</strong>Breakfast
+                <strong className="pr-5px">Category :</strong>
+                {product?.categories}
               </p>
               <p className="text-18 992:text-[20px] leading-28 992:leading-[35px] pb-10px 1200:pb-20px">
                 <strong className="pr-5px">Food Type :</strong>Snack, Fast Food
@@ -277,11 +303,8 @@ const productDetail = () => {
                     Title="Write A Review"
                     className="px-30px py-[13px] btn--border btn-read btn--animated rounded-35px"
                     onClick={() => {
-                      if (!isLoggedIn) {
-                        navigate(ROUTE_NAME.LOGIN);
-                      } else {
-                        setReview(!Review);
-                      }
+                      formik.resetForm();
+                      setReview(!Review);
                     }}
                   />
                 </div>
@@ -313,26 +336,41 @@ const productDetail = () => {
                   <li>
                     <StarIcon fill="#2BB672" stroke="#2BB672" />
                   </li>
+                  email{" "}
                   <li>
                     <StarIcon fill="#2BB672" stroke="#2BB672" />
                   </li>
                 </ul>
               </div>
-              <form className="pt-40px w-full">
+              <form className="pt-40px w-full" onSubmit={formik.handleSubmit}>
                 <div className="w-full max-w-full pb-40px">
                   <label className="text-[22px] pb-10px block">
                     Add a headline
                   </label>
                   <input
                     type="text"
+                    name="title"
                     className="border-[1px] border-[#A4A4A4] w-full max-w-full focus:outline-none rounded-50px h-50px py-20px px-20px"
+                    onChange={formik.handleChange}
+                    value={formik.values.title}
                   />
+                  {formik.touched.title && formik.errors.title ? (
+                    <p style={{ color: "red" }}>{formik.errors.title}</p>
+                  ) : null}
                 </div>
                 <div className="w-full pb-40px">
                   <label className="text-[22px] pb-10px block">
                     Write your review
                   </label>
-                  <textarea className="resize-none border-[1px] border-[#A4A4A4] w-full max-w-full focus:outline-none rounded-30px h-[240px] pt-10px pb-20px px-30px text-20"></textarea>
+                  <textarea
+                    className="resize-none border-[1px] border-[#A4A4A4] w-full max-w-full focus:outline-none rounded-30px h-[240px] pt-10px pb-20px px-30px text-20"
+                    onChange={formik.handleChange}
+                    value={formik.values.review}
+                    name="review"
+                  ></textarea>
+                  {formik.touched.review && formik.errors.review ? (
+                    <p style={{ color: "red" }}>{formik.errors.review}</p>
+                  ) : null}
                 </div>
                 <div className="w-full flex flex-wrap pb-40px">
                   <div className="w-6/12 pr-20px">
@@ -341,8 +379,14 @@ const productDetail = () => {
                     </label>
                     <input
                       type="text"
+                      name="user_name"
                       className="border-[1px] border-[#A4A4A4] w-full max-w-full focus:outline-none rounded-50px h-50px py-20px px-20px"
+                      onChange={formik.handleChange}
+                      value={formik.values.user_name}
                     />
+                    {formik.touched.user_name && formik.errors.user_name ? (
+                      <p style={{ color: "red" }}>{formik.errors.user_name}</p>
+                    ) : null}
                   </div>
                   <div className="w-6/12 pl-20px">
                     <label className="text-[22px] pb-10px block">
@@ -350,16 +394,28 @@ const productDetail = () => {
                     </label>
                     <input
                       type="text"
+                      name="user_email"
                       className="border-[1px] border-[#A4A4A4] w-full max-w-full focus:outline-none rounded-50px h-50px py-20px px-20px"
+                      onChange={formik.handleChange}
+                      value={formik.values.user_email}
                     />
+                    {formik.touched.user_email && formik.errors.user_email ? (
+                      <p style={{ color: "red" }}>{formik.errors.user_email}</p>
+                    ) : null}
                   </div>
                 </div>
                 <div className="flex flex-wrap justify-end gap-20px w-full pb-50px">
                   <Button
+                    type="button"
                     Title="Cancel"
                     className="py-[19px] px-[35px] border-[1px] border-[#222] text-26 leading-26 rounded-[55px] font-bold"
+                    onClick={() => {
+                      formik.resetForm();
+                      setReview(!Review);
+                    }}
                   />
                   <Button
+                    type="submit"
                     Title="Submit Review"
                     className="py-[19px] px-[20px] text-26 leading-26 btn--border btn-read btn--animated rounded-[55px] font-bold"
                   />
@@ -367,137 +423,59 @@ const productDetail = () => {
               </form>
             </div>
           </div>
-          <div className="flex flex-wrap w-full">
-            <div className="flex gap-25px py-40px border-b-[1px] border-[#121110]/30">
-              <div className="w-80px h-80px">
-                <img
-                  className="rounded-full w-full h-full object-cover"
-                  src={AuthorReviewImage}
-                  alt=""
-                />
-              </div>
-              <div className="w-[calc(100%_-_80px)]">
-                <div className="text-24 leading-40 font-medium">
-                  David Warner
+          {reviews.map(
+            (item: {
+              title: string;
+              review: string;
+              user_name: string;
+              rate: number;
+              created_at: string;
+              id: number;
+            }) => (
+              <div className="flex flex-wrap w-full" key={item.id}>
+                <div className="flex gap-25px py-40px border-b-[1px] border-[#121110]/30">
+                  <div className="w-80px h-80px">
+                    <img
+                      className="rounded-full w-full h-full object-cover"
+                      src={AuthorReviewImage}
+                      alt=""
+                    />
+                  </div>
+                  <div className="w-[calc(100%_-_80px)]">
+                    <div className="text-24 leading-40 font-medium">
+                      {item.user_name}
+                    </div>
+                    <div className="text-18 leading-26 pb-25px">
+                      <span>{item.created_at}</span>
+                    </div>
+                    <ul className="flex items-center gap-5px pb-10px">
+                      <li>
+                        <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                      </li>
+                      <li>
+                        <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                      </li>
+                      <li>
+                        <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                      </li>
+                      <li>
+                        <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                      </li>
+                      <li>
+                        <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
+                      </li>
+                    </ul>
+                    <p className="font-medium text-20 leading-36 pb-10px text-[#121110]">
+                      {item?.title}
+                    </p>
+                    <p className="text-20 leading-36 text-[#55504C]">
+                      {item?.review}
+                    </p>
+                  </div>
                 </div>
-                <div className="text-18 leading-26 pb-25px">
-                  -<span> Jan 18, 2023</span>
-                </div>
-                <ul className="flex items-center gap-5px pb-10px">
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                </ul>
-                <p className="font-medium text-20 leading-36 pb-10px text-[#121110]">
-                  Wonderful taste
-                </p>
-                <p className="text-20 leading-36 text-[#55504C]">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus.
-                </p>
               </div>
-            </div>
-            <div className="flex gap-25px py-40px border-b-[1px] border-[#121110]/30">
-              <div className="w-80px h-80px">
-                <img
-                  className="rounded-full w-full h-full object-cover"
-                  src={AuthorReviewImage}
-                  alt=""
-                />
-              </div>
-              <div className="w-[calc(100%_-_80px)]">
-                <div className="text-24 leading-40 font-medium">
-                  David Warner
-                </div>
-                <div className="text-18 leading-26 pb-25px">
-                  -<span> Jan 18, 2023</span>
-                </div>
-                <ul className="flex items-center gap-5px pb-10px">
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                </ul>
-                <p className="font-medium text-20 leading-36 pb-10px text-[#121110]">
-                  Wonderful taste
-                </p>
-                <p className="text-20 leading-36 text-[#55504C]">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-25px py-40px border-b-[1px] border-[#121110]/30">
-              <div className="w-80px h-80px">
-                <img
-                  className="rounded-full w-full h-full object-cover"
-                  src={AuthorReviewImage}
-                  alt=""
-                />
-              </div>
-              <div className="w-[calc(100%_-_80px)]">
-                <div className="text-24 leading-40 font-medium">
-                  David Warner
-                </div>
-                <div className="text-18 leading-26 pb-25px">
-                  -<span> Jan 18, 2023</span>
-                </div>
-                <ul className="flex items-center gap-5px pb-10px">
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                  <li>
-                    <StarIcon fill="#FFBF1C" stroke="#FFBF1C" />
-                  </li>
-                </ul>
-                <p className="font-medium text-20 leading-36 pb-10px text-[#121110]">
-                  Wonderful taste
-                </p>
-                <p className="text-20 leading-36 text-[#55504C]">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus.
-                </p>
-              </div>
-            </div>
-          </div>
+            )
+          )}
         </div>
       </div>
       <div className="pb-40px">

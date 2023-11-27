@@ -16,7 +16,7 @@ import { clearCart } from "../../redux/slices/cartSlice";
 function CheckoutPage() {
   const [voucher, setVoucher] = useState("");
   const [discount, setDiscount] = useState(0);
-  const [appliedVoucher, setAppliedVoucher] = useState();
+  const [appliedVoucher, setAppliedVoucher] = useState("");
 
   const [Razorpay]: any = useRazorpay();
   const navigate = useNavigate();
@@ -106,8 +106,8 @@ function CheckoutPage() {
       );
     } else {
       notify(TOAST_TYPE.ERROR, response.message);
+      setVoucher("");
     }
-    setVoucher("");
   };
 
   useEffect(() => {
@@ -118,6 +118,12 @@ function CheckoutPage() {
       navigate(ROUTE_NAME.LOGIN);
     }
   }, [totalQuantity]);
+
+  const removeVoucher = () => {
+    setVoucher("");
+    setDiscount(0);
+    setAppliedVoucher("");
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -145,21 +151,31 @@ function CheckoutPage() {
           </div>
           <div>
             Voucher:
-            <input
-              className="bg-green-200 p-2 m-2 border-collapse rounded-md"
-              type="text"
-              value={voucher}
-              onChange={(e) => setVoucher(e.target.value)}
-            />
+            {discount ? (
+              <span>{voucher}</span>
+            ) : (
+              <input
+                className="bg-green-200 p-2 m-2 border-collapse rounded-md"
+                type="text"
+                value={voucher}
+                onChange={(e) => setVoucher(e.target.value)}
+              />
+            )}
             <button
               className="text-green-500 py-2 px-4 rounded-md hover:bg-green-400 hover:text-white"
-              onClick={applyVoucherHandler}
+              onClick={() => {
+                {
+                  if (voucher.length > 0) {
+                    applyVoucherHandler();
+                  }
+                }
+              }}
             >
               Apply
             </button>
             <button
               className="text-red-500 py-2 px-4 rounded-md"
-              onClick={() => setVoucher("")}
+              onClick={removeVoucher}
             >
               Clear
             </button>
@@ -172,9 +188,6 @@ function CheckoutPage() {
         <div className="mb-4">
           <h2 className="text-xl font-semibold mb-2">Payment Options</h2>
           <div className="flex space-x-4">
-            <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700">
-              Credit Card
-            </button>
             <button
               className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700"
               onClick={razorpayHandler}
@@ -185,10 +198,6 @@ function CheckoutPage() {
           </div>
         </div>
       </div>
-
-      <button className="bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-700">
-        Place Order
-      </button>
     </div>
   );
 }

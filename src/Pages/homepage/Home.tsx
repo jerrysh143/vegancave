@@ -35,21 +35,19 @@ import BurgerCTAImage from "../../images/burgerCtaImage.png";
 import { Link, useNavigate } from "react-router-dom";
 import { ROUTE_NAME } from "../typesRoute";
 import { getProductsByKey } from "../../services/auth";
-import { TOAST_TYPE, notify } from "../../utils/utils";
 import { Product } from "../../components/ProductsWrap/ProductsWrap";
 
 const Home = () => {
   const [famousProducts, setFamousProducts] = useState([]);
   const navigate = useNavigate();
 
-  const fetchFamousProducts=async ()=>{
-    const response = await getProductsByKey();
-    if(response.status){
-      setFamousProducts(response.data)
+  const fetchFamousProducts = async () => {
+    const response = await getProductsByKey("famous");
+    if (response.status) {
+      setFamousProducts(response.data);
     }
-  }
-  
-  
+  };
+
   useEffect(() => {
     fetchFamousProducts();
   }, []);
@@ -197,7 +195,7 @@ const Home = () => {
             </h2>
           </div>
           <div className="flex-wrap flex">
-            {famousProducts.map((item: Product)=>(
+            {famousProducts.map((item: Product) => (
               <Link
                 to={`productdetail/${item.id}`}
                 className="w-full 480:w-6/12 md:w-4/12 px-0 567:px-10px md:px-15px mb-15px md:mb-[58px]"
